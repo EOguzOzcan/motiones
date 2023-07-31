@@ -1,19 +1,22 @@
 import Link from "next/link"
 
-import { NavSection } from "@/layout/NavSection"
-import { VideoSection } from "@/layout/VideoSection"
+import { Background } from '../background/Background';
+import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
+import { Logo } from './Logo';
+import { VideoSection } from '@/layout/VideoSection'
+import { NavSection } from '@/layout/NavSection'
 
-import { Background } from "../background/Background"
-import { NavbarTwoColumns } from "../navigation/NavbarTwoColumns"
-import { Logo } from "./Logo"
 
 const VideoBackground = () => {
   return (
-    <video autoPlay loop muted className="h-[700px] w-full object-cover ">
-      <source src="/video.mp4" type="video/mp4" />
-    </video>
-  )
-}
+		<video autoPlay loop muted className='h-[700px] w-full object-cover ' >
+
+		<source src="/video.mp4" type="video/mp4" />
+	</video>
+  );
+};
+
+
 
 const Hero = () => {
   return (
