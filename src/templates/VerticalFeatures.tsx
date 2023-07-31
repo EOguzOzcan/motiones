@@ -11,19 +11,19 @@ const VerticalFeatures = () => (
       <ThreeFeature
         title="Responsive Layout"
         description="Optio dolores expedita unde vel laudantium enim nisi eos distinctio, rem. Repellat repudiandae quos laborum magni."
-        image="/assets/images/feature.svg"
+        image="/responsive.svg"
         imageAlt="Responsive Layout"
       />
       <ThreeFeature
         title="Easy to Customize"
         description="Praesentium reprehenderit quae, sequi deserunt laboriosam velit necessitatibus nulla ea optio, quis nam pariatur."
-        image="/assets/images/feature2.svg"
+        image="/website.svg"
         imageAlt="Responsive Layout"
       />
       <ThreeFeature
         title="Fully Documented"
         description="Aperiam recusandae ipsa culpa, cupiditate magnam dolor molestiae, omnis, architecto possimus aperiam corrupti corporis."
-        image="/assets/images/feature3.svg"
+        image="/document.svg"
         imageAlt="Responsive Layout"
       />
     </div>
