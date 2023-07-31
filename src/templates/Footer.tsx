@@ -17,21 +17,40 @@ const Footer = () => {
 
   return (
     <FooterSection>
-      <div className='flex flex-col text-center text-white'>
-        <div className='my-5 text-right'>
-          <label className=' mr-4 '>GET THE NEWSLETTER</label>
-          <input
-            type='email'
-            onChange={(e) => setEmail(e.target.value)}
-            className='bg-gray-50 border border-gray-300 text-gray-900  focus:ring-blue-500 focus:border-blue-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-          />
-          <button
-            type='button'
-            className='text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-sm px-5 py-0.4'
-            onClick={handleSendEmail}
-          >
-            Light
-          </button>
+      <div className='flex flex-col text-center text-gray-800'>
+        <div className='my-5 self-end'>
+          <div className='flex flex-row'>
+            <div className='relative'>
+              <input
+                type='text'
+                id='hs-leading-icon'
+                name='hs-leading-icon'
+                className='py-3 px-4 pl-11 block w-full border-gray-200 shadow-sm rounded-md text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400'
+                placeholder='you@site.com'
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <div className='absolute inset-y-0 left-0 flex items-center pointer-events-none z-20 pl-4'>
+                <svg
+                  className='h-4 w-4 text-gray-400'
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='16'
+                  height='16'
+                  fill='currentColor'
+                  viewBox='0 0 16 16'
+                >
+                  <path d='M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z' />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <button
+                className='h-16 w-16 rounded-md border-2 border-red-700 bg-red-700 text-sm font-semibold text-white'
+                onClick={handleSendEmail}
+              >
+                Light
+              </button>
+            </div>
+          </div>
         </div>
         <div className='grid grid-cols-3 mt-5 justify-center' style={{ backgroundColor: "bg-gray-100" }}>
           <div>

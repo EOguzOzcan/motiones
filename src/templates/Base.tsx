@@ -14,9 +14,9 @@ const Base = () => (
     <Banner />
     <BannerRight />
     <Banner />
-    <div className='bg-red-500'>
+    <div className='bg-gray-100'>
       <Footer />
-    </div>{" "}
+    </div>
   </div>
 )
 
