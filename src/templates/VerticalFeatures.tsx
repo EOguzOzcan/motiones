@@ -1,12 +1,33 @@
-import { VerticalFeatureRow } from '../feature/VerticalFeatureRow';
-import { Section } from '../layout/Section';
+import { ThreeFeature } from "@/feature/ThreeFeautre"
+
+import { Section } from "../layout/Section"
 
 const VerticalFeatures = () => (
   <Section
-    title="Your title here"
-    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at."
+    title="It's about making ideas happen"
+    description="Spend less time worrying about front-end and more focusing on your product."
   >
-    <VerticalFeatureRow
+    <div className="flex w-full flex-col items-center space-x-0 px-5 md:flex-row md:space-x-20 md:px-0">
+      <ThreeFeature
+        title="Responsive Layout"
+        description="Optio dolores expedita unde vel laudantium enim nisi eos distinctio, rem. Repellat repudiandae quos laborum magni."
+        image="/assets/images/feature.svg"
+        imageAlt="Responsive Layout"
+      />
+      <ThreeFeature
+        title="Easy to Customize"
+        description="Praesentium reprehenderit quae, sequi deserunt laboriosam velit necessitatibus nulla ea optio, quis nam pariatur."
+        image="/assets/images/feature2.svg"
+        imageAlt="Responsive Layout"
+      />
+      <ThreeFeature
+        title="Fully Documented"
+        description="Aperiam recusandae ipsa culpa, cupiditate magnam dolor molestiae, omnis, architecto possimus aperiam corrupti corporis."
+        image="/assets/images/feature3.svg"
+        imageAlt="Responsive Layout"
+      />
+    </div>
+    {/* <VerticalFeatureRow
       title="Your title here"
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
       image="/assets/images/feature.svg"
@@ -24,8 +45,8 @@ const VerticalFeatures = () => (
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
       image="/assets/images/feature3.svg"
       imageAlt="Third feature alt text"
-    />
+    /> */}
   </Section>
-);
+)
 
-export { VerticalFeatures };
+export { VerticalFeatures }

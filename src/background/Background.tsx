@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { ReactNode } from "react"
 
 type IBackgroundProps = {
   children: ReactNode;
@@ -6,7 +6,7 @@ type IBackgroundProps = {
 };
 
 const Background = (props: IBackgroundProps) => (
-  <div className={props.color}>{props.children}</div>
-);
+  <div className={`${props.color} relative mx-auto`}>{props.children}</div>
+)
 
-export { Background };
+export { Background }
