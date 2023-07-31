@@ -1,6 +1,6 @@
 export const AppConfig = {
-  site_name: 'Starter',
-  title: 'Nextjs Starter',
-  description: 'Starter code for your Nextjs Boilerplate with Tailwind CSS',
-  locale: 'en',
-};
+  site_name: "Arc Global Chain",
+  title: "Arc Global Chain",
+  description: "Arc Global Chain",
+  locale: "en"
+}

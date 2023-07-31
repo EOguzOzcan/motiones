@@ -1,8 +1,8 @@
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { NextSeo } from 'next-seo';
+import Head from "next/head"
+import { useRouter } from "next/router"
+import { NextSeo } from "next-seo"
 
-import { AppConfig } from '../utils/AppConfig';
+import { AppConfig } from "../utils/AppConfig"
 
 type IMetaProps = {
   title: string;
@@ -11,7 +11,7 @@ type IMetaProps = {
 };
 
 const Meta = (props: IMetaProps) => {
-  const router = useRouter();
+  const router = useRouter()
 
   return (
     <>
@@ -31,19 +31,19 @@ const Meta = (props: IMetaProps) => {
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href={`${router.basePath}/favicon-32x32.png`}
+          href={`${router.basePath}/favicon.png`}
           key="icon32"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href={`${router.basePath}/favicon-16x16.png`}
+          href={`${router.basePath}/favicon.png`}
           key="icon16"
         />
         <link
           rel="icon"
-          href={`${router.basePath}/favicon.ico`}
+          href={`${router.basePath}/favicon.png`}
           key="favicon"
         />
       </Head>
@@ -56,11 +56,11 @@ const Meta = (props: IMetaProps) => {
           description: props.description,
           url: props.canonical,
           locale: AppConfig.locale,
-          site_name: AppConfig.site_name,
+          site_name: AppConfig.site_name
         }}
       />
     </>
-  );
-};
+  )
+}
 
-export { Meta };
+export { Meta }

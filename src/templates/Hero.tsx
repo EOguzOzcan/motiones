@@ -23,13 +23,19 @@ const Hero = () => {
 
         <NavSection yPadding="py-6">
           <NavbarTwoColumns logo={<Logo xl />}>
-            <li>
-              <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
-                GitHub
+            <li className="w-24 h-10  flex items-center justify-center rounded-md  hover:border-gray-800 hover:bg-gray-800 hover:text-white transition-all ease-in-out cursor-pointer">
+              <Link href="/">
+                About
               </Link>
             </li>
-            <li>
-              <Link href="/">Sign in</Link>
+            <li className="w-32 h-10  flex items-center justify-center rounded-md  hover:border-gray-800 hover:bg-gray-800 hover:text-white transition-all ease-in-out cursor-pointer">
+              <Link href="/">Features</Link>
+            </li>
+            <li className="w-32 h-10  flex items-center justify-center rounded-md  hover:border-gray-800 hover:bg-gray-800 hover:text-white transition-all ease-in-out cursor-pointer">
+              <Link href="/">Pricing</Link>
+            </li>
+            <li className="w-32 h-10  flex items-center justify-center rounded-md  hover:border-gray-800 hover:bg-gray-800 hover:text-white transition-all ease-in-out cursor-pointer">
+              <Link href="/">Products</Link>
             </li>
           </NavbarTwoColumns>
         </NavSection>
