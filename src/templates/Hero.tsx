@@ -6,6 +6,7 @@ import {Logo} from './Logo'
 import {VideoSection} from '@/layout/VideoSection'
 import {NavSection} from '@/layout/NavSection'
 import { Link as ScrollLink } from 'react-scroll';
+import { useEffect, useState } from 'react'
 const VideoBackground = () => {
 
 
@@ -27,7 +28,31 @@ const VideoBackground = () => {
 	)
 }
 
+
 const Hero = () => {
+  const [isScreenMd, setIsScreenMd] = useState(false)
+
+  useEffect(() => {
+    // Function to check if the screen size matches the specified media query
+    const checkScreenSize = () => {
+      setIsScreenMd(window.matchMedia("(min-width: 768px)").matches)
+    }
+
+    // Run the initial check
+    checkScreenSize()
+
+    // Add an event listener to recheck the screen size when the window is resized
+    window.addEventListener("resize", checkScreenSize)
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", checkScreenSize)
+    }
+  }, [])
+
+
+
+
 	return (
 		<Background color="bg-gray-100 ">
 			<VideoSection>
@@ -35,25 +60,26 @@ const Hero = () => {
 				<VideoBackground />
 				<div className='absolute top-[50%] left-[50%] z-10 ' style={{"transform":"translate(-50%, -55%)"}}>
 					<div className='text-white flex flex-col justify-center items-center gap-y-8 w-[800px] text-center'>
-					<h2 className='text-3xl'>
+					<h2 className='text-xl  md:text-3xl'>
 					Providing the finest commodity
 					</h2>
-					<h1 className='text-5xl font-bold'>The right price, the right time</h1>
-					<p className='text-lg font-base'>
+					<h1 className='text-2xl md:text-5xl font-bold'>The right price, the right time</h1>
+					{/* <p className='text-lg font-base'>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-					</p>
+					</p> */}
 					<div className='flex gap-x-4'>
-					<button className="h-12 w-36 rounded-md border-2 border-orange-500 bg-orange-500 text-sm font-semibold text-white shadow-md">
+					<button className="h-8 w-24 md:h-12 md:w-36  rounded-md border-2 border-orange-500 bg-orange-500 text-sm font-semibold text-white shadow-md">
                Get Started
               </button>
-							<button className="h-12 w-36 rounded-md border-2 border-white-700  text-sm font-semibold text-white">
+							<button className="h-8 w-24 md:h-12 md:w-36 rounded-md border-2 border-white-700  text-sm font-semibold text-white">
                View Work
               </button>
 					</div>
 					</div>
 				</div>
 
-				<NavSection yPadding="py-6" >
+				{isScreenMd && (
+					<NavSection yPadding="py-6" >
 					<NavbarTwoColumns logo={<Logo  />}>
 
 						<li  className="w-24 h-10  flex items-center justify-center rounded-md text-white text-base    hover:text-white transition-all ease-in-out cursor-pointer">
@@ -72,6 +98,7 @@ const Hero = () => {
 						</li>
 					</NavbarTwoColumns>
 				</NavSection>
+				)}
 			</VideoSection>
 		</Background>
 	)
