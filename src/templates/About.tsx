@@ -48,49 +48,51 @@ const MyComponent = () => {
   return (
     <div className="mx-auto flex w-full h-full py-4" id="about">
       {isScreenMd ? (
-        <>
+     <>
+		    <div className="flex flex-1 py-5  flex-col items-center justify-center space-y-5 bg-gray-100 ">
 			
-          <div id="about" className="flex flex-1   flex-col items-center justify-center space-y-5 bg-gray-100  ">
-				<div className="mb-12 flex flex-col gap-y-5  ">
-				<h1 className="ml-60  w-[500px] text-left text-5xl font-light leading-9 text-gray-800">About <span className="font-semibold text-orange-500">Arc Global Chain</span></h1>
+			<div id="about" className=" ">
+		<div className="mb-12 flex flex-col gap-y-5  ">
+		<h1 className="ml-60  w-[500px] text-left text-5xl font-light leading-9 text-gray-800">About <span className="font-semibold text-orange-500">Arc Global Chain</span></h1>
+		<p className="ml-60 w-[600px] text-left text-md  leading-7">
+		ARC Global Chain is established by ATG & Ruha Yağ Rafineri A.Ş.to provide the finest quality sugar and sunflower oil commodity products.
+		</p>
+		</div>
+				<h1 className=" ml-60 w-[600px] text-left text-3xl font-light leading-9 text-gray-800">
+				We Are Digital <span className="font-semibold text-orange-500">Marketing & Branding</span>
+				</h1>
 				<p className="ml-60 w-[600px] text-left text-md  leading-7">
-				ARC Global Chain is established by ATG & Ruha Yağ Rafineri A.Ş.to provide the finest quality sugar and sunflower oil commodity products.
+				We pride ourselves in manufacturing and delivering the highest quality commodities. We also make sure all our products undergo accredited independent quality assurance inspection testing.
 				</p>
-				</div>
-					  <h1 className=" ml-60 w-[600px] text-left text-3xl font-light leading-9 text-gray-800">
-						We Are Digital <span className="font-semibold text-orange-500">Marketing & Branding</span>
-            </h1>
-            <p className="ml-60 w-[600px] text-left text-md  leading-7">
-						We pride ourselves in manufacturing and delivering the highest quality commodities. We also make sure all our products undergo accredited independent quality assurance inspection testing.
-            </p>
-						<div className="flex items-center ml-36 justify-around w-[600px]">
-							<div>
-								<ul>
-									<li className="flex items-center gap-x-1 text-lg"><HiCheck size={20} color="orange"/> <span>Creative Design</span></li>
-									<li className="flex items-center gap-x-1 text-lg"><HiCheck size={20} color="orange"/> <span>Retina Ready</span></li>
-									<li className="flex items-center gap-x-1 text-lg"><HiCheck size={20} color="orange"/> <span>Responsive Design</span></li>
-								</ul>
-							</div>
-							<div>
-								<ul>
-								<li className="flex items-center gap-x-1 text-lg"><HiCheck size={20} color="orange"/> <span>Modern Design</span></li>
-									<li className="flex items-center gap-x-1 text-lg"><HiCheck size={20} color="orange"/> <span>Awesome Design</span></li>
-									<li className="flex items-center gap-x-1 text-lg"><HiCheck size={20} color="orange"/> <span>Digital Marketing & Branding</span></li>
+				<div className="flex items-center ml-48 justify-around w-[600px]">
+					<div>
+						<ul>
+							<li className="flex items-center gap-x-1 text-lg"><HiCheck size={20} color="orange"/> <span>Creative Design</span></li>
+							<li className="flex items-center gap-x-1 text-lg"><HiCheck size={20} color="orange"/> <span>Retina Ready</span></li>
+							<li className="flex items-center gap-x-1 text-lg"><HiCheck size={20} color="orange"/> <span>Responsive Design</span></li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+						<li className="flex items-center gap-x-1 text-lg"><HiCheck size={20} color="orange"/> <span>Modern Design</span></li>
+							<li className="flex items-center gap-x-1 text-lg"><HiCheck size={20} color="orange"/> <span>Awesome Design</span></li>
+							<li className="flex items-center gap-x-1 text-lg"><HiCheck size={20} color="orange"/> <span>Digital Marketing & Branding</span></li>
 
-								</ul>
-							</div>
-						</div>
-            <div className="ml-60  flex w-[600px] items-center">
-            
-              <button className="h-12 mt-4 w-36 rounded-md border-2 border-orange-500 bg-orange-500 text-sm font-semibold text-white">
-                READ MORE
-              </button>
-            </div>
-          </div>
-          <div className="w-[900px]  ">
-         <VideoBackground />
-          </div>
-        </>
+						</ul>
+					</div>
+				</div>
+				<div className="ml-60  flex w-[600px]  items-center">
+				
+					<button className="h-12 mt-8 w-36  rounded-md border-2 border-orange-500 bg-orange-500 text-sm font-semibold text-white">
+						READ MORE
+					</button>
+				</div>
+			</div>
+		</div>
+			<div className="w-[900px]  ">
+		 <VideoBackground />
+			</div>
+		 </>
       ) : (
         <>
           <div className="flex  flex-col items-center justify-center space-y-5 bg-gray-100 px-5 py-3 md:p-0">

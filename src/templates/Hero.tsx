@@ -84,17 +84,21 @@ const Hero = () => {
 
 						<li  className="w-24 h-10  flex items-center justify-center rounded-md text-white text-base    hover:text-white transition-all ease-in-out cursor-pointer">
 						<ScrollLink offset={-150} to="about" smooth={true} duration={1000}>
-							About
+							About 
 						</ScrollLink>
 						</li>
 						<li className="w-32 h-10  flex items-center justify-center rounded-md  text-white   text-base hover:text-white transition-all ease-in-out cursor-pointer">
-							<Link href="/">Features</Link>
+						<ScrollLink offset={-150} to="products" smooth={true} duration={1000}>
+							Products
+							</ScrollLink>
 						</li>
 						<li className="w-32 h-10  flex items-center justify-center rounded-md  text-white  text-base  hover:text-white transition-all ease-in-out cursor-pointer">
-							<Link href="/">Pricing</Link>
+						<ScrollLink offset={-150} to="contact" smooth={true} duration={1000}>
+							 Contact Us
+							</ScrollLink>
 						</li>
 						<li className="w-32 h-10  flex items-center justify-center rounded-md  text-white  text-base hover:text-white transition-all ease-in-out cursor-pointer">
-							<Link href="/">Products</Link>
+							<Link href="/">*****</Link>
 						</li>
 					</NavbarTwoColumns>
 				</NavSection>

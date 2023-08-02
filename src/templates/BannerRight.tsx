@@ -28,7 +28,7 @@ const MyComponent = () => {
     <div className='mx-auto flex w-full'>
       {isScreenMd ? (
         <>
-          <div>
+          <div id="products">
             <Image src='/photo2.jpg' alt='human work' width={950} height={200} />
           </div>
           <div className='flex flex-1 flex-col items-center justify-center space-y-5 bg-gray-100  '>

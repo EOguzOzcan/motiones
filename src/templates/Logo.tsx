@@ -30,7 +30,7 @@ const Logo = (props: ILogoProps) => {
         <rect x="15" y="4" width="6" height="16" rx="1" />
         <path d="M4 20h14" />
       </svg> */}
-      <Image src="/favicon.png" alt='logo' width={size} height={size}  style={{ display: "flex" }} />
+      <Image src="/arcglobalchain.png" alt='logo' width={size} height={size}  style={{ display: "flex",marginRight:"12px" }} />
 
       {AppConfig.site_name}
     </span>
