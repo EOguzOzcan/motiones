@@ -3,8 +3,9 @@ import { AppConfig } from "../utils/AppConfig"
 import { About } from "./About"
 import { Banner } from "./Banner"
 import { BannerRight } from "./BannerRight"
-import { Footer } from "./Footer"
+import { Contact } from "./Contact"
 import { Hero } from "./Hero"
+import { Footer } from "./Footer"
 import { VerticalFeatures } from "./VerticalFeatures"
 
 const Base = () => (
@@ -12,12 +13,13 @@ const Base = () => (
     <Meta title={AppConfig.title} description={AppConfig.description} />
     <Hero />
     <VerticalFeatures />
-		<About/>
+    <About />
     <BannerRight />
     <Banner />
     <div className='bg-gray-100'>
-      <Footer />
+      <Contact />
     </div>
+    <Footer />
   </div>
 )
 
