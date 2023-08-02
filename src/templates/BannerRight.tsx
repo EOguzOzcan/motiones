@@ -25,33 +25,20 @@ const MyComponent = () => {
   }, [])
 
   return (
-    <div className="mx-auto flex w-full">
+    <div className='mx-auto flex w-full'>
       {isScreenMd ? (
         <>
           <div>
-            <Image
-              src="/photo2.jpg"
-              alt="human work"
-              width={950}
-              height={200}
-            />
+            <Image src='/photo2.jpg' alt='human work' width={950} height={200} />
           </div>
-          <div className="flex flex-1 flex-col items-center justify-center space-y-5 bg-gray-100  ">
-            <h1 className="  w-[500px] text-left text-4xl font-light leading-9 text-gray-800">
-              Validate your Business Idea and Reach Product Market Fit
-            </h1>
-            <p className="w-[500px] text-left text-lg  leading-7">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
-              veritatis inventore eum, cupiditate esse debitis consectetur nisi
-              harum. Tempore, assumenda ducimus vero totam labore. Ipsam, eos
-              odit eaque, voluptatum minima, odio eveniet soluta saepe, culpa
-              quo enim omnis iusto. Possimus, at numquam beatae non atque?
-            </p>
-            <div className="flex  w-[500px] items-center">
-              <button className="mr-6 h-12 w-36 rounded-md border-2 border-gray-600 font-semibold">
-                LEARN MORE
-              </button>
-              <button className="h-12 w-36 rounded-md border-2 border-orange-500 bg-orange-500 text-sm font-semibold text-white">
+          <div className='flex flex-1 flex-col items-center justify-center space-y-5 bg-gray-100  '>
+            <h1 className='  w-[500px] text-left text-4xl font-extrabold leading-9 text-gray-700'>PRODUCTS</h1>
+            <p className='w-[500px] text-left text-lg  leading-7'>Sugar</p>
+            <p className='w-[500px] text-left text-lg  leading-7'>Sunflower Oil</p>
+
+            <div className='flex  w-[500px] items-center'>
+              <button className='mr-6 h-12 w-36 rounded-md border-2 border-gray-600 font-semibold'>LEARN MORE</button>
+              <button className='h-12 w-36 rounded-md border-2 border-orange-500 bg-orange-500 text-sm font-semibold text-white'>
                 TRY IT FOR FREE
               </button>
             </div>
@@ -59,22 +46,19 @@ const MyComponent = () => {
         </>
       ) : (
         <>
-          <div className="flex flex-1 flex-col items-center justify-center space-y-5 bg-gray-100 px-5 py-2 md:p-0">
-            <h1 className="  text-left text-4xl font-light leading-9 text-gray-800 ">
+          <div className='flex flex-1 flex-col items-center justify-center space-y-5 bg-gray-100 px-5 py-2 md:p-0'>
+            <h1 className='  text-left text-4xl font-light leading-9 text-gray-800 '>
               Validate your Business Idea and Reach Product Market Fit
             </h1>
-            <p className=" text-left text-lg  leading-7">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
-              veritatis inventore eum, cupiditate esse debitis consectetur nisi
-              harum. Tempore, assumenda ducimus vero totam labore. Ipsam, eos
-              odit eaque, voluptatum minima, odio eveniet soluta saepe, culpa
-              quo enim omnis iusto. Possimus, at numquam beatae non atque?
+            <p className=' text-left text-lg  leading-7'>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere veritatis inventore eum, cupiditate esse
+              debitis consectetur nisi harum. Tempore, assumenda ducimus vero totam labore. Ipsam, eos odit eaque,
+              voluptatum minima, odio eveniet soluta saepe, culpa quo enim omnis iusto. Possimus, at numquam beatae non
+              atque?
             </p>
-            <div className="  flex items-center">
-              <button className="mr-6 h-12 w-36 rounded-md border-2 border-gray-600 font-semibold">
-                LEARN MORE
-              </button>
-              <button className="h-12 w-36 rounded-md border-2 border-orange-500 bg-orange-500 text-sm font-semibold text-white">
+            <div className='  flex items-center'>
+              <button className='mr-6 h-12 w-36 rounded-md border-2 border-gray-600 font-semibold'>LEARN MORE</button>
+              <button className='h-12 w-36 rounded-md border-2 border-orange-500 bg-orange-500 text-sm font-semibold text-white'>
                 TRY IT FOR FREE
               </button>
             </div>
