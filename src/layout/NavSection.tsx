@@ -24,7 +24,7 @@ const NavSection = (props: ISectionProps) => {
 
   return (
     <div
-      className={`fixed top-0 mx-auto w-full ${
+      className={`fixed top-0 mx-auto w-full z-20 ${
         props.yPadding ? props.yPadding : ""
       } ${scrollBg}`}
     >

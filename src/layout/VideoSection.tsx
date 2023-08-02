@@ -9,7 +9,7 @@ type ISectionProps = {
 
 const VideoSection = (props: ISectionProps) => (
   <div
-    className={`mx-auto flex  w-full justify-center object-cover  ${
+    className={`mx-auto flex relative  w-full justify-center object-cover  ${
       props.yPadding ? props.yPadding : ""
     }`}
   >

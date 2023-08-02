@@ -17,7 +17,7 @@ const Footer = () => {
 
   return (
     <FooterSection>
-      <div className='flex flex-col text-center text-gray-800'>
+      <div className='flex flex-col text-center text-gray-800' id="footer">
         <div className='my-12 self-end'>
           <div className='flex flex-row '>
             <div className='relative '>
