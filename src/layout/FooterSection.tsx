@@ -8,7 +8,7 @@ type ISectionProps = {
 }
 
 const FooterSection = (props: ISectionProps) => (
-  <div className={"mx-auto max-w-screen-lg px-3"}>
+  <div className={"mx-auto max-w-screen-xl px-3"}>
     {(props.title || props.description) && (
       <div className='mb-12 text-center'>
         {props.title && <h2 className='text-4xl font-bold text-gray-900'>{props.title}</h2>}
