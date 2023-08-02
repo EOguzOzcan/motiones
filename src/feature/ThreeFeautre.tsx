@@ -13,7 +13,7 @@ const ThreeFeature = (props: IVerticalFeatureRowProps) => {
 
 
 	return (
-		<div className="card flex flex-col justify-center items-center w-96 space-y-4 text-center mt-6 md:mt-0">
+		<div className="card flex flex-col justify-start items-center h-96 w-96 space-y-4 text-center mt-6 md:mt-0">
 			<div>
 				<Image
 					src={props.image}
@@ -22,7 +22,7 @@ const ThreeFeature = (props: IVerticalFeatureRowProps) => {
 					height={100}
 				/>
 			</div>
-			<div>
+			<div >
 				<h2 className='font-medium text-3xl'>{props.title}</h2>
 			</div>
 			<div>

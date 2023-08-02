@@ -9,22 +9,28 @@ const VerticalFeatures = () => (
   >
     <div className="flex w-full flex-col items-center space-x-0 px-5 md:flex-row md:space-x-20 md:px-0">
       <ThreeFeature
-        title="Responsive Layout"
-        description="Optio dolores expedita unde vel laudantium enim nisi eos distinctio, rem. Repellat repudiandae quos laborum magni."
-        image="/responsive.svg"
-        imageAlt="Responsive Layout"
+        title="Reliability"
+        description="With a market of flooded with unreliable suppliers and joker brokers, we promise to make sure that rain or shine you can count on us to provide you with the best quality products."
+        image="/trust.svg"
+        imageAlt="Reliability"
       />
       <ThreeFeature
-        title="Easy to Customize"
-        description="Praesentium reprehenderit quae, sequi deserunt laboriosam velit necessitatibus nulla ea optio, quis nam pariatur."
-        image="/website.svg"
-        imageAlt="Responsive Layout"
+        title="Speed"
+        description="We pride ourselves on speedy communication. If you have a question, we will respond within minutes."
+        image="/speed.svg"
+        imageAlt="Speed"
       />
       <ThreeFeature
-        title="Fully Documented"
-        description="Aperiam recusandae ipsa culpa, cupiditate magnam dolor molestiae, omnis, architecto possimus aperiam corrupti corporis."
-        image="/document.svg"
-        imageAlt="Responsive Layout"
+        title="Best Prices"
+        description="We invest in optimising our operations so every part of the process is as efficient as possible. This allows us to continuously get you better and better prices with no chance of a reduction in quality."
+        image="/price.svg"
+        imageAlt="Best Prices"
+      />
+      <ThreeFeature
+        title="Direct"
+        description="Tired of working with a chain of joker brokers? We work direct with suppliers to ensure efficient communication and the best prices."
+        image="/direct.svg"
+        imageAlt="Direct"
       />
     </div>
     {/* <VerticalFeatureRow

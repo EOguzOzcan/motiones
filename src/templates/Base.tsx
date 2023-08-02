@@ -1,5 +1,6 @@
 import { Meta } from "../layout/Meta"
 import { AppConfig } from "../utils/AppConfig"
+import { About } from "./About"
 import { Banner } from "./Banner"
 import { BannerRight } from "./BannerRight"
 import { Footer } from "./Footer"
@@ -11,7 +12,7 @@ const Base = () => (
     <Meta title={AppConfig.title} description={AppConfig.description} />
     <Hero />
     <VerticalFeatures />
-    <Banner />
+		<About/>
     <BannerRight />
     <Banner />
     <div className='bg-gray-100'>
