@@ -31,19 +31,19 @@ const Hero = () => {
 	return (
 		<Background color="bg-gray-100 ">
 			<VideoSection>
-			<div className=' black-overlay z-1'></div>
+			<div className=' md:black-overlay z-1'></div>
 				<VideoBackground />
 				<div className='absolute top-[50%] left-[50%] z-10 ' style={{"transform":"translate(-50%, -55%)"}}>
 					<div className='text-white flex flex-col justify-center items-center gap-y-8 w-[800px] text-center'>
 					<h2 className='text-3xl'>
-					We Are Creative
+					Providing the finest commodity
 					</h2>
-					<h1 className='text-5xl font-bold'>The Best Digital Experience</h1>
+					<h1 className='text-5xl font-bold'>The right price, the right time</h1>
 					<p className='text-lg font-base'>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 					</p>
 					<div className='flex gap-x-4'>
-					<button className="h-12 w-36 rounded-md border-2 border-red-700 bg-red-700 text-sm font-semibold text-white shadow-md">
+					<button className="h-12 w-36 rounded-md border-2 border-orange-500 bg-orange-500 text-sm font-semibold text-white shadow-md">
                Get Started
               </button>
 							<button className="h-12 w-36 rounded-md border-2 border-white-700  text-sm font-semibold text-white">
@@ -57,7 +57,7 @@ const Hero = () => {
 					<NavbarTwoColumns logo={<Logo  />}>
 
 						<li  className="w-24 h-10  flex items-center justify-center rounded-md text-white text-base    hover:text-white transition-all ease-in-out cursor-pointer">
-						<ScrollLink to="footer" smooth={true} duration={1000}>
+						<ScrollLink offset={-150} to="about" smooth={true} duration={1000}>
 							About
 						</ScrollLink>
 						</li>

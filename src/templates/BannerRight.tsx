@@ -51,7 +51,7 @@ const MyComponent = () => {
               <button className="mr-6 h-12 w-36 rounded-md border-2 border-gray-600 font-semibold">
                 LEARN MORE
               </button>
-              <button className="h-12 w-36 rounded-md border-2 border-red-700 bg-red-700 text-sm font-semibold text-white">
+              <button className="h-12 w-36 rounded-md border-2 border-orange-500 bg-orange-500 text-sm font-semibold text-white">
                 TRY IT FOR FREE
               </button>
             </div>
@@ -74,7 +74,7 @@ const MyComponent = () => {
               <button className="mr-6 h-12 w-36 rounded-md border-2 border-gray-600 font-semibold">
                 LEARN MORE
               </button>
-              <button className="h-12 w-36 rounded-md border-2 border-red-700 bg-red-700 text-sm font-semibold text-white">
+              <button className="h-12 w-36 rounded-md border-2 border-orange-500 bg-orange-500 text-sm font-semibold text-white">
                 TRY IT FOR FREE
               </button>
             </div>

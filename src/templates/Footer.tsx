@@ -25,13 +25,13 @@ const Footer = () => {
                 type='text'
                 id='hs-leading-icon'
                 name='hs-leading-icon'
-                className='py-3 px-4 pl-11 block w-full border-2 border-red-700 shadow-sm rounded-l-lg text-lg placeholder:text-gray-800 focus:z-10 focus:border-blue-500 focus:ring-blue-500 bg-gray-100'
+                className='py-3 px-4 pl-11 block w-full border-2 border-orange-500 shadow-sm rounded-l-lg text-lg placeholder:text-gray-800 focus:z-10 focus:border-blue-500 focus:ring-blue-500 bg-gray-100'
                 placeholder='Please enter your email'
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <button
-              className='py-3 px-4 block rounded-r-lg border-red-700 bg-red-700 text-sm font-semibold text-white'
+              className='py-3 px-4 block rounded-r-lg border-orange-500 bg-orange-500 text-sm font-semibold text-white'
               onClick={handleSendEmail}
             >
               Subscribe
