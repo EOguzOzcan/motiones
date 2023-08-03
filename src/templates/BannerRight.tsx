@@ -28,11 +28,11 @@ const MyComponent = () => {
     <div className='mx-auto flex w-full'>
       {isScreenMd ? (
         <>
-          <div id="products">
+          <div id='products'>
             <Image src='/photo2.jpg' alt='human work' width={950} height={200} />
           </div>
           <div className='flex flex-1 flex-col items-center justify-center space-y-5 bg-gray-100  '>
-            <h1 className='  w-[500px] text-left text-4xl font-extrabold leading-9 text-gray-700'>PRODUCTS</h1>
+            <h1 className='  w-[500px] text-left text-4xl font-normal leading-9 text-gray-700'>PRODUCTS</h1>
             <p className='w-[500px] text-left text-lg  leading-7'>Sugar</p>
             <p className='w-[500px] text-left text-lg  leading-7'>Sunflower Oil</p>
 

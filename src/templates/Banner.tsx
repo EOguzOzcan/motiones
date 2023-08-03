@@ -29,7 +29,7 @@ const MyComponent = () => {
       {isScreenMd ? (
         <>
           <div className='flex flex-1 flex-col items-center justify-center space-y-5 bg-gray-100  '>
-            <h4 className=' ml-60 w-[500px] text-left text-4xl font-extrabold leading-9 text-gray-700'>OUR PROMISES</h4>
+            <h4 className=' ml-60 w-[500px] text-left text-4xl font-normal leading-9 text-gray-700'>OUR PROMISES</h4>
             <p className='ml-60 w-[500px] text-left text-lg  leading-7'>
               <span className='text-orange-500'>Reliability: </span>
               With a market of flooded with unreliable suppliers and joker brokers, we promise to make sure that rain or
