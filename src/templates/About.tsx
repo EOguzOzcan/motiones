@@ -51,18 +51,18 @@ const MyComponent = () => {
      <>
 		    <div className="flex flex-1 py-5  flex-col items-center justify-center space-y-5 bg-gray-100 ">
 			
-			<div id="about" className=" ">
-		<div className="mb-12 flex flex-col gap-y-5  ">
-		<h1 className="  w-[600px] text-left text-5xl font-light leading-9 text-gray-800">About <span className="font-semibold text-orange-500">ARC Global Chain</span></h1>
-		<p className=" w-[600px] text-left text-md  leading-7 mb-12">
+			<div  >
+		<div className="mb-0 flex flex-col gap-y-5  ">
+		<h1 className="  w-[600px] text-left text-4xl font-light leading-9 text-gray-800 mb-5">About <span className="font-semibold text-orange-500">ARC Global Chain</span></h1>
+		<p className=" w-[600px] ml-24 text-left text-3xl  leading-7 mb-12">
 		ARC Global Chain is established by ATG & Ruha Yağ Rafineri A.Ş.to provide the finest quality sugar and sunflower oil commodity products.
 		</p>
 		</div>
 				{/* <h1 className=" ml-60 w-[600px] text-left text-3xl  leading-9 text-gray-600 font-semibold">
 				Our Value Offer 
 				</h1> */}
-				<p className="ml-60 w-[600px] text-left text-md  leading-7 mt-2">
-				Our vision is to achieve sustainable leadership in the wholesale sunflower oil and sugar industry. We aim to be a business that adds value to our customers and business partners, benefits society, and demonstrates environmental responsibility. Our mission is to become a leading brand in the industry by continuously providing our customers with quality, trust, and satisfaction.
+				<p className="ml-48 w-[600px] text-left text-2xl  leading-7 ">
+				Our vision is to achieve sustainable leadership in the wholesale sunflower oil and sugar industry. We aim to be a business that adds value to our customers and business partners, benefits society, and demonstrates environmental responsibility.
 				</p>
 		
 			

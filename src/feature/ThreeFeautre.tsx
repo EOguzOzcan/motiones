@@ -26,7 +26,7 @@ const ThreeFeature = (props: IVerticalFeatureRowProps) => {
 				<h2 className='font-medium text-3xl'>{props.title}</h2>
 			</div>
 			<div>
-				<p className='text-lg px-2 md:px-0'>{props.description}</p>
+				<p className='px-2 md:px-0 text-xl'>{props.description}</p>
 			</div>
 		</div>
 	)
