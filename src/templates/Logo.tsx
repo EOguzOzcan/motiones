@@ -6,7 +6,7 @@ type ILogoProps = {
 };
 
 const Logo = (props: ILogoProps) => {
-  const size = props.xl ? "44" : "32"
+  const size = props.xl ? "44" : "48"
   const fontStyle = props.xl
     ? "font-semibold text-3xl"
     : "font-semibold text-xl"
