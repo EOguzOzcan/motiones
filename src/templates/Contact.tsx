@@ -29,10 +29,10 @@ const Contact = () => {
   return (
     <FooterSection>
       <div className='bg-gray-100  p-4'>
-        <div className='grid sm:grid-cols-2 grid-cols-1 '>
+        <div className='grid sm:grid-cols-2 grid-cols-1 mt-10 '>
           <div className=' grid grid-rows-5'>
             <h4 className='text-4xl font-normal text-orange-500'>Get In Touch</h4>
-            <div className='row-span-4 grid grid-cols-6 '>
+            <div className='row-span-4 grid grid-cols-6 mt-10 '>
               <div className='col-span-3  '>
                 <h2 className='text-2xl text-gray-800'>
                   Let's <span className='font-normal text-orange-500'>Contact</span> Us
@@ -53,7 +53,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className='mt-5'>
+          <div className=''>
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className='mb-4'>
                 <input
