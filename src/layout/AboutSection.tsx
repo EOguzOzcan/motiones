@@ -1,26 +1,18 @@
 import type { ReactNode } from "react"
 
 type ISectionProps = {
-  title?: string;
-  description?: string;
-  yPadding?: string;
-  children: ReactNode;
-};
+  title?: string
+  description?: string
+  yPadding?: string
+  children: ReactNode
+}
 
 const AboutSection = (props: ISectionProps) => (
-  <div
-    className={`mx-auto flex w-full ${
-      props.yPadding ? props.yPadding : "py-16"
-    }`}
-  >
+  <div className={`mx-auto flex w-full ${props.yPadding ? props.yPadding : "py-8"}`}>
     {(props.title || props.description) && (
-      <div className="mb-12 text-center">
-        {props.title && (
-          <h2 className="text-5xl font-normal text-gray-700">{props.title}</h2>
-        )}
-        {props.description && (
-          <div className="mt-4 text-xl md:px-20">{props.description}</div>
-        )}
+      <div className='mb-12 text-center'>
+        {props.title && <h2 className='text-5xl font-normal text-gray-700'>{props.title}</h2>}
+        {props.description && <div className='mt-4 text-xl md:px-20'>{props.description}</div>}
       </div>
     )}
 

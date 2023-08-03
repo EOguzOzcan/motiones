@@ -32,23 +32,23 @@ const Contact = () => {
         <div className='grid sm:grid-cols-2 grid-cols-1 '>
           <div>
             <div className='mb-5'>
-              <h4 className='text-4xl font-extrabold text-orange-500'>Get In Touch</h4>
+              <h4 className='text-4xl font-normal text-orange-500'>Get In Touch</h4>
               <h2 className='text-2xl text-gray-800'>
-                Let's <span className='font-extrabold text-orange-500'>Contact</span> Us
+                Let's <span className='font-normal text-orange-500'>Contact</span> Us
               </h2>
               <p className='text-lg text-gray-800'>Let Us Know How We Can Help Your Business Succeed</p>
             </div>
 
             <div className='mt-5'>
               <div>
-                <span className='font-extrabold text-orange-500'>Email:</span> info@arcglobalchain.com
+                <span className='font-normal text-orange-500'>Email:</span> info@arcglobalchain.com
               </div>
               <div>
-                <span className='font-extrabold text-orange-500'>Location:</span> Başarı Sk. No:3/3, Bakırköy, İstanbul,
+                <span className='font-normal text-orange-500'>Location:</span> Başarı Sk. No:3/3, Bakırköy, İstanbul,
                 Turkey
               </div>
               <div>
-                <span className='font-extrabold text-orange-500'>Tel No:</span> +90 (212) 660 8457
+                <span className='font-normal text-orange-500'>Tel No:</span> +90 (212) 660 8457
               </div>
             </div>
           </div>
