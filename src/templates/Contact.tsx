@@ -30,29 +30,30 @@ const Contact = () => {
     <FooterSection>
       <div className='bg-gray-100  p-4'>
         <div className='grid sm:grid-cols-2 grid-cols-1 '>
-          <div>
-            <div className='mb-5'>
-              <h4 className='text-4xl font-normal text-orange-500'>Get In Touch</h4>
-              <h2 className='text-2xl text-gray-800'>
-                Let's <span className='font-normal text-orange-500'>Contact</span> Us
-              </h2>
-              <p className='text-lg text-gray-800'>Let Us Know How We Can Help Your Business Succeed</p>
-            </div>
-
-            <div className='mt-5'>
-              <div>
-                <span className='font-normal text-orange-500'>Email:</span> info@arcglobalchain.com
+          <div className=' grid grid-rows-5'>
+            <h4 className='text-4xl font-normal text-orange-500'>Get In Touch</h4>
+            <div className='row-span-4 grid grid-cols-6 '>
+              <div className='col-span-3  '>
+                <h2 className='text-2xl text-gray-800'>
+                  Let's <span className='font-normal text-orange-500'>Contact</span> Us
+                </h2>
+                <p className='text-lg text-gray-800'>Let Us Know How We Can Help Your Business Succeed</p>
               </div>
-              <div>
-                <span className='font-normal text-orange-500'>Location:</span> Başarı Sk. No:3/3, Bakırköy, İstanbul,
-                Turkey
-              </div>
-              <div>
-                <span className='font-normal text-orange-500'>Tel No:</span> +90 (212) 660 8457
+              <div className='col-span-2'>
+                <div>
+                  <span className='font-normal text-orange-500'>Email:</span> info@arcglobalchain.com
+                </div>
+                <div>
+                  <span className='font-normal text-orange-500'>Location:</span> Başarı Sk. No:3/3, Bakırköy, İstanbul,
+                  Turkey
+                </div>
+                <div>
+                  <span className='font-normal text-orange-500'>Tel No:</span> +90 (212) 660 8457
+                </div>
               </div>
             </div>
           </div>
-          <div className='mt-4'>
+          <div className='mt-5'>
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className='mb-4'>
                 <input

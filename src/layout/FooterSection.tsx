@@ -8,16 +8,7 @@ type ISectionProps = {
 }
 
 const FooterSection = (props: ISectionProps) => (
-  <div className={"mx-auto max-w-screen-xl px-3"}>
-    {(props.title || props.description) && (
-      <div className='mb-12 text-center'>
-        {props.title && <h2 className='text-4xl font-bold text-gray-900'>{props.title}</h2>}
-        {props.description && <div className='mt-4 text-xl md:px-20'>{props.description}</div>}
-      </div>
-    )}
-
-    {props.children}
-  </div>
+  <div className='flex flex-1 flex-col items-center justify-center space-y-5 bg-gray-100'>{props.children}</div>
 )
 
 export { FooterSection }
