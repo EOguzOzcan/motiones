@@ -1,58 +1,114 @@
-import { ThreeFeature } from "@/feature/ThreeFeautre"
+import React from "react"
 
-import { Section } from "../layout/Section"
+import {
+  createStyles,
+  Title,
+  SimpleGrid,
+  Text,
+  Button,
+  ThemeIcon,
+  Grid,
+  Col,
+  rem,
+} from '@mantine/core';
+import { IconReceiptOff, IconFlame, IconCircleDotted, IconFileCode } from '@tabler/icons-react';
 
-const VerticalFeatures = () => (
-  <Section
-    title="Providing the finest agro commodities"
-    description="With over 12 years of extensive experience in international commodity trading"
-  >
-    <div className="flex w-full flex-col items-center justify-between space-x-0 px-5 md:flex-row  gap-x-24 md:px-0">
-      <ThreeFeature
-        title="Reliability"
-        description="With a market of flooded with unreliable suppliers, we promise to provide you the best quality products."
-        image="/trust.svg"
-        imageAlt="Reliability"
-      />
-      <ThreeFeature
-        title="Speed"
-        description="We pride ourselves on speedy communication. If you have a question, we will respond within minutes."
-        image="/speed.svg"
-        imageAlt="Speed"
-      />
-      <ThreeFeature
-        title="Best Prices"
-        description="We invest in optimising our operations so every part of the process is as efficient as possible."
-        image="/price.svg"
-        imageAlt="Best Prices"
-      />
-      <ThreeFeature
-        title="Direct"
-        description="We work directly with suppliers and manufacturers to ensure efficient communication and the best prices."
-        image="/direct.svg"
-        imageAlt="Direct"
-      />
+const useStyles = createStyles((theme) => ({
+  wrapper: {
+    padding: `calc(${theme.spacing.xl} * 2)`,
+  },
+
+  title: {
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontSize: rem(36),
+    fontWeight: 900,
+    lineHeight: 1.1,
+    marginBottom: theme.spacing.md,
+    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+  },
+}));
+
+const features = [
+  {
+    icon: IconReceiptOff,
+    title: 'Uncompromising Quality',
+    description: 'We believe in offering products that meet the highest quality standards. Our sugar and sunflower oil products undergo rigorous testing and inspection to ensure they exceed your expectations.',
+  },
+  {
+    icon: IconFileCode,
+    title: 'Competitive Pricing',
+    description: 'We understand the value of affordability in a competitive market. Our prices are designed to give your business the edge it needs without compromising on quality.',
+  },
+  {
+    icon: IconCircleDotted,
+    title: 'Reliable Supply',
+    description:
+      'With ARC Global Chain, you can count on a steady and dependable supply. Say goodbye to stock shortages and focus on growing your business with confidence.',
+  },
+  {
+    icon: IconFlame,
+    title: 'Exceptional Customer Service',
+    description:
+      'Your satisfaction is our priority. Our dedicated support team is always ready to assist you with any queries or concerns, providing a seamless experience every step of the way.',
+  },
+];
+
+
+
+const VerticalFeatures = () => {
+  const { classes } = useStyles();
+
+  const items = features.map((feature) => (
+    <div key={feature.title}>
+      <ThemeIcon
+        size={44}
+        radius="md"
+        variant="gradient"
+        gradient={{ deg: 133, from: 'blue', to: 'cyan' }}
+      >
+        <feature.icon size={rem(26)} stroke={1.5} />
+      </ThemeIcon>
+      <Text fz="lg" mt="sm" fw={500}>
+        {feature.title}
+      </Text>
+      <Text c="dimmed" fz="sm">
+        {feature.description}
+      </Text>
     </div>
-    {/* <VerticalFeatureRow
-      title="Your title here"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
-      image="/assets/images/feature.svg"
-      imageAlt="First feature alt text"
-    />
-    <VerticalFeatureRow
-      title="Your title here"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
-      image="/assets/images/feature2.svg"
-      imageAlt="Second feature alt text"
-      reverse
-    />
-    <VerticalFeatureRow
-      title="Your title here"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
-      image="/assets/images/feature3.svg"
-      imageAlt="Third feature alt text"
-    /> */}
-  </Section>
-)
+  ));
+
+
+	return(
+		<div className={`${classes.wrapper} my-16 mx-12`}>
+	<Grid gutter={80}>
+		<Col span={12} md={5}>
+			<Title className={classes.title} order={2}>
+				A fully featured React components library for your next project
+			</Title>
+			<Text c="dimmed">
+				Build fully functional accessible web applications faster than ever – Mantine includes
+				more than 120 customizable components and hooks to cover you in any situation
+			</Text>
+
+			<Button
+				variant="gradient"
+				gradient={{ deg: 133, from: 'blue', to: 'cyan' }}
+				size="lg"
+				radius="md"
+				mt="xl"
+			>
+				Get started
+			</Button>
+		</Col>
+		<Col span={12} md={7}>
+			<SimpleGrid cols={2} spacing={30} breakpoints={[{ maxWidth: 'md', cols: 1 }]}>
+				{items}
+			</SimpleGrid>
+		</Col>
+	</Grid>
+</div>
+	)
+ 
+}
 
 export { VerticalFeatures }

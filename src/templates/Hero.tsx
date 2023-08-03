@@ -3,30 +3,103 @@
 import {Background} from '../background/Background'
 import {NavbarTwoColumns} from '../navigation/NavbarTwoColumns'
 import {Logo} from './Logo'
-import {VideoSection} from '@/layout/VideoSection'
 import {NavSection} from '@/layout/NavSection'
 import { Link as ScrollLink } from 'react-scroll';
 import { useEffect, useState } from 'react'
-const VideoBackground = () => {
+
+import { createStyles, Container, Title, Text, Button, rem } from '@mantine/core';
+const useStyles = createStyles((theme) => ({
+  root: {
+    backgroundColor: '#11284b',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundImage:
+      'linear-gradient(250deg, rgba(130, 201, 30, 0) 0%, #062343 70%), url(/sunflower.jpg)',
+    paddingTop: `calc(${theme.spacing.xl} * 3)`,
+    paddingBottom: `calc(${theme.spacing.xl} * 3)`,
+  },
+
+  inner: {
+    display: 'flex',
+    justifyContent: 'space-between',
+
+    [theme.fn.smallerThan('md')]: {
+      flexDirection: 'column',
+    },
+  },
+
+  image: {
+    [theme.fn.smallerThan('md')]: {
+      display: 'none',
+    },
+  },
+
+  content: {
+    paddingTop: `calc(${theme.spacing.xl} * 2)`,
+    paddingBottom: `calc(${theme.spacing.xl} * 2)`,
+    marginRight: `calc(${theme.spacing.xl} * 3)`,
+
+    [theme.fn.smallerThan('md')]: {
+      marginRight: 0,
+    },
+  },
+
+  title: {
+    color: theme.white,
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontWeight: 900,
+    lineHeight: 1.05,
+    maxWidth: rem(600),
+    fontSize: rem(48),
+
+    [theme.fn.smallerThan('md')]: {
+      maxWidth: '100%',
+      fontSize: rem(34),
+      lineHeight: 1.15,
+    },
+  },
+
+  description: {
+    color: theme.white,
+    opacity: 0.75,
+    maxWidth: rem(500),
+
+    [theme.fn.smallerThan('md')]: {
+      maxWidth: '100%',
+    },
+  },
+
+  control: {
+    paddingLeft: rem(50),
+    paddingRight: rem(50),
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontSize: rem(22),
+
+    [theme.fn.smallerThan('md')]: {
+      width: '100%',
+    },
+  },
+}));
+// const VideoBackground = () => {
 
 
-	return (
-		<div className='youtube-container'>
+// 	return (
+// 		<div className='youtube-container'>
 
-		<iframe
-		className='opacity-90'
-			src="https://www.youtube-nocookie.com/embed/QKduOuB4Yyc?controls=0&autoplay=1&mute=1&loop=1&showInfo=0&loop=1&color=white&controls=0&modestbranding=1&playsinline=1&rel=0&enablejsapi=1&playlist=QKduOuB4Yyc"
-			title="YouTube video player"
-			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-			allowFullScreen
-			>
+// 		<iframe
+// 		className='opacity-90'
+// 			src="https://www.youtube-nocookie.com/embed/QKduOuB4Yyc?controls=0&autoplay=1&mute=1&loop=1&showInfo=0&loop=1&color=white&controls=0&modestbranding=1&playsinline=1&rel=0&enablejsapi=1&playlist=QKduOuB4Yyc"
+// 			title="YouTube video player"
+// 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+// 			allowFullScreen
+// 			>
 			
 
-			</iframe>
+// 			</iframe>
 			
-			</div>
-	)
-}
+// 			</div>
+// 	)
+// }
 
 
 const Hero = () => {
@@ -51,29 +124,44 @@ const Hero = () => {
   }, [])
 
 
-
+	const { classes } = useStyles();
 
 	return (
 		<Background color="bg-gray-100 ">
-			<VideoSection>
+		
 			<div className=' md:black-overlay z-1'></div>
-				<VideoBackground />
-				<div className='absolute top-[50%] left-[50%] z-10 ' style={{"transform":"translate(-50%, -55%)"}}>
-					<div className='text-white flex flex-col justify-center items-center gap-y-8 w-[800px] text-center'>
-					<h2 className='text-xl  md:text-3xl'>
-					Sugar and Sunflower Oil
-					
-					</h2>
-					<h1 className='text-2xl md:text-5xl font-bold'>Providing the finest commodity</h1>
-					{/* <p className='text-lg font-base'>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-					</p> */}
-				<h2 className='text-xl  md:text-3xl'>
-				The right price, the right time
-					</h2>
-					</div>
-				</div>
+			
+				
+ 
+    <div className={classes.root}>
+      <Container size="lg">
+        <div className={classes.inner}>
+          <div className={classes.content}>
+            <Title className={classes.title}>
+						Your Trusted Source for Sugar and Sunflower Oil
+             
+            </Title>
 
+            <Text className={`${classes.description} text-2xl`} mt={30}>
+						Providing the finest Commodity
+            </Text>
+            <Text  className={`${classes.description} text-xl`} mt={30}>
+						Right Product, Right Price, Right Time
+            </Text>
+
+            <Button
+              variant="gradient"
+              gradient={{ from: 'pink', to: 'yellow' }}
+              size="xl"
+              className={`${classes.control} bg-orange-500`}
+              mt={40}
+            >
+              Get started
+            </Button>
+          </div>
+        </div>
+      </Container>
+    </div>
 				{isScreenMd && (
 					<NavSection yPadding="py-6" >
 					<NavbarTwoColumns logo={<Logo  />}>
@@ -97,7 +185,7 @@ const Hero = () => {
 					</NavbarTwoColumns>
 				</NavSection>
 				)}
-			</VideoSection>
+			
 		</Background>
 	)
 }

@@ -7,7 +7,8 @@
 .youtube-container {
 	overflow: hidden;
 	width: 100%;
-	aspect-ratio: 16/9;
+	height: 100%;
+
 
 	
 
@@ -28,4 +29,14 @@
 		width: 99vw;
 		z-index: 5;
 		background-color: rgba(0, 0, 0, 0.2); /* Siyah ekranın şeffaflığı */
+	}
+
+
+	.bg-vid {
+		object-fit: cover;
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
 	}
