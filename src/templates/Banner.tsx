@@ -29,29 +29,27 @@ const MyComponent = () => {
       {isScreenMd ? (
         <>
           <div className='flex flex-1 flex-col items-center justify-center space-y-5 bg-gray-100  '>
-            <h4 className=' ml-60 w-[500px] text-left text-4xl font-extrabold leading-9 text-gray-700'>OUR PROMISES</h4>
-            <p className='ml-60 w-[500px] text-left text-lg  leading-7'>
-              <span className='text-orange-500'>Reliability: </span>
-              With a market of flooded with unreliable suppliers and joker brokers, we promise to make sure that rain or
-              shine you can count on us to provide you with the best quality products.
-            </p>
-            <p className='ml-60 w-[500px] text-left text-lg  leading-7'>
-              <span className='text-orange-500'>Speed: </span>
-              We pride ourselves on speedy communication. If you have a question, we will respond within minutes.
-            </p>
-            <p className='ml-60 w-[500px] text-left text-lg  leading-7'>
-              <span className='text-orange-500'>Best Prices: </span>
-              We invest in optimising our operations so every part of the process is as efficient as possible. This
-              allows us to continuously get you better and better prices with no chance of a reduction in quality.
-            </p>
-            <p className='ml-60 w-[500px] text-left text-lg  leading-7'>
-              <span className='text-orange-500'>Direct: </span>
-              Tired of working with a chain of joker brokers? We work direct with suppliers to ensure efficient
-              communication and the best prices
-            </p>
+            <h4 className='  w-[600px] text-left text-4xl font-extrabold leading-9 text-gray-700'>Sugar</h4>
+         
+          	<ul className=" flex flex-col gap-y-2 list-disc">
+
+<li className='w-[500px] text-left text-lg  leading-7 '>Obtained from natural and pure sunflowers.</li>
+
+<li className='w-[500px] text-left text-lg  leading-7'>High nutritional value and natural fatty acids.</li>
+
+<li className='w-[500px] text-left text-lg  leading-7'>Suitable for a healthy diet.</li>
+
+<li className='w-[500px] text-left text-lg  leading-7'>Available in various packaging sizes to cater to customer preferences.</li>
+
+</ul>
+<div className='flex  w-[500px] items-center'>
+              <button className='h-12 w-36 rounded-md border-2 border-orange-500 bg-orange-500 text-sm font-semibold text-white'>
+                Speficitions
+              </button>
+            </div>
           </div>
           <div>
-            <Image src='/photo1.jpg' alt='human work' width={950} height={200} style={{ display: "flex" }} />
+            <Image src='/left.png' alt='human work' width={950} height={200} style={{ display: "flex" }} />
           </div>
         </>
       ) : (

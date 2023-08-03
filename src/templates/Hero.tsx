@@ -1,4 +1,4 @@
-import Link from 'next/link'
+// import Link from 'next/link'
 
 import {Background} from '../background/Background'
 import {NavbarTwoColumns} from '../navigation/NavbarTwoColumns'
@@ -61,20 +61,16 @@ const Hero = () => {
 				<div className='absolute top-[50%] left-[50%] z-10 ' style={{"transform":"translate(-50%, -55%)"}}>
 					<div className='text-white flex flex-col justify-center items-center gap-y-8 w-[800px] text-center'>
 					<h2 className='text-xl  md:text-3xl'>
-					Providing the finest commodity
+					Sugar and Sunflower Oil
+					
 					</h2>
-					<h1 className='text-2xl md:text-5xl font-bold'>The right price, the right time</h1>
+					<h1 className='text-2xl md:text-5xl font-bold'>Providing the finest commodity</h1>
 					{/* <p className='text-lg font-base'>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 					</p> */}
-					<div className='flex gap-x-4'>
-					<button className="h-8 w-24 md:h-12 md:w-36  rounded-md border-2 border-orange-500 bg-orange-500 text-sm font-semibold text-white shadow-md">
-               Get Started
-              </button>
-							<button className="h-8 w-24 md:h-12 md:w-36 rounded-md border-2 border-white-700  text-sm font-semibold text-white">
-               View Work
-              </button>
-					</div>
+				<h2 className='text-xl  md:text-3xl'>
+				The right price, the right time
+					</h2>
 					</div>
 				</div>
 
@@ -82,24 +78,22 @@ const Hero = () => {
 					<NavSection yPadding="py-6" >
 					<NavbarTwoColumns logo={<Logo  />}>
 
-						<li  className="w-24 h-10  flex items-center justify-center rounded-md text-white text-base    hover:text-white transition-all ease-in-out cursor-pointer">
+						<li  className="w-24 h-10  flex items-center justify-center rounded-md text-white text-2xl    hover:text-white transition-all ease-in-out cursor-pointer">
 						<ScrollLink offset={-150} to="about" smooth={true} duration={1000}>
 							About 
 						</ScrollLink>
 						</li>
-						<li className="w-32 h-10  flex items-center justify-center rounded-md  text-white   text-base hover:text-white transition-all ease-in-out cursor-pointer">
+						<li className="w-32 h-10  flex items-center justify-center rounded-md  text-white   text-2xl  hover:text-white transition-all ease-in-out cursor-pointer">
 						<ScrollLink offset={-150} to="products" smooth={true} duration={1000}>
 							Products
 							</ScrollLink>
 						</li>
-						<li className="w-32 h-10  flex items-center justify-center rounded-md  text-white  text-base  hover:text-white transition-all ease-in-out cursor-pointer">
+						<li className="w-32 h-10  flex items-center justify-center rounded-md  text-white  text-2xl   hover:text-white transition-all ease-in-out cursor-pointer">
 						<ScrollLink offset={-150} to="contact" smooth={true} duration={1000}>
 							 Contact Us
 							</ScrollLink>
 						</li>
-						<li className="w-32 h-10  flex items-center justify-center rounded-md  text-white  text-base hover:text-white transition-all ease-in-out cursor-pointer">
-							<Link href="/">*****</Link>
-						</li>
+						
 					</NavbarTwoColumns>
 				</NavSection>
 				)}

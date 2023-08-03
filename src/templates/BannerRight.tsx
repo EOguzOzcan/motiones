@@ -28,18 +28,27 @@ const MyComponent = () => {
     <div className='mx-auto flex w-full'>
       {isScreenMd ? (
         <>
-          <div id="products">
-            <Image src='/photo2.jpg' alt='human work' width={950} height={200} />
+          <div id="products" >
+            <Image src='/right.png' alt='human work' width={950} height={200} />
           </div>
           <div className='flex flex-1 flex-col items-center justify-center space-y-5 bg-gray-100  '>
-            <h1 className='  w-[500px] text-left text-4xl font-extrabold leading-9 text-gray-700'>PRODUCTS</h1>
-            <p className='w-[500px] text-left text-lg  leading-7'>Sugar</p>
-            <p className='w-[500px] text-left text-lg  leading-7'>Sunflower Oil</p>
+            <h1 className='  w-[500px] text-left text-4xl font-extrabold leading-9 text-gray-700'>Sunflower Oil Features</h1>
+						<ul className=" flex flex-col gap-y-2 list-disc">
+
+<li className='w-[500px] text-left text-lg  leading-7 '>Obtained from natural and pure sunflowers.</li>
+
+<li className='w-[500px] text-left text-lg  leading-7'>High nutritional value and natural fatty acids.</li>
+
+<li className='w-[500px] text-left text-lg  leading-7'>Suitable for a healthy diet.</li>
+
+<li className='w-[500px] text-left text-lg  leading-7'>Available in various packaging sizes to cater to customer preferences.</li>
+
+</ul>
+            {/* <p className='w-[500px] text-left text-lg  leading-7'>Sunflower Oil</p> */}
 
             <div className='flex  w-[500px] items-center'>
-              <button className='mr-6 h-12 w-36 rounded-md border-2 border-gray-600 font-semibold'>LEARN MORE</button>
               <button className='h-12 w-36 rounded-md border-2 border-orange-500 bg-orange-500 text-sm font-semibold text-white'>
-                TRY IT FOR FREE
+                Speficition
               </button>
             </div>
           </div>

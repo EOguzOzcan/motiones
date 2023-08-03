@@ -1,28 +1,28 @@
 import React, { useEffect, useState } from "react"
 
 import { TwoCardSection } from "@/layout/TwoCardSection"
-import { HiCheck } from "react-icons/hi2";
+import Image from "next/image"
 
-const VideoBackground = () => {
+// const VideoBackground = () => {
 
 
-	return (
-		<div className='youtube-container'>
+// 	return (
+// 		<div className='youtube-container'>
 
-		<iframe
-		className='opacity-90'
-			src="https://www.youtube-nocookie.com/embed/G4Ttm0R44kg?controls=0&autoplay=1&mute=1&loop=1&showInfo=0&loop=1&color=white&controls=0&modestbranding=1&playsinline=1&rel=0&enablejsapi=1&playlist=G4Ttm0R44kg"
-			title="YouTube video player"
-			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-			allowFullScreen
-			>
+// 		<iframe
+// 		className='opacity-90'
+// 			src="https://www.youtube-nocookie.com/embed/G4Ttm0R44kg?controls=0&autoplay=1&mute=1&loop=1&showInfo=0&loop=1&color=white&controls=0&modestbranding=1&playsinline=1&rel=0&enablejsapi=1&playlist=G4Ttm0R44kg"
+// 			title="YouTube video player"
+// 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+// 			allowFullScreen
+// 			>
 			
 
-			</iframe>
+// 			</iframe>
 			
-			</div>
-	)
-}
+// 			</div>
+// 	)
+// }
 
 const MyComponent = () => {
   const [isScreenMd, setIsScreenMd] = useState(false)
@@ -53,45 +53,27 @@ const MyComponent = () => {
 			
 			<div id="about" className=" ">
 		<div className="mb-12 flex flex-col gap-y-5  ">
-		<h1 className="ml-60  w-[500px] text-left text-5xl font-light leading-9 text-gray-800">About <span className="font-semibold text-orange-500">Arc Global Chain</span></h1>
-		<p className="ml-60 w-[600px] text-left text-md  leading-7">
+		<h1 className="  w-[600px] text-left text-5xl font-light leading-9 text-gray-800">About <span className="font-semibold text-orange-500">ARC Global Chain</span></h1>
+		<p className=" w-[600px] text-left text-md  leading-7 mb-12">
 		ARC Global Chain is established by ATG & Ruha Yağ Rafineri A.Ş.to provide the finest quality sugar and sunflower oil commodity products.
 		</p>
 		</div>
-				<h1 className=" ml-60 w-[600px] text-left text-3xl font-light leading-9 text-gray-800">
-				We Are Digital <span className="font-semibold text-orange-500">Marketing & Branding</span>
-				</h1>
-				<p className="ml-60 w-[600px] text-left text-md  leading-7">
-				We pride ourselves in manufacturing and delivering the highest quality commodities. We also make sure all our products undergo accredited independent quality assurance inspection testing.
+				{/* <h1 className=" ml-60 w-[600px] text-left text-3xl  leading-9 text-gray-600 font-semibold">
+				Our Value Offer 
+				</h1> */}
+				<p className="ml-60 w-[600px] text-left text-md  leading-7 mt-2">
+				Our vision is to achieve sustainable leadership in the wholesale sunflower oil and sugar industry. We aim to be a business that adds value to our customers and business partners, benefits society, and demonstrates environmental responsibility. Our mission is to become a leading brand in the industry by continuously providing our customers with quality, trust, and satisfaction.
 				</p>
-				<div className="flex items-center ml-48 justify-around w-[600px]">
-					<div>
-						<ul>
-							<li className="flex items-center gap-x-1 text-lg"><HiCheck size={20} color="orange"/> <span>Creative Design</span></li>
-							<li className="flex items-center gap-x-1 text-lg"><HiCheck size={20} color="orange"/> <span>Retina Ready</span></li>
-							<li className="flex items-center gap-x-1 text-lg"><HiCheck size={20} color="orange"/> <span>Responsive Design</span></li>
-						</ul>
-					</div>
-					<div>
-						<ul>
-						<li className="flex items-center gap-x-1 text-lg"><HiCheck size={20} color="orange"/> <span>Modern Design</span></li>
-							<li className="flex items-center gap-x-1 text-lg"><HiCheck size={20} color="orange"/> <span>Awesome Design</span></li>
-							<li className="flex items-center gap-x-1 text-lg"><HiCheck size={20} color="orange"/> <span>Digital Marketing & Branding</span></li>
-
-						</ul>
-					</div>
-				</div>
-				<div className="ml-60  flex w-[600px]  items-center">
-				
-					<button className="h-12 mt-8 w-36  rounded-md border-2 border-orange-500 bg-orange-500 text-sm font-semibold text-white">
-						READ MORE
-					</button>
-				</div>
+		
+			
 			</div>
 		</div>
-			<div className="w-[900px]  ">
+		<div className="">
+		<Image src='/left.png' className="object-cover" alt='human work' width={950} height={600} />
+		</div>
+			{/* <div className="w-[900px]  ">
 		 <VideoBackground />
-			</div>
+			</div> */}
 		 </>
       ) : (
         <>
