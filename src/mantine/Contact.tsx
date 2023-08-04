@@ -21,7 +21,7 @@ const useStyles = createStyles((theme) => ({
       theme.colors[theme.primaryColor][7]
     } 100%)`,
     padding: `calc(${theme.spacing.xl} * 2.5)`,
-
+    borderRadius: theme.radius.md,
     [theme.fn.smallerThan("sm")]: {
       padding: `calc(${theme.spacing.xl} * 1.5)`
     }
@@ -88,7 +88,7 @@ export function ContactMantine() {
   ))
 
   return (
-    <div className={classes.wrapper}>
+    <div className={`${classes.wrapper} mx-12 my-6`}>
       <SimpleGrid cols={2} spacing={50} breakpoints={[{ maxWidth: "sm", cols: 1 }]}>
         <div>
           <Title className={classes.title}>Join the Ranks of Our Satisfied Clients</Title>
