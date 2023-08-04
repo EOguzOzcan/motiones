@@ -83,11 +83,10 @@ const VerticalFeatures = () => {
 	<Grid gutter={80}>
 		<Col span={12} md={5}>
 			<Title className={`${classes.title} text-2xl md:text-4xl`} order={2}>
-				A fully featured React components library for your next project
+			ARC Global Chain: Your Trusted Partner for Quality, Price, Supply, and Service
 			</Title>
 			<Text c="dimmed">
-				Build fully functional accessible web applications faster than ever – Mantine includes
-				more than 120 customizable components and hooks to cover you in any situation
+			ARC Global Chain is a company that offers high-quality sugar and sunflower oil products at competitive prices. They ensure a reliable supply chain, eliminating stock shortages. Their exceptional customer service makes them a trusted partner, providing a seamless experience for their customers.
 			</Text>
 
 			<Button

@@ -46,9 +46,7 @@ const useStyles = createStyles((theme) => ({
     fontSize: theme.fontSizes.sm,
     fontWeight: 500,
 
-    '&:hover': {
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
-    },
+   
   },
 
   linkLabel: {
@@ -92,7 +90,7 @@ useEffect(() => {
 			mb={120}
 		>
 			<Container className={classes.inner} fluid>
-				<Group className='flex justify-center items-center'>
+				<Group className='flex justify-center items-center cursor-pointer'>
 					<Burger opened={opened} onClick={toggle} className={`${classes.burger}`} color={`${matches ? "black" : "white"}`} size="md" />
 					<Logo />
 				</Group>
@@ -108,7 +106,7 @@ useEffect(() => {
 							</ScrollLink>
 						</li>
 					
-						<li	className={`${classes.link} text-white text-2xl cursor-pointer`}>
+						<li	className={`${classes.link} text-white text-2xl cursor-pointer `}>
 							<ScrollLink offset={-150} to="products" smooth={true} duration={1000}>
 						Products
 					</ScrollLink>

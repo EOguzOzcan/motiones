@@ -4,7 +4,7 @@ import {Background} from '../background/Background'
 
 
 import {useMediaQuery} from '@mantine/hooks'
-import { createStyles, Title, Text, Button, rem } from '@mantine/core';
+import { createStyles, Title, Text, rem } from '@mantine/core';
 const useStyles = createStyles((theme) => ({
   root: {
     backgroundColor: '#11284b',
@@ -123,30 +123,20 @@ const Hero = () => {
 					</video>
 					</div>
 		
-          <div  className={`${classes.content} content `}>
-            <Title className={`${classes.title} text-xl md:text-4xl `}>
+          <div  className={`${classes.content} content flex flex-col items-center justify-center`}>
+            <Title className={`${classes.title} text-xl md:text-5xl `}>
 						Your Trusted Source for Sugar and Sunflower Oil
              
             </Title>
 
-            <Text className={`${classes.description} text-lg md:text-2xl`} mt={30}>
+            <Text className={`${classes.description} text-lg md:text-3xl`} mt={30}>
 						Providing the finest Commodity
             </Text>
-            <Text  className={`${classes.description} text-base md:text-xl`} mt={30}>
+            <Text  className={`${classes.description} text-base md:text-2xl`} mt={30}>
 						Right Product, Right Price, Right Time
             </Text>
 
-            {!matches &&(
-							<Button
-              variant="gradient"
-              gradient={{ from: 'pink', to: 'yellow' }}
-              size="xl"
-              className={`${classes.control} bg-orange-500`}
-              mt={40}
-            >
-              Get started
-            </Button>
-						)}
+          
           </div>
         </div>
      

@@ -120,7 +120,7 @@ const About = () => {
         <Container size="xl" py="xl" className='ml-0' id='about' >
      
 
-      <Title order={2} className={ `${classes.title} text-black mb-8 text-2xl md:text-5xl `} ta="center"  mt="sm">
+      <Title order={2} className={ `${classes.title} text-gray-600 mb-8 text-2xl md:text-5xl `} ta="center"  mt="sm">
         About ARC Global Chain
       </Title>
 
