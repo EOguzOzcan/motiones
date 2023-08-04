@@ -1,4 +1,4 @@
-import { createStyles, Text, Title, Image, rem,Container, } from '@mantine/core';
+import { createStyles, Text, Title, Image, rem,Container } from '@mantine/core';
 
 
 
@@ -38,6 +38,7 @@ const useStyles = createStyles((theme) => ({
       marginTop: theme.spacing.xl,
     },
   },
+
 
   title: {
     fontSize: rem(34),
@@ -134,7 +135,7 @@ const Product2 = () => {
       <Text c="dimmed" ta="center" mt="md" className="-ml-40">
 			Choose us as your partner, and let's sweeten up your business together
       </Text>
-
+		
      
     </Container>
       

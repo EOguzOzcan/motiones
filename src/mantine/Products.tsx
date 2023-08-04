@@ -1,4 +1,4 @@
-import { createStyles, Badge, Group, Text, Card, SimpleGrid, rem, List, Image } from "@mantine/core"
+import { createStyles, Text, Card, SimpleGrid, rem, List, Image, Button } from "@mantine/core"
 import { IconGauge, IconUser } from "@tabler/icons-react"
 
 const mockdata = [
@@ -69,7 +69,7 @@ const useStyles = createStyles((theme) => ({
 export function Products() {
   const { classes } = useStyles()
   const features = mockdata.map((feature) => (
-    <Card key={feature.title} shadow='md' radius='md' className={classes.card} padding='xl'>
+    <Card key={feature.title} shadow='md' radius='md' className={`${classes.card} flex flex-col`} padding='xl'>
         <Card.Section>
         <Image src="left.png" alt="test" height={375} className="object-cover" />
       </Card.Section>
@@ -84,21 +84,24 @@ export function Products() {
           <List.Item key={item}>{item}</List.Item>
         ))}
       </List>
+			<Button
+      fullWidth
+      className="bg-blue-500 w-32"
+    >
+     Specs
+    </Button>
     </Card>
   ))
 
   return (
    
      <div className="px-12 py-6">
-		  <Group position='center'>
-        <Badge variant='filled' size='lg'>
-          Products
-        </Badge>
-      </Group>
+		 
 
       <SimpleGrid cols={2} spacing='xl' mt={50} breakpoints={[{ maxWidth: "md", cols: 1 }]}>
         {features}
       </SimpleGrid>
+			
 		 </div>
   )
 }
