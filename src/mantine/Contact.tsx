@@ -17,9 +17,7 @@ const useStyles = createStyles((theme) => ({
   wrapper: {
     minHeight: 400,
     boxSizing: "border-box",
-    backgroundImage: `linear-gradient(-60deg, ${theme.colors[theme.primaryColor][4]} 0%, ${
-      theme.colors[theme.primaryColor][7]
-    } 100%)`,
+  
     padding: `calc(${theme.spacing.xl} * 2.5)`,
     borderRadius: theme.radius.md,
     [theme.fn.smallerThan("sm")]: {
@@ -35,7 +33,7 @@ const useStyles = createStyles((theme) => ({
 
   description: {
     color: theme.colors[theme.primaryColor][0],
-    maxWidth: rem(300),
+    maxWidth: rem(500),
 
     [theme.fn.smallerThan("sm")]: {
       maxWidth: "100%"
@@ -88,11 +86,11 @@ export function ContactMantine() {
   ))
 
   return (
-    <div className={`${classes.wrapper} mx-12 my-6`} id="contact">
+    <div className={`${classes.wrapper} mx-12 my-6 bg-gradient-to-r from-orange-400 to-orange-500`} id="contact">
       <SimpleGrid cols={2} spacing={50} breakpoints={[{ maxWidth: "sm", cols: 1 }]}>
         <div>
-          <Title className={classes.title}>Join the Ranks of Our Satisfied Clients</Title>
-          <Text className={classes.description} mt='sm' mb={30}>
+          <Title className={`${classes.title} text-3xl`}>Let Us Know How We Can Help Your Business Succeed</Title>
+          <Text className={`${classes.description} text-lg`} mt='lg' mb={30}>
             For any inquiries or to place an order, contact our friendly customer support team today. We look forward to
             serving you!
           </Text>
@@ -124,7 +122,7 @@ export function ContactMantine() {
           />
 
           <Group position='right' mt='md'>
-            <Button className={classes.control} variant='light'>
+            <Button className={classes.control} variant='light' color="orange">
               Send message
             </Button>
           </Group>

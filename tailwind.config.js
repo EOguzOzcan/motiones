@@ -1,3 +1,5 @@
+
+
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}", "./pages/**/*.html"],
   theme: {
@@ -7,6 +9,7 @@ module.exports = {
       base: "1rem",
       lg: "1.125rem",
       xl: "1.2rem",
+			"1.5xl": "1.4rem",
       "2xl": "1.6rem",
       "3xl": "1.7rem",
 			"3.5xl": "2rem",
@@ -42,7 +45,10 @@ module.exports = {
       lineHeight: {
         hero: "4.5rem"
       }
-    }
+    },
+		fontFamily: {
+			fontHind: ['Hind', 'sans-serif'],
+		}
   },
   plugins: []
 }

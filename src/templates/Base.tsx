@@ -1,4 +1,4 @@
-import {About} from './About'
+
 import {ContactMantine} from '../mantine/Contact'
 import {Hero} from './Hero'
 import {Footer} from './Footer'
@@ -13,11 +13,11 @@ const Base = () => (
 		<HeaderAction />
 		<Hero />
 		<VerticalFeatures />
-		<About />
+
 		<NewProduct />
 		<WhyChoose
-			title='Why Choose ARC Global Chain'
-			description='At ARC Global Chain, we take pride in offering a diverse range of premium sugar and top-notch sunflower oil products. Our commitment to excellence extends beyond our products, as we provide eight unique business features that set us apart from the competition and ensure your success'
+			title='Why Choose Us'
+			description='We take pride in offering a diverse range of premium sugar and top-notch sunflower oil products. Our commitment to excellence extends beyond our products, as we provide eight unique business features that set us apart from the competition and ensure your success'
 		/>
 		<Products />
 		<div className='bg-gray-100'>

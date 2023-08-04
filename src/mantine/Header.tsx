@@ -83,37 +83,37 @@ useEffect(() => {
 
 	return (
 		<Header
-		className={`fixed z-[200] px-0 md:px-12  ${windowScreen ? 'bg-transparent ' : 'bg-orange-600 opacity-90 '}`}
+		className={`fixed z-[200] px-0 md:px-12  ${windowScreen ? 'bg-transparent ' : 'bg-orange-500 opacity-90 '}`}
 	
 			height={HEADER_HEIGHT}
 			sx={{ borderBottom: 0 }}
 			mb={120}
 		>
 			<Container className={classes.inner} fluid>
-				<Group className='flex justify-center items-center cursor-pointer'>
+				<Group className='flex justify-center items-center cursor-pointer mt-2'>
 					<Burger opened={opened} onClick={toggle} className={`${classes.burger}`} color={`${matches ? "black" : "white"}`} size="md" />
 					<Logo />
 				</Group>
-				<Group spacing={5} className={classes.links}>
+				<Group spacing={24} className={`${classes.links} mt-1`}>
 					{/* <a
 						href="#about" // Replace "#" with the URL or path to the About section
 						className={`${classes.link} text-white text-2xl`}
 					> */}
-						<li	className={`${classes.link} text-white text-2xl cursor-pointer`}>
+						<li	className={`${classes.link} text-white text-1.5xl cursor-pointer`}>
 					<ScrollLink offset={-150} to="about" smooth={true} duration={1000}>
 
 						About
 							</ScrollLink>
 						</li>
 					
-						<li	className={`${classes.link} text-white text-2xl cursor-pointer `}>
+						<li	className={`${classes.link} text-white text-1.5xl cursor-pointer `}>
 							<ScrollLink offset={-150} to="products" smooth={true} duration={1000}>
 						Products
 					</ScrollLink>
 					</li>
 				
 					
-					<li	className={`${classes.link} text-white text-2xl cursor-pointer`}>
+					<li	className={`${classes.link} text-white text-1.5xl cursor-pointer`}>
 					<ScrollLink offset={-150} to="contact" smooth={true} duration={1000}>
 						Contact Us
 						</ScrollLink>

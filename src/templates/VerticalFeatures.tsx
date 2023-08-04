@@ -64,14 +64,14 @@ const VerticalFeatures = () => {
         size={44}
         radius="md"
         variant="gradient"
-        gradient={{ deg: 133, from: 'blue', to: 'cyan' }}
+        gradient={{ deg: 133, from: 'orange', to: 'yellow' }}
       >
         <feature.icon size={rem(26)} stroke={1.5} />
       </ThemeIcon>
-      <Text fz="lg" mt="sm" fw={500}>
+      <Text fz="lg" mt="sm" fw={900} className="text-black">
         {feature.title}
       </Text>
-      <Text c="dimmed" fz="sm">
+      <Text c="dimmed" fz="sm" className="text-base">
         {feature.description}
       </Text>
     </div>
@@ -79,14 +79,25 @@ const VerticalFeatures = () => {
 
 
 	return(
-		<div className={`${classes.wrapper} my-4 md:my-16 mx-0 md:mx-12`}>
+		<div className={`${classes.wrapper} my-4 mt-16 mx-0 md:mx-12`}>
 	<Grid gutter={80}>
 		<Col span={12} md={5}>
 			<Title className={`${classes.title} text-2xl md:text-4xl`} order={2}>
-			ARC Global Chain: Your Trusted Partner for Quality, Price, Supply, and Service
+			ARC Global Chain
+			<br/>
+			<Title className={`${classes.title} text-2xl md:text-3.5xl mt-2`} order={2}>
+
+			Your Trusted Partner for Quality, Price, Supply, and Service
 			</Title>
-			<Text c="dimmed">
-			ARC Global Chain is a company that offers high-quality sugar and sunflower oil products at competitive prices. They ensure a reliable supply chain, eliminating stock shortages. Their exceptional customer service makes them a trusted partner, providing a seamless experience for their customers.
+			</Title>
+			<br />
+			
+			<Text c="dimmed" className="text-xl">
+			ARC Global Chain is established by ATG & Ruha Yağ Rafineri A.Ş.to provide the finest quality sugar and sunflower oil commodity products.
+			</Text>
+			<br />
+			<Text c="dimmed" className="text-xl">
+			We pride ourselves in manufacturing and delivering the highest quality commodities. We also make sure all our products undergo accredited independent quality assurance inspection testing.
 			</Text>
 
 			<Button

@@ -1,4 +1,4 @@
-import { createStyles, Text, Card, SimpleGrid, rem, List, Image, Button, ThemeIcon } from "@mantine/core"
+import { createStyles, Text, Card, SimpleGrid, rem, List, Image, Button, ThemeIcon, Title, Container } from "@mantine/core"
 import { IconCircleDashed, IconGauge, IconUser } from "@tabler/icons-react"
 
 const mockdata = [
@@ -18,7 +18,7 @@ const mockdata = [
   {
     title: "Premium Sunflower Oil",
     description:
-      "As a trusted supplier in the industry, we take immense pride in offering premium-grade sunflower oil that promises purity, flavor, and versatility. Whether you are a retailer, distributor, or a food manufacturer, our catalog showcases a wide range of options to cater to your unique requirements, including packaging and shipment details.We have an annual supply capacity of 1,000,000 tons of raw and refined sunflowers and showing a significant activity in vegetable oil production and storage areas. Besides working with fully integrated seed and vegetable oil processing facilities in Turkey, Malaysia and Europe, together with our business partners, we have a smart pallet rack storage system with a monthly storage capacity of more than 5,000 euro pallets for vegetable oil.",
+      "As a trusted supplier in the industry, we take immense pride in offering premium-grade sunflower oil that promises purity, flavor, and versatility. We have an annual supply capacity of 1,000,000 tons of raw and refined sunflowers and showing a significant activity in vegetable oil production and storage areas. Besides working with fully integrated seed and vegetable oil processing facilities in Turkey, Malaysia and Europe, together with our business partners, we have a smart pallet rack storage system with a monthly storage capacity of more than 5,000 euro pallets for vegetable oil.",
     list: ["Refined Sunflower Oil", "High Oleic Sunflower Oil", "Organic Sunflower Oil"],
     icon: IconUser,
 		image: "/assets/tractor.jpg"
@@ -39,16 +39,7 @@ const useStyles = createStyles((theme) => ({
 		maxWidth: 600,
 		margin: 'auto',
 
-		'&::after': {
-			content: '""',
-			display: 'block',
-			backgroundColor: theme.fn.primaryColor(),
-			width: rem(45),
-			height: rem(2),
-			marginTop: theme.spacing.sm,
-			marginLeft: 'auto',
-			marginRight: 'auto'
-		}
+	
 	},
 
 	card: {
@@ -61,7 +52,7 @@ const useStyles = createStyles((theme) => ({
 		'&::after': {
 			content: '""',
 			display: 'block',
-			backgroundColor: theme.fn.primaryColor(),
+			backgroundColor: "orange",
 			width: rem(215),
 			height: rem(2),
 
@@ -88,16 +79,16 @@ export function Products() {
         <Card.Section>
         <Image src={feature.image} alt="test" height={375} className="object-cover" />
       </Card.Section>
-      <Text fz='lg' fw={500} className={`${classes.cardTitle} text-center flex justify-center items-center flex-col` } mt='md'>
+      <Text fz='lg' fw={500} className={`${classes.cardTitle} text-center flex justify-center items-center flex-col text-2xl mt-8` } mt='md'>
         {feature.title}
       </Text>
-      <Text fz='sm' c='dimmed' mt='sm'>
+      <Text fz='sm' c='dimmed' mt='sm' className="text-base">
         {feature.description}
       </Text>
-      <List className="mb-12" listStyleType='disc' fz='sm' c='dimmed' mt='sm'>
+      <List className="mb-12 ml-12" listStyleType='disc' fz='sm' c='dimmed' mt='sm'>
         {feature.list.map((item) => (
-          <List.Item key={item}   icon={
-						<ThemeIcon color="blue" size={20} radius="xl">
+          <List.Item key={item} className="text-base mt-4"  icon={
+						<ThemeIcon color="orange" size={20} radius="xl">
 							<IconCircleDashed size="1rem" />
 						</ThemeIcon>
 					}>{item}</List.Item>
@@ -106,7 +97,7 @@ export function Products() {
 			<div className="absolute bottom-0 right-0 mr-8 ">
 			<Button
       fullWidth
-      className="bg-blue-500 mb-4 w-32"
+      className="bg-orange-500 mb-4 w-32"
 			onClick={downloadFile}
     >
      Specs
@@ -119,6 +110,12 @@ export function Products() {
 
 	return (
 		<div className='px-12 py-6'>
+			  <Title className={`${classes.title} text-2xl md:text-4xl mt-2 mb-6 text-black text-center`} order={2}>Products</Title>
+				<Container size={800} p={0}>
+        <Text size='sm' className={`${classes.description} text-lg  text-center mb-12`}>
+				At ARC Global Chain, we take pride in offering a diverse range of premium sugar and top-notch sunflower oil products
+        </Text>
+      </Container>
 			<SimpleGrid
 				cols={2}
 				spacing='xl'

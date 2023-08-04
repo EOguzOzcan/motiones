@@ -1,5 +1,5 @@
 export const AppConfig = {
-  site_name: "ARC Global Chain",
+  site_name: "arcglobalchain",
   title: "ARC Global Chain",
   description: "Arc Global Chain",
   locale: "en"

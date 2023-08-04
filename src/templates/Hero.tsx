@@ -46,7 +46,7 @@ const useStyles = createStyles((theme) => ({
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     fontWeight: 900,
     lineHeight: 1.05,
-    maxWidth: rem(600),
+    maxWidth: rem(800),
     fontSize: rem(48),
 
     [theme.fn.smallerThan('md')]: {
@@ -59,7 +59,7 @@ const useStyles = createStyles((theme) => ({
   description: {
     color: theme.white,
     opacity: 0.75,
-    maxWidth: rem(500),
+    maxWidth: rem(600),
 
     [theme.fn.smallerThan('md')]: {
       maxWidth: '100%',
@@ -124,14 +124,15 @@ const Hero = () => {
 					</div>
 		
           <div  className={`${classes.content} content flex flex-col items-center justify-center`}>
-            <Title className={`${classes.title} text-xl md:text-5xl `}>
-						Your Trusted Source for Sugar and Sunflower Oil
-             
-            </Title>
+           
 
             <Text className={`${classes.description} text-lg md:text-3xl`} mt={30}>
-						Providing the finest Commodity
+						Your Trusted Source for Sugar and Sunflower Oil
             </Text>
+						<Title className={`${classes.title} text-xl md:text-5xl mt-6 `}>
+						
+						Providing the finest Commodity
+            </Title>
             <Text  className={`${classes.description} text-base md:text-2xl`} mt={30}>
 						Right Product, Right Price, Right Time
             </Text>

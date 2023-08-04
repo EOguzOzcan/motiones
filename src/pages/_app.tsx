@@ -4,7 +4,7 @@ import "../styles/global.css"
 import type { AppProps } from "next/app"
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <MantineProvider withGlobalStyles withNormalizeCSS>
+  <MantineProvider withGlobalStyles withNormalizeCSS >
     <Component {...pageProps} />
   </MantineProvider>
 )

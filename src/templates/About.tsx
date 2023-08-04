@@ -55,7 +55,7 @@ const useStyles = createStyles((theme) => ({
     '&::after': {
       content: '""',
       display: 'block',
-      backgroundColor: theme.fn.primaryColor(),
+      backgroundColor: "orange",
       width: rem(45),
       height: rem(2),
       marginTop: theme.spacing.sm,

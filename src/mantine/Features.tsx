@@ -1,8 +1,64 @@
-import { ThemeIcon, Text, Title, Container, createStyles, rem } from "@mantine/core"
-import { IconGauge, IconCookie, IconUser, IconMessage2, IconLock } from "@tabler/icons-react"
-import { FeaturesAsymmetrical } from "./Features"
+import { createStyles, Text, SimpleGrid, rem } from '@mantine/core';
+import { IconGauge, IconUser, IconCookie, IconLock, IconMessage2 } from '@tabler/icons-react';
 
-export const MOCKDATA = [
+const useStyles = createStyles((theme) => ({
+  feature: {
+    position: 'relative',
+    paddingTop: theme.spacing.xl,
+    paddingLeft: theme.spacing.xl,
+  },
+
+  overlay: {
+    position: 'absolute',
+    height: rem(100),
+    width: rem(160),
+    top: 0,
+    left: 0,
+    backgroundColor: theme.fn.variant({ variant: 'light', color: "gray" }).background,
+    zIndex: 1,
+  },
+
+  content: {
+    position: 'relative',
+    zIndex: 2,
+  },
+
+  icon: {
+    color: theme.fn.variant({ variant: 'light', color: "orange" }).color,
+  },
+
+  title: {
+    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+  },
+}));
+
+interface FeatureProps extends React.ComponentPropsWithoutRef<'div'> {
+  icon: React.FC<any>;
+  title: string;
+  description: string;
+}
+
+function Feature({ icon: Icon, title, description, className, ...others }: FeatureProps) {
+  const { classes, cx } = useStyles();
+
+  return (
+    <div className={cx(classes.feature, className)} {...others}>
+      <div className={classes.overlay} />
+
+      <div className={classes.content}>
+        <Icon size={rem(38)} className={classes.icon} stroke={1.5} />
+        <Text fw={700} fz="lg" mb="xs" mt={5} className={classes.title}>
+          {title}
+        </Text>
+        <Text c="dimmed" fz="sm" className='text-base'>
+          {description}
+        </Text>
+      </div>
+    </div>
+  );
+}
+
+const mockdata = [
   {
     icon: IconGauge,
     title: "Quality Assurance",
@@ -29,7 +85,7 @@ export const MOCKDATA = [
   },
   {
     icon: IconMessage2,
-    title: "Reliable and Efficient Supply Chain",
+    title: "Efficient Supply Chain",
     description:
       "With a robust and efficient supply chain, we ensure that your orders are processed promptly and delivered on time. Say goodbye to stock shortages and maintain a seamless business flow."
   },
@@ -53,84 +109,15 @@ export const MOCKDATA = [
   }
 ]
 
-interface FeatureProps {
-  icon: React.FC<any>
-  title: React.ReactNode
-  description: React.ReactNode
-}
 
-export function Feature({ icon: Icon, title, description }: FeatureProps) {
-  return (
-    <div >
-      <ThemeIcon variant='filled' color="orange" size={40} radius={8}>
-        <Icon size='1.1rem' stroke={1.5} />
-      </ThemeIcon>
-      <Text fz="lg" mt="sm" fw={700} className="text-black text-xl">
-        {title}
-      </Text>
-	
-      <Text size='sm' color='dimmed' className="text-base" sx={{ lineHeight: 1.6 }}>
-        {description}
-      </Text>
-    </div>
-  )
-}
-
-const useStyles = createStyles((theme) => ({
-  wrapper: {
-    paddingTop: `calc(${theme.spacing.xl} * 4)`,
-    paddingBottom: `calc(${theme.spacing.xl} * 4)`,
-    maxWidth: "80vw"
-  },
-
-  title: {
-	
-			fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-			fontSize: rem(36),
-			fontWeight: 900,
-			lineHeight: 1.1,
-			marginBottom: theme.spacing.md,
-			color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-			textAlign: "center",
-
-    [theme.fn.smallerThan("sm")]: {
-      fontSize: rem(28),
-      textAlign: "center"
-    }
-  },
-
-  description: {
-    textAlign: "center",
-
-    [theme.fn.smallerThan("sm")]: {
-      textAlign: "left"
-    }
-  }
-}))
-
-interface FeaturesGridProps {
-  title: React.ReactNode
-  description: React.ReactNode
-  data?: FeatureProps[]
-}
-
-export function WhyChoose({ title, description }: FeaturesGridProps) {
-  const { classes } = useStyles()
- 
+export function FeaturesAsymmetrical() {
+  const items = mockdata.map((item) => <Feature {...item} key={item.title} />);
 
   return (
-    <Container className={classes.wrapper}>
-     <Title className={`${classes.title} text-2xl md:text-4xl mt-2`} order={2}>{title}</Title>
-
-      <Container size={800} p={0}>
-        <Text size='sm' className={`${classes.description} text-lg `}>
-          {description}
-        </Text>
-      </Container>
-				<br />
-				<br />
-
-     <FeaturesAsymmetrical/>
-    </Container>
-  )
+  
+      <SimpleGrid cols={4} breakpoints={[{ maxWidth: 'sm', cols: 1 }]} spacing={100}>
+        {items}
+      </SimpleGrid>
+   
+  );
 }

@@ -33,9 +33,9 @@ const Logo = (props: ILogoProps) => {
       </svg> */}
 				<ScrollLink offset={-50} to="home" smooth={true} duration={1000} className={`flex justify-center items-center ml-4 md:ml-0 text-white ${fontStyle}`}>
 
-      <Image src="/arcglobalchain.png" alt='logo' width={40} height={40}  style={{ display: "flex",marginRight:"12px" }} />
+      <Image src="/superwhite.png" alt='logo' width={40} height={40}  style={{ display: "flex",marginRight:"12px" }} />
 
-      <h1 className="text-3xl md:text-3.5xl text-black md:text-white">
+      <h1 className="text-3xl md:text-3.5xl text-black md:text-white font-bold font-fontHind">
 			{AppConfig.site_name}
 			</h1>
 				</ScrollLink>
