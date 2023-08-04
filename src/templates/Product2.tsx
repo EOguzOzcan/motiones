@@ -108,7 +108,7 @@ const useStyles = createStyles((theme) => ({
 
 
 
-const About = () => {
+const Product2 = () => {
 	const { classes } = useStyles();
 
 
@@ -117,28 +117,29 @@ const About = () => {
 
   return (
     <div className={classes.wrapper}>
+			<Image src="/left.png" className={classes.image} />
         <Container size="xl" py="xl" >
      
 
-      <Title order={2} className={ `${classes.title} text-black mb-8 text-5xl -ml-56`} ta="center"  mt="sm">
+      <Title order={2} className={ `${classes.title} text-black mb-8 text-5xl ml-56`} ta="center"  mt="sm">
         About ARC Global Chain
       </Title>
 
-      <Text c="dimmed" className={`${classes.description} text-xl -ml-12`} ta="center" mt="md">
+      <Text c="dimmed" className={`${classes.description} text-xl ml-24`} ta="center" mt="md">
 			At ARC Global Chain, we are passionate about providing the finest selection of premium-grade sugar products and top-quality sunflower oil. As a trusted supplier, we offer a range of unique product differentiations and business features to meet your specific needs. 
       </Text>
-      <Text c="dimmed" className={`${classes.description} -ml-6`} ta="center" mt="md">
+      <Text c="dimmed" className={`${classes.description} ml-16`} ta="center" mt="md">
 			Whether you're a retailer, distributor, or a food manufacturer, Our commitment to excellence sets us apart from the competition, and we are dedicated to providing you with the best products and exceptional service for your business needs.
       </Text>
-      <Text c="dimmed" ta="center" mt="md" className="-ml-4">
+      <Text c="dimmed" ta="center" mt="md" className="-ml-24">
 			Choose us as your partner, and let's sweeten up your business together
       </Text>
 
      
     </Container>
-      <Image src="/left.png" className={classes.image} />
+      
     </div>
   );
 }
 
-export {About}
+export {Product2}
