@@ -1,20 +1,17 @@
 // import Link from 'next/link'
 
 import {Background} from '../background/Background'
-import {NavbarTwoColumns} from '../navigation/NavbarTwoColumns'
-import {Logo} from './Logo'
-import {NavSection} from '@/layout/NavSection'
-import { Link as ScrollLink } from 'react-scroll';
-import { useEffect, useState } from 'react'
 
-import { createStyles, Container, Title, Text, Button, rem } from '@mantine/core';
+
+import {useMediaQuery} from '@mantine/hooks'
+import { createStyles, Title, Text, Button, rem } from '@mantine/core';
 const useStyles = createStyles((theme) => ({
   root: {
     backgroundColor: '#11284b',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    backgroundImage:
-      'linear-gradient(250deg, rgba(130, 201, 30, 0) 0%, #062343 70%), url(/sunflower.jpg)',
+    // backgroundImage:
+    //   'linear-gradient(250deg, rgba(130, 201, 30, 0) 0%, #062343 70%), url(/sunflower.jpg)',
     paddingTop: `calc(${theme.spacing.xl} * 3)`,
     paddingBottom: `calc(${theme.spacing.xl} * 3)`,
   },
@@ -103,53 +100,44 @@ const useStyles = createStyles((theme) => ({
 
 
 const Hero = () => {
-  const [isScreenMd, setIsScreenMd] = useState(false)
-
-  useEffect(() => {
-    // Function to check if the screen size matches the specified media query
-    const checkScreenSize = () => {
-      setIsScreenMd(window.matchMedia("(min-width: 768px)").matches)
-    }
-
-    // Run the initial check
-    checkScreenSize()
-
-    // Add an event listener to recheck the screen size when the window is resized
-    window.addEventListener("resize", checkScreenSize)
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", checkScreenSize)
-    }
-  }, [])
+ 
 
 
 	const { classes } = useStyles();
-
+	const matches = useMediaQuery('(max-width: 1200px)')
 	return (
 		<Background color="bg-gray-100 ">
 		
-			<div className=' md:black-overlay z-1'></div>
+		
 			
 				
  
-    <div className={classes.root}>
-      <Container size="lg">
-        <div className={classes.inner}>
-          <div className={classes.content}>
-            <Title className={classes.title}>
+    <div  id='home' >
+     
+        <div className={`${classes.inner} ${matches ? "mobile-section":"section"}`}>
+					<div className='black-overlay'></div>
+		
+					<div className="video-background">
+					<video autoPlay loop muted >
+						<source src='/container.mp4' type='video/mp4' />
+					</video>
+					</div>
+		
+          <div  className={`${classes.content} content `}>
+            <Title className={`${classes.title} text-xl md:text-4xl `}>
 						Your Trusted Source for Sugar and Sunflower Oil
              
             </Title>
 
-            <Text className={`${classes.description} text-2xl`} mt={30}>
+            <Text className={`${classes.description} text-lg md:text-2xl`} mt={30}>
 						Providing the finest Commodity
             </Text>
-            <Text  className={`${classes.description} text-xl`} mt={30}>
+            <Text  className={`${classes.description} text-base md:text-xl`} mt={30}>
 						Right Product, Right Price, Right Time
             </Text>
 
-            <Button
+            {!matches &&(
+							<Button
               variant="gradient"
               gradient={{ from: 'pink', to: 'yellow' }}
               size="xl"
@@ -158,16 +146,17 @@ const Hero = () => {
             >
               Get started
             </Button>
+						)}
           </div>
         </div>
-      </Container>
+     
     </div>
-				{isScreenMd && (
+				{/* {isScreenMd && (
 					<NavSection yPadding="py-6" >
 					<NavbarTwoColumns logo={<Logo  />}>
 
 						<li  className="w-24 h-10  flex items-center justify-center rounded-md text-white text-2xl    hover:text-white transition-all ease-in-out cursor-pointer">
-						<ScrollLink offset={-150} to="about" smooth={true} duration={1000}>
+						Link offset={-150} to="about" smooth={true} duration={1000}>
 							About 
 						</ScrollLink>
 						</li>
@@ -184,7 +173,7 @@ const Hero = () => {
 						
 					</NavbarTwoColumns>
 				</NavSection>
-				)}
+				)} */}
 			
 		</Background>
 	)
