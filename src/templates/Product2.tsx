@@ -131,7 +131,7 @@ const Product2 = () => {
       <Text c="dimmed" className={`${classes.description} ml-16`} ta="center" mt="md">
 			Whether you're a retailer, distributor, or a food manufacturer, Our commitment to excellence sets us apart from the competition, and we are dedicated to providing you with the best products and exceptional service for your business needs.
       </Text>
-      <Text c="dimmed" ta="center" mt="md" className="-ml-24">
+      <Text c="dimmed" ta="center" mt="md" className="-ml-40">
 			Choose us as your partner, and let's sweeten up your business together
       </Text>
 

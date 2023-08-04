@@ -1,4 +1,4 @@
-import { createStyles, Badge, Group, Text, Card, SimpleGrid, Container, rem, List } from "@mantine/core"
+import { createStyles, Badge, Group, Text, Card, SimpleGrid, rem, List, Image } from "@mantine/core"
 import { IconGauge, IconUser } from "@tabler/icons-react"
 
 const mockdata = [
@@ -15,7 +15,7 @@ const mockdata = [
     icon: IconGauge
   },
   {
-    title: "Premium Sunflower Oil:",
+    title: "Premium Sunflower Oil",
     description:
       "As a trusted supplier in the industry, we take immense pride in offering premium-grade sunflower oil that promises purity, flavor, and versatility. Whether you are a retailer, distributor, or a food manufacturer, our catalog showcases a wide range of options to cater to your unique requirements, including packaging and shipment details.We have an annual supply capacity of 1,000,000 tons of raw and refined sunflowers and showing a significant activity in vegetable oil production and storage areas. Besides working with fully integrated seed and vegetable oil processing facilities in Turkey, Malaysia and Europe, together with our business partners, we have a smart pallet rack storage system with a monthly storage capacity of more than 5,000 euro pallets for vegetable oil.",
     list: ["Refined Sunflower Oil", "High Oleic Sunflower Oil", "Organic Sunflower Oil"],
@@ -58,19 +58,22 @@ const useStyles = createStyles((theme) => ({
       content: '""',
       display: "block",
       backgroundColor: theme.fn.primaryColor(),
-      width: rem(45),
+      width: rem(215),
       height: rem(2),
+			
       marginTop: theme.spacing.sm
     }
   }
 }))
 
 export function Products() {
-  const { classes, theme } = useStyles()
+  const { classes } = useStyles()
   const features = mockdata.map((feature) => (
     <Card key={feature.title} shadow='md' radius='md' className={classes.card} padding='xl'>
-      <feature.icon size={rem(50)} stroke={2} color={theme.fn.primaryColor()} />
-      <Text fz='lg' fw={500} className={classes.cardTitle} mt='md'>
+        <Card.Section>
+        <Image src="left.png" alt="test" height={375} className="object-cover" />
+      </Card.Section>
+      <Text fz='lg' fw={500} className={`${classes.cardTitle} text-center flex justify-center items-center flex-col` } mt='md'>
         {feature.title}
       </Text>
       <Text fz='sm' c='dimmed' mt='sm'>
@@ -85,8 +88,9 @@ export function Products() {
   ))
 
   return (
-    <Container size='lg' py='xl'>
-      <Group position='center'>
+   
+     <div className="px-12 py-6">
+		  <Group position='center'>
         <Badge variant='filled' size='lg'>
           Products
         </Badge>
@@ -95,6 +99,6 @@ export function Products() {
       <SimpleGrid cols={2} spacing='xl' mt={50} breakpoints={[{ maxWidth: "md", cols: 1 }]}>
         {features}
       </SimpleGrid>
-    </Container>
+		 </div>
   )
 }
