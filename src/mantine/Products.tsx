@@ -72,6 +72,17 @@ const useStyles = createStyles((theme) => ({
 
 export function Products() {
   const { classes } = useStyles()
+
+	const downloadFile = () => {
+    // Replace 'path/to/your/file.pdf' with the actual path or URL of your file
+    const fileUrl = '/RUHA-CATALOG-2023.pdf';
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = 'RUHA-CATALOG-2023.pdf'; // Specify the desired filename for the download
+    link.click();
+  };
+
+
   const features = mockdata.map((feature) => (
     <Card key={feature.title} shadow='md' radius='md' className={`${classes.card} relative flex flex-col`} padding='xl' id="products">
         <Card.Section>
@@ -96,6 +107,7 @@ export function Products() {
 			<Button
       fullWidth
       className="bg-blue-500 mb-4 w-32"
+			onClick={downloadFile}
     >
      Specs
     </Button>
