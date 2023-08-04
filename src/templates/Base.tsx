@@ -1,4 +1,3 @@
-
 import {About} from './About'
 import {ContactMantine} from '../mantine/Contact'
 import {Hero} from './Hero'
@@ -7,11 +6,11 @@ import {VerticalFeatures} from './VerticalFeatures'
 import {WhyChoose} from '../mantine/WhyChoose'
 import {Products} from '../mantine/Products'
 import NewProduct from '../mantine/NewProduct'
-import { HeaderAction } from '@/mantine/Header'
+import {HeaderAction} from '@/mantine/Header'
 
 const Base = () => (
 	<div className='w-full text-gray-600 antialiased'>
-		<HeaderAction/>
+		<HeaderAction />
 		<Hero />
 		<VerticalFeatures />
 		<About />
