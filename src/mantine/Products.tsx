@@ -26,46 +26,48 @@ const mockdata = [
 ]
 
 const useStyles = createStyles((theme) => ({
-  title: {
-    fontSize: rem(34),
-    fontWeight: 900,
+	title: {
+		fontSize: rem(34),
+		fontWeight: 900,
 
-    [theme.fn.smallerThan("sm")]: {
-      fontSize: rem(24)
-    }
-  },
+		[theme.fn.smallerThan('sm')]: {
+			fontSize: rem(24)
+		}
+	},
 
-  description: {
-    maxWidth: 600,
-    margin: "auto",
+	description: {
+		maxWidth: 600,
+		margin: 'auto',
 
-    "&::after": {
-      content: '""',
-      display: "block",
-      backgroundColor: theme.fn.primaryColor(),
-      width: rem(45),
-      height: rem(2),
-      marginTop: theme.spacing.sm,
-      marginLeft: "auto",
-      marginRight: "auto"
-    }
-  },
+		'&::after': {
+			content: '""',
+			display: 'block',
+			backgroundColor: theme.fn.primaryColor(),
+			width: rem(45),
+			height: rem(2),
+			marginTop: theme.spacing.sm,
+			marginLeft: 'auto',
+			marginRight: 'auto'
+		}
+	},
 
-  card: {
-    border: `${rem(1)} solid ${theme.colorScheme === "dark" ? theme.colors.dark[5] : theme.colors.gray[1]}`
-  },
+	card: {
+		border: `${rem(1)} solid ${
+			theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1]
+		}`
+	},
 
-  cardTitle: {
-    "&::after": {
-      content: '""',
-      display: "block",
-      backgroundColor: theme.fn.primaryColor(),
-      width: rem(215),
-      height: rem(2),
-			
-      marginTop: theme.spacing.sm
-    }
-  }
+	cardTitle: {
+		'&::after': {
+			content: '""',
+			display: 'block',
+			backgroundColor: theme.fn.primaryColor(),
+			width: rem(215),
+			height: rem(2),
+
+			marginTop: theme.spacing.sm
+		}
+	}
 }))
 
 export function Products() {
@@ -101,15 +103,18 @@ export function Products() {
     </Card>
   ))
 
-  return (
-   
-     <div className="px-12 py-6">
-		 
 
-      <SimpleGrid cols={2} spacing='xl' mt={50} breakpoints={[{ maxWidth: "md", cols: 1 }]}>
-        {features}
-      </SimpleGrid>
-			
-		 </div>
-  )
+
+	return (
+		<div className='px-12 py-6'>
+			<SimpleGrid
+				cols={2}
+				spacing='xl'
+				mt={50}
+				breakpoints={[{maxWidth: 'md', cols: 1}]}
+			>
+				{features}
+			</SimpleGrid>
+		</div>
+	)
 }
