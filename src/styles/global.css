@@ -40,3 +40,56 @@
 		top: 0;
 		left: 0;
 	}
+
+
+	.section {
+		position: relative;
+		width: 100%;
+		height: 600px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+
+	}
+	.mobile-section {
+		position: relative;
+		width: 100%;
+		height: 200px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		margin-top: 85px;
+
+	}
+
+
+	.content{
+
+		text-align: center;
+	
+		z-index: 100;
+		opacity: 1;
+		position: absolute;
+	}
+
+	.video-container{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+
+	.black-overlay{
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: black;
+		z-index: 80;
+		opacity: 0.3;
+		width: 100%;
+	}
+	

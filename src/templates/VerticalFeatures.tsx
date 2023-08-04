@@ -79,10 +79,10 @@ const VerticalFeatures = () => {
 
 
 	return(
-		<div className={`${classes.wrapper} my-16 mx-12`}>
+		<div className={`${classes.wrapper} my-4 md:my-16 mx-0 md:mx-12`}>
 	<Grid gutter={80}>
 		<Col span={12} md={5}>
-			<Title className={classes.title} order={2}>
+			<Title className={`${classes.title} text-2xl md:text-4xl`} order={2}>
 				A fully featured React components library for your next project
 			</Title>
 			<Text c="dimmed">

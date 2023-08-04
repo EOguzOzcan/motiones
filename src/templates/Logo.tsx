@@ -1,18 +1,19 @@
 import Image from "next/image"
 import { AppConfig } from "../utils/AppConfig"
+import {Link as ScrollLink } from "react-scroll"
 
 type ILogoProps = {
   xl?: boolean;
 };
 
 const Logo = (props: ILogoProps) => {
-  const size = props.xl ? "44" : "48"
+
   const fontStyle = props.xl
     ? "font-semibold text-3xl"
     : "font-semibold text-xl"
 
   return (
-    <span className={`inline-flex items-center text-white ${fontStyle}`}>
+    <span >
       {/* <svg
         className="mr-1 stroke-current text-primary-500"
         xmlns="http://www.w3.org/2000/svg"
@@ -30,9 +31,14 @@ const Logo = (props: ILogoProps) => {
         <rect x="15" y="4" width="6" height="16" rx="1" />
         <path d="M4 20h14" />
       </svg> */}
-      <Image src="/arcglobalchain.png" alt='logo' width={size} height={size}  style={{ display: "flex",marginRight:"12px" }} />
+				<ScrollLink offset={-50} to="home" smooth={true} duration={1000} className={`flex justify-center items-center ml-4 md:ml-0 text-white ${fontStyle}`}>
 
-      {AppConfig.site_name}
+      <Image src="/arcglobalchain.png" alt='logo' width={40} height={40}  style={{ display: "flex",marginRight:"12px" }} />
+
+      <h1 className="text-3xl md:text-3.5xl text-black md:text-white">
+			{AppConfig.site_name}
+			</h1>
+				</ScrollLink>
     </span>
   )
 }
