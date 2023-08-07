@@ -17,7 +17,7 @@ export const MOCKDATA = [
   },
   {
     icon: IconCookie,
-    title: "Private Labeling and Packaging",
+    title: "Custom Packaging",
     description:
       "Establish your brand identity with our private labeling and custom packaging options. Stand out on the market with a personalized touch that reflects your business's uniqueness."
   },

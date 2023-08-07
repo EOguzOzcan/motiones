@@ -67,13 +67,13 @@ const mockdata = [
   },
   {
     icon: IconUser,
-    title: "Tailored Product Range",
+    title: "Product Range",
     description:
       "We understand that different businesses have unique requirements. That's why we offer a tailored product range, including various sugar grades and different sunflower oil quantities to suit your specific needs."
   },
   {
     icon: IconCookie,
-    title: "Private Labeling and Packaging",
+    title: "Custom Packaging",
     description:
       "Establish your brand identity with our private labeling and custom packaging options. Stand out on the market with a personalized touch that reflects your business's uniqueness."
   },
@@ -91,7 +91,7 @@ const mockdata = [
   },
   {
     icon: IconCookie,
-    title: "Outstanding Customer Support",
+    title: "Outstanding Support",
     description:
       "Our dedicated customer support team is always ready to assist you with any inquiries or concerns. Experience top-notch service and quick resolution to any issues that may arise."
   },
@@ -103,7 +103,7 @@ const mockdata = [
   },
   {
     icon: IconMessage2,
-    title: "Industry Expertise and Guidance",
+    title: "Industry Expertise",
     description:
       "Benefit from our extensive industry knowledge and expertise. We provide valuable insights and guidance to help you make informed decisions that drive your business forward."
   }

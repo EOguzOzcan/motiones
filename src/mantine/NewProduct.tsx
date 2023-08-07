@@ -9,7 +9,7 @@ const imageContent = (
 
 const mockdata = () => {
   return (
-    <div className="text-gray-600">
+    <div className="text-gray-600" id="about">
       <Title className="m-3 text-black font-bold" order={1}>
         {aboutContent.title}
       </Title>
