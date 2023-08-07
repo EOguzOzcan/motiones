@@ -13,7 +13,7 @@ type Props = {
 function MantineTabs({ data }: Props) {
   return (
     <>
-      <Tabs color='orange' defaultValue='0'>
+      <Tabs color='orange' defaultValue='0' className="mb-12 mt-8">
         <Tabs.List>
           {data.map((item) => (
             <Tabs.Tab value={item.id}>{item.title}</Tabs.Tab>

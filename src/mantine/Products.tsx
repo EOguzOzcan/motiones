@@ -51,19 +51,19 @@ const mockdata = [
     data: [
       {
         id: "0",
-        title: "Refined ",
+        title: "Refined Oil",
         description:
           "Refined Sunflower Oil is a high-quality cooking oil extracted from sunflower seeds through a process of refining and purification. It is known for its light color, mild flavor, and high smoke point, making it a popular choice for cooking, frying, baking, and salad dressings. Refined sunflower oil undergoes a series of processes, including degumming, neutralization, bleaching, and deodorization, to remove impurities and enhance its stability and shelf life. Its neutral taste allows it to complement the natural flavors of various dishes without overpowering them. Due to its heart-healthy monounsaturated and polyunsaturated fats, and low levels of saturated fat, refined sunflower oil is considered a healthier alternative to some other cooking oils. Its versatility and nutritional benefits have made it a staple in kitchens worldwide for both domestic and commercial use."
       },
       {
         id: "1",
-        title: "High Oleic",
+        title: "High Oleic Oil",
         description:
           "High Oleic Sunflower Oil is a premium-grade cooking oil derived from sunflower seeds with a distinctive composition that is rich in monounsaturated fats, particularly oleic acid. The high oleic variety of sunflower oil is obtained from specially selected sunflower seeds that have been bred to have higher levels of oleic acid and lower levels of polyunsaturated fats, resulting in a more stable and heat-resistant oil. This makes it ideal for high-temperature cooking methods such as frying and sautéing. The oil's high smoke point ensures that it does not break down and release harmful compounds when exposed to high heat. Additionally, the oil's neutral taste allows it to complement a wide range of dishes without altering their flavors. High Oleic Sunflower Oil is popular in both commercial food production and home cooking, where its stability, health benefits, and versatility make it a preferred choice for various culinary applications."
       },
       {
         id: "2",
-        title: "Organic",
+        title: "Organic Oil",
         description:
           "Organic Sunflower Oil is a premium-quality cooking oil derived from organically grown sunflower seeds, cultivated without the use of synthetic pesticides, herbicides, or genetically modified organisms (GMOs). This oil is cold-pressed or expeller-pressed to retain its natural nutrients and flavors, resulting in a light golden color and a mild, nutty taste. The organic certification ensures that the oil is produced in an environmentally sustainable and responsible manner. Organic Sunflower Oil is a versatile oil suitable for various culinary uses, such as sautéing, roasting, baking, and salad dressings. Its high smoke point makes it ideal for frying and deep-frying, while its heart-healthy monounsaturated and polyunsaturated fats, as well as vitamin E content, contribute to its health benefits. With a clean and pure taste, Organic Sunflower Oil is a popular choice among health-conscious consumers seeking a natural and sustainable cooking oil option for their everyday culinary needs."
       }
@@ -106,14 +106,14 @@ const useStyles = createStyles((theme) => ({
 export function Products() {
   const { classes } = useStyles()
 
-  const downloadFile = () => {
-    // Replace 'path/to/your/file.pdf' with the actual path or URL of your file
-    const fileUrl = "/RUHA-CATALOG-2023.pdf"
-    const link = document.createElement("a")
-    link.href = fileUrl
-    link.download = "RUHA-CATALOG-2023.pdf" // Specify the desired filename for the download
-    link.click()
-  }
+  // const downloadFile = () => {
+  //   // Replace 'path/to/your/file.pdf' with the actual path or URL of your file
+  //   const fileUrl = "/RUHA-CATALOG-2023.pdf"
+  //   const link = document.createElement("a")
+  //   link.href = fileUrl
+  //   link.download = "RUHA-CATALOG-2023.pdf" // Specify the desired filename for the download
+  //   link.click()
+  // }
 
   const features = mockdata.map((feature) => (
     <Card
@@ -141,7 +141,7 @@ export function Products() {
       <MantineTabs data={feature.data} />
 
       <div className='absolute bottom-0 right-0 mr-8 '>
-        <Button fullWidth className='bg-gray-500 mb-4 w-32 hover:bg-orange-500 transition-all' onClick={downloadFile}>
+        <Button fullWidth className='bg-gray-500 mb-4 w-32 hover:bg-orange-500 transition-all'>
           Specs
         </Button>
       </div>
