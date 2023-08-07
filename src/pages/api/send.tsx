@@ -5,14 +5,14 @@ import { Resend } from "resend"
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  const { email } = JSON.parse(req.body)
   try {
+    const { data: contactInfo } = JSON.parse(req.body)
     const data = await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
-      to: email,
+      from: "sales@arcglobalchain.com",
+      to: contactInfo.to,
       subject: "Hello world",
       text: "Plain text version of your email",
-      react: EmailTemplate({ firstName: email })
+      react: EmailTemplate({ firstName: contactInfo.name })
     })
 
     res.status(200).json(data)
