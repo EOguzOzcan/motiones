@@ -4,7 +4,7 @@ import { aboutContent } from '@/utils/aboutContent';
 import { useMediaQuery } from '@mantine/hooks';
 
 const imageContent = (
-  <Image mx="auto" className="object-cover w-96 md:w-[900px] md:h-[350px]" radius="lg" src="/container2.jpg" alt="Random image" />
+  <Image mx="auto" height={350} className="object-cover w-96 md:w-[900px] " radius="lg" src="/container2.jpg" alt="Random image" />
 );
 
 const mockdata = () => {
