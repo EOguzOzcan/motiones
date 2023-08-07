@@ -92,7 +92,7 @@ export function ContactMantine() {
           <Title className={`${classes.title} text-3xl`}>Let Us Know How We Can Help Your Business Succeed</Title>
           <Text className={`${classes.description} text-lg`} mt='lg' mb={30}>
             For any inquiries or to place an order, contact our friendly customer support team today. We look forward to
-            serving you!
+            serving you.
           </Text>
 
           <ContactIconsList variant='white' />

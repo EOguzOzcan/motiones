@@ -1,7 +1,7 @@
 import React from "react"
 
 import { createStyles, Title, SimpleGrid, Text, Button, ThemeIcon, Grid, Col, rem } from "@mantine/core"
-import { IconReceiptOff, IconFlame, IconCircleDotted, IconFileCode } from "@tabler/icons-react"
+import { IconTruck,IconCertificate,IconDiscountCheck,Icon24Hours} from "@tabler/icons-react"
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -20,25 +20,25 @@ const useStyles = createStyles((theme) => ({
 
 const features = [
   {
-    icon: IconReceiptOff,
+    icon: IconCertificate,
     title: "Uncompromising Quality",
     description:
       "We believe in offering products that meet the highest quality standards. Our sugar and sunflower oil products undergo rigorous testing and inspection to ensure they exceed your expectations."
   },
   {
-    icon: IconFileCode,
+    icon: IconDiscountCheck,
     title: "Competitive Pricing",
     description:
       "We understand the value of affordability in a competitive market. Our prices are designed to give your business the edge it needs without compromising on quality."
   },
   {
-    icon: IconCircleDotted,
+    icon: IconTruck,
     title: "Reliable Supply",
     description:
       "With ARC Global Chain, you can count on a steady and dependable supply. Say goodbye to stock shortages and focus on growing your business with confidence."
   },
   {
-    icon: IconFlame,
+    icon: Icon24Hours,
     title: "Exceptional Customer Service",
     description:
       "Your satisfaction is our priority. Our dedicated support team is always ready to assist you with any queries or concerns, providing a seamless experience every step of the way."
@@ -50,7 +50,7 @@ const VerticalFeatures = () => {
 
   const items = features.map((feature) => (
     <div key={feature.title}>
-      <ThemeIcon size={44} radius='md' variant='gradient' gradient={{ deg: 133, from: "orange", to: "yellow" }}>
+      <ThemeIcon size={44} radius='md' variant='gradient' gradient={{ deg: 133, from: "orange", to: "orange" }}>
         <feature.icon size={rem(26)} stroke={1.5} />
       </ThemeIcon>
       <Text fz='lg' mt='sm' fw={900} className='text-black'>

@@ -1,5 +1,5 @@
 import { createStyles, Text, SimpleGrid, rem } from '@mantine/core';
-import { IconGauge, IconUser, IconCookie, IconLock, IconMessage2 } from '@tabler/icons-react';
+import {  IconMessage2, IconCertificate, IconDiscountCheck, Icon24Hours, IconTruck, IconTableOptions, IconTags, IconLeaf } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   feature: {
@@ -60,43 +60,43 @@ function Feature({ icon: Icon, title, description, className, ...others }: Featu
 
 const mockdata = [
   {
-    icon: IconGauge,
+    icon: IconCertificate,
     title: "Quality Assurance",
     description:
       "Our sugar and sunflower oil products undergo rigorous quality checks at every stage to guarantee unmatched purity and taste. You can trust that only the finest products make their way to your shelves."
   },
   {
-    icon: IconUser,
+    icon: IconTableOptions,
     title: "Product Range",
     description:
       "We understand that different businesses have unique requirements. That's why we offer a tailored product range, including various sugar grades and different sunflower oil quantities to suit your specific needs."
   },
   {
-    icon: IconCookie,
+    icon: IconTags,
     title: "Custom Packaging",
     description:
       "Establish your brand identity with our private labeling and custom packaging options. Stand out on the market with a personalized touch that reflects your business's uniqueness."
   },
   {
-    icon: IconLock,
+    icon: IconDiscountCheck,
     title: "Competitive Pricing",
     description:
       "At ARC Global Chain, we believe in providing premium products at competitive prices. This allows you to maintain a healthy profit margin without compromising on quality."
   },
   {
-    icon: IconMessage2,
+    icon: IconTruck,
     title: "Efficient Supply Chain",
     description:
       "With a robust and efficient supply chain, we ensure that your orders are processed promptly and delivered on time. Say goodbye to stock shortages and maintain a seamless business flow."
   },
   {
-    icon: IconCookie,
+    icon: Icon24Hours,
     title: "Outstanding Support",
     description:
       "Our dedicated customer support team is always ready to assist you with any inquiries or concerns. Experience top-notch service and quick resolution to any issues that may arise."
   },
   {
-    icon: IconLock,
+    icon: IconLeaf,
     title: "Sustainable Sourcing",
     description:
       "We are committed to sustainability and ethical sourcing practices. Our sugar and sunflower oil are sourced responsibly, ensuring minimal impact on the environment and supporting local communities."

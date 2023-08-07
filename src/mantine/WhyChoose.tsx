@@ -1,10 +1,10 @@
 import { ThemeIcon, Text, Title, Container, createStyles, rem } from "@mantine/core"
-import { IconGauge, IconCookie, IconUser, IconMessage2, IconLock } from "@tabler/icons-react"
+import { IconCookie, IconUser, IconMessage2, IconLock, IconCertificate } from "@tabler/icons-react"
 import { FeaturesAsymmetrical } from "./Features"
 
 export const MOCKDATA = [
   {
-    icon: IconGauge,
+    icon: IconCertificate,
     title: "Quality Assurance",
     description:
       "Our sugar and sunflower oil products undergo rigorous quality checks at every stage to guarantee unmatched purity and taste. You can trust that only the finest products make their way to your shelves."
