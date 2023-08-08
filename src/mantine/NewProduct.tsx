@@ -7,7 +7,7 @@ const imageContent = (
   <Image
     mx='auto'
     height={350}
-    className='object-cover w-96 md:w-[900px] '
+    className='object-cover w-96 md:w-[900px] mt-0 md:mt-8 '
     radius='lg'
     src='/container2.jpg'
     alt='Random image'
