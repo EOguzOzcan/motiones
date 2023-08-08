@@ -61,15 +61,15 @@ interface FeatureProps {
 
 export function Feature({ icon: Icon, title, description }: FeatureProps) {
   return (
-    <div >
-      <ThemeIcon variant='filled' color="orange" size={40} radius={8}>
+    <div>
+      <ThemeIcon variant='filled' color='orange' size={40} radius={8}>
         <Icon size='1.1rem' stroke={1.5} />
       </ThemeIcon>
-      <Text fz="lg" mt="sm" fw={700} className="text-black text-xl">
+      <Text fz='lg' mt='sm' fw={700} className='text-black text-xl'>
         {title}
       </Text>
-	
-      <Text size='sm' color='dimmed' className="text-base" sx={{ lineHeight: 1.6 }}>
+
+      <Text size='sm' color='dimmed' className='text-base' sx={{ lineHeight: 1.6 }}>
         {description}
       </Text>
     </div>
@@ -84,14 +84,13 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-	
-			fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-			fontSize: rem(36),
-			fontWeight: 900,
-			lineHeight: 1.1,
-			marginBottom: theme.spacing.md,
-			color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-			textAlign: "center",
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontSize: rem(36),
+    fontWeight: 900,
+    lineHeight: 1.1,
+    marginBottom: theme.spacing.md,
+    color: theme.colorScheme === "dark" ? theme.white : theme.black,
+    textAlign: "center",
 
     [theme.fn.smallerThan("sm")]: {
       fontSize: rem(28),
@@ -116,21 +115,20 @@ interface FeaturesGridProps {
 
 export function WhyChoose({ title, description }: FeaturesGridProps) {
   const { classes } = useStyles()
- 
 
   return (
     <Container className={classes.wrapper}>
-     <Title className={`${classes.title} text-2xl md:text-4xl mt-2`} order={2}>{title}</Title>
-
+      <Title className={`${classes.title} text-2xl md:text-4xl mt-2`} order={2}>
+        {title}
+      </Title>
       <Container size={800} p={0}>
         <Text size='sm' className={`${classes.description} text-lg `}>
           {description}
         </Text>
       </Container>
-				<br />
-				<br />
-
-     <FeaturesAsymmetrical/>
+      <br />
+      <br />
+      <FeaturesAsymmetrical />
     </Container>
   )
 }

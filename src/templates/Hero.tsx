@@ -1,34 +1,33 @@
 // import Link from 'next/link'
 
-import {Background} from '../background/Background'
+import { Background } from "../background/Background"
 
-
-import {useMediaQuery} from '@mantine/hooks'
-import { createStyles, Title, Text, rem } from '@mantine/core';
+import { useMediaQuery } from "@mantine/hooks"
+import { createStyles, Title, Text, rem } from "@mantine/core"
 const useStyles = createStyles((theme) => ({
   root: {
-    backgroundColor: '#11284b',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
+    backgroundColor: "#11284b",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
     // backgroundImage:
     //   'linear-gradient(250deg, rgba(130, 201, 30, 0) 0%, #062343 70%), url(/sunflower.jpg)',
     paddingTop: `calc(${theme.spacing.xl} * 3)`,
-    paddingBottom: `calc(${theme.spacing.xl} * 3)`,
+    paddingBottom: `calc(${theme.spacing.xl} * 3)`
   },
 
   inner: {
-    display: 'flex',
-    justifyContent: 'space-between',
+    display: "flex",
+    justifyContent: "space-between",
 
-    [theme.fn.smallerThan('md')]: {
-      flexDirection: 'column',
-    },
+    [theme.fn.smallerThan("md")]: {
+      flexDirection: "column"
+    }
   },
 
   image: {
-    [theme.fn.smallerThan('md')]: {
-      display: 'none',
-    },
+    [theme.fn.smallerThan("md")]: {
+      display: "none"
+    }
   },
 
   content: {
@@ -36,9 +35,9 @@ const useStyles = createStyles((theme) => ({
     paddingBottom: `calc(${theme.spacing.xl} * 2)`,
     marginRight: `calc(${theme.spacing.xl} * 3)`,
 
-    [theme.fn.smallerThan('md')]: {
-      marginRight: 0,
-    },
+    [theme.fn.smallerThan("md")]: {
+      marginRight: 0
+    }
   },
 
   title: {
@@ -49,11 +48,11 @@ const useStyles = createStyles((theme) => ({
     maxWidth: rem(800),
     fontSize: rem(48),
 
-    [theme.fn.smallerThan('md')]: {
-      maxWidth: '100%',
+    [theme.fn.smallerThan("md")]: {
+      maxWidth: "100%",
       fontSize: rem(34),
-      lineHeight: 1.15,
-    },
+      lineHeight: 1.15
+    }
   },
 
   description: {
@@ -61,9 +60,9 @@ const useStyles = createStyles((theme) => ({
     opacity: 0.75,
     maxWidth: rem(600),
 
-    [theme.fn.smallerThan('md')]: {
-      maxWidth: '100%',
-    },
+    [theme.fn.smallerThan("md")]: {
+      maxWidth: "100%"
+    }
   },
 
   control: {
@@ -72,13 +71,12 @@ const useStyles = createStyles((theme) => ({
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     fontSize: rem(22),
 
-    [theme.fn.smallerThan('md')]: {
-      width: '100%',
-    },
-  },
-}));
+    [theme.fn.smallerThan("md")]: {
+      width: "100%"
+    }
+  }
+}))
 // const VideoBackground = () => {
-
 
 // 	return (
 // 		<div className='youtube-container'>
@@ -90,59 +88,38 @@ const useStyles = createStyles((theme) => ({
 // 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 // 			allowFullScreen
 // 			>
-			
 
 // 			</iframe>
-			
+
 // 			</div>
 // 	)
 // }
 
-
 const Hero = () => {
- 
-
-
-	const { classes } = useStyles();
-	const matches = useMediaQuery('(max-width: 1200px)')
-	return (
-		<Background color="bg-gray-100 ">
-		
-		
-			
-				
- 
-    <div  id='home' >
-     
-        <div className={`${classes.inner} ${matches ? "mobile-section":"section"}`}>
-					<div className='black-overlay'></div>
-		
-					<div className="video-background">
-					<video autoPlay loop muted >
-						<source src='/container.mp4' type='video/mp4' />
-					</video>
-					</div>
-		
-          <div  className={`${classes.content} content flex flex-col items-center justify-center`}>
-           
-
+  const { classes } = useStyles()
+  const matches = useMediaQuery("(max-width: 1200px)")
+  return (
+    <Background color='bg-gray-100 '>
+      <div id='home'>
+        <div className={`${classes.inner} ${matches ? "mobile-section" : "section"}`}>
+          <div className='black-overlay'></div>
+          <div className='video-background'>
+            <video autoPlay loop muted>
+              <source src='/container.mp4' type='video/mp4' />
+            </video>
+          </div>
+          <div className={`${classes.content} content flex flex-col items-center justify-center`}>
             <Text className={`${classes.description} text-lg md:text-3xl`} mt={30}>
-						Your Trusted Source for Sugar and Sunflower Oil
+              Your Trusted Source for Sugar and Sunflower Oil
             </Text>
-						<Title className={`${classes.title} text-xl md:text-5xl mt-6 `}>
-						
-						Providing the finest Commodity
-            </Title>
-            <Text  className={`${classes.description} text-base md:text-2xl`} mt={30}>
-						Right Product, Right Price, Right Time
+            <Title className={`${classes.title} text-xl md:text-5xl mt-6 `}>Providing the finest Commodity</Title>
+            <Text className={`${classes.description} text-base md:text-2xl`} mt={30}>
+              Right Product, Right Price, Right Time
             </Text>
-
-          
           </div>
         </div>
-     
-    </div>
-				{/* {isScreenMd && (
+      </div>
+      {/* {isScreenMd && (
 					<NavSection yPadding="py-6" >
 					<NavbarTwoColumns logo={<Logo  />}>
 
@@ -165,9 +142,8 @@ const Hero = () => {
 					</NavbarTwoColumns>
 				</NavSection>
 				)} */}
-			
-		</Background>
-	)
+    </Background>
+  )
 }
 
-export {Hero}
+export { Hero }

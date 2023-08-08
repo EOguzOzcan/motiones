@@ -115,7 +115,7 @@ export function Products() {
   //   link.click()
   // }
 
-  const features = mockdata.map((feature) => (
+  const features = mockdata.map((feature, index) => (
     <Card
       key={feature.title}
       shadow='md'
@@ -138,7 +138,7 @@ export function Products() {
       <Text fz='sm' c='dimmed' mt='sm' className='text-base'>
         {feature.description}
       </Text>
-      <MantineTabs data={feature.data} />
+      <MantineTabs data={feature.data} index={index} />
 
       <div className='absolute bottom-0 right-0 mr-8 '>
         <Button fullWidth className='bg-gray-500 mb-4 w-32 hover:bg-orange-500 transition-all'>

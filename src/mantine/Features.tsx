@@ -1,45 +1,54 @@
-import { createStyles, Text, SimpleGrid, rem } from '@mantine/core';
-import {  IconMessage2, IconCertificate, IconDiscountCheck, Icon24Hours, IconTruck, IconTableOptions, IconTags, IconLeaf } from '@tabler/icons-react';
+import { createStyles, Text, SimpleGrid, rem } from "@mantine/core"
+import {
+  IconMessage2,
+  IconCertificate,
+  IconDiscountCheck,
+  Icon24Hours,
+  IconTruck,
+  IconTableOptions,
+  IconTags,
+  IconLeaf
+} from "@tabler/icons-react"
 
 const useStyles = createStyles((theme) => ({
   feature: {
-    position: 'relative',
+    position: "relative",
     paddingTop: theme.spacing.xl,
-    paddingLeft: theme.spacing.xl,
+    paddingLeft: theme.spacing.xl
   },
 
   overlay: {
-    position: 'absolute',
+    position: "absolute",
     height: rem(100),
     width: rem(160),
     top: 0,
     left: 0,
-    backgroundColor: theme.fn.variant({ variant: 'light', color: "gray" }).background,
-    zIndex: 1,
+    backgroundColor: theme.fn.variant({ variant: "light", color: "gray" }).background,
+    zIndex: 1
   },
 
   content: {
-    position: 'relative',
-    zIndex: 2,
+    position: "relative",
+    zIndex: 2
   },
 
   icon: {
-    color: theme.fn.variant({ variant: 'light', color: "orange" }).color,
+    color: theme.fn.variant({ variant: "light", color: "orange" }).color
   },
 
   title: {
-    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-  },
-}));
+    color: theme.colorScheme === "dark" ? theme.white : theme.black
+  }
+}))
 
-interface FeatureProps extends React.ComponentPropsWithoutRef<'div'> {
-  icon: React.FC<any>;
-  title: string;
-  description: string;
+interface FeatureProps extends React.ComponentPropsWithoutRef<"div"> {
+  icon: React.FC<any>
+  title: string
+  description: string
 }
 
 function Feature({ icon: Icon, title, description, className, ...others }: FeatureProps) {
-  const { classes, cx } = useStyles();
+  const { classes, cx } = useStyles()
 
   return (
     <div className={cx(classes.feature, className)} {...others}>
@@ -47,15 +56,15 @@ function Feature({ icon: Icon, title, description, className, ...others }: Featu
 
       <div className={classes.content}>
         <Icon size={rem(38)} className={classes.icon} stroke={1.5} />
-        <Text fw={700} fz="lg" mb="xs" mt={5} className={classes.title}>
+        <Text fw={700} fz='lg' mb='xs' mt={5} className={classes.title}>
           {title}
         </Text>
-        <Text c="dimmed" fz="sm" className='text-base'>
+        <Text c='dimmed' fz='sm' className='text-base'>
           {description}
         </Text>
       </div>
     </div>
-  );
+  )
 }
 
 const mockdata = [
@@ -109,15 +118,20 @@ const mockdata = [
   }
 ]
 
-
 export function FeaturesAsymmetrical() {
-  const items = mockdata.map((item) => <Feature {...item} key={item.title} />);
+  const items = mockdata.map((item) => <Feature {...item} key={item.title} />)
 
   return (
-  
-      <SimpleGrid cols={4} breakpoints={[{ maxWidth: 'sm', cols: 1 }]} spacing={100}>
-        {items}
-      </SimpleGrid>
-   
-  );
+    <SimpleGrid
+      cols={4}
+      breakpoints={[
+        { maxWidth: "sm", cols: 1 },
+        { maxWidth: "md", cols: 2 },
+        { maxWidth: "lg", cols: 2 }
+      ]}
+      spacing={100}
+    >
+      {items}
+    </SimpleGrid>
+  )
 }

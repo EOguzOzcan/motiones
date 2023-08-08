@@ -1,7 +1,7 @@
 import React from "react"
 
 import { createStyles, Title, SimpleGrid, Text, Button, ThemeIcon, Grid, Col, rem } from "@mantine/core"
-import { IconTruck,IconCertificate,IconDiscountCheck,Icon24Hours} from "@tabler/icons-react"
+import { IconTruck, IconCertificate, IconDiscountCheck, Icon24Hours } from "@tabler/icons-react"
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
