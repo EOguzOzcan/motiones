@@ -3,7 +3,7 @@
 import { Background } from "../background/Background"
 
 import { useMediaQuery } from "@mantine/hooks"
-import { createStyles, Title, Text, rem } from "@mantine/core"
+import { createStyles, Title, Text, rem, Image } from "@mantine/core"
 const useStyles = createStyles((theme) => ({
   root: {
     backgroundColor: "#11284b",
@@ -25,9 +25,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   image: {
-    [theme.fn.smallerThan("md")]: {
-      display: "none"
-    }
+    maxWidth: "100%"
   },
 
   content: {
@@ -57,7 +55,7 @@ const useStyles = createStyles((theme) => ({
 
   description: {
     color: theme.white,
-    opacity: 0.75,
+    fontWeight: 600,
     maxWidth: rem(600),
 
     [theme.fn.smallerThan("md")]: {
@@ -103,18 +101,17 @@ const Hero = () => {
       <div id='home'>
         <div className={`${classes.inner} ${matches ? "mobile-section" : "section"}`}>
           <div className='black-overlay'></div>
-          <div className='video-background'>
-            <video autoPlay loop muted>
-              <source src='/container.mp4' type='video/mp4' />
-            </video>
-          </div>
+          {/* <video autoPlay loop muted> */}
+          <Image src='/testt.jpg' className={classes.image} />
+
+          {/* <source src='/testt.jpg' type='video/mp4' /> */}
+          {/* </video> */}
           <div className={`${classes.content} content flex flex-col items-center justify-center`}>
-            <Text className={`${classes.description} text-lg md:text-3xl`} mt={30}>
-              Your Trusted Source for Sugar and Sunflower Oil
-            </Text>
-            <Title className={`${classes.title} text-xl md:text-5xl mt-6 `}>Providing the finest Commodity</Title>
-            <Text className={`${classes.description} text-base md:text-2xl`} mt={30}>
-              Right Product, Right Price, Right Time
+            <Title className={`${classes.title} text-lg md:text-4xl mt-6 lg:ml-28`}>
+              Engineering and technical solutions
+            </Title>
+            <Text className={`${classes.description} md:text-2xl lg:ml-28`} mt={30}>
+              Marine and Port & Industry & E-Mobility & Service
             </Text>
           </div>
         </div>

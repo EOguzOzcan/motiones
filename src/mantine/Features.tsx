@@ -37,7 +37,11 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     color: theme.colorScheme === "dark" ? theme.white : theme.black
+  },
+  description: {
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`
   }
 }))
 
@@ -59,7 +63,7 @@ function Feature({ icon: Icon, title, description, className, ...others }: Featu
         <Text fw={700} fz='lg' mb='xs' mt={5} className={classes.title}>
           {title}
         </Text>
-        <Text c='dimmed' fz='sm' className='text-base'>
+        <Text c='dimmed' className={`${classes.description} text-base`}>
           {description}
         </Text>
       </div>
@@ -70,51 +74,51 @@ function Feature({ icon: Icon, title, description, className, ...others }: Featu
 const mockdata = [
   {
     icon: IconCertificate,
-    title: "Quality Assurance",
+    title: "Quick Response",
     description:
-      "Our sugar and sunflower oil products undergo rigorous quality checks at every stage to guarantee unmatched purity and taste. You can trust that only the finest products make their way to your shelves."
+      "Our sales and technical team are always ready to assist you with any queries or concerns, providing a seamless experience in every step of the way."
   },
   {
     icon: IconTableOptions,
-    title: "Product Range",
+    title: "Outstanding Support",
     description:
-      "We understand that different businesses have unique requirements. That's why we offer a tailored product range, including various sugar grades and different sunflower oil quantities to suit your specific needs."
+      "We understand that different markets have unique requirements. That’s why we offer customized solutions to suit your specific needs."
   },
   {
     icon: IconTags,
-    title: "Custom Packaging",
+    title: "Customer-oriented Solutions",
     description:
-      "Establish your brand identity with our private labeling and custom packaging options. Stand out on the market with a personalized touch that reflects your business's uniqueness."
+      "Your satisfaction is our priority. Stand out on the market with a customized touch that improve your energy efficiency in your system."
   },
   {
     icon: IconDiscountCheck,
     title: "Competitive Pricing",
     description:
-      "At ARC Global Chain, we believe in providing premium products at competitive prices. This allows you to maintain a healthy profit margin without compromising on quality."
+      "At Motion-ES, we believe in providing premium solutions at competitive prices. This allows you to maintain a healthy profit margin without compromising on quality."
   },
   {
     icon: IconTruck,
-    title: "Efficient Supply Chain",
+    title: "Industry Expertise",
     description:
-      "With a robust and efficient supply chain, we ensure that your orders are processed promptly and delivered on time. Say goodbye to stock shortages and maintain a seamless business flow."
+      "With a robust and efficient supply chain, we ensure that your orders are processed promptly and delivered on time."
   },
   {
     icon: Icon24Hours,
-    title: "Outstanding Support",
+    title: "Sustainable Sourcing",
     description:
-      "Our dedicated customer support team is always ready to assist you with any inquiries or concerns. Experience top-notch service and quick resolution to any issues that may arise."
+      "Our dedicated customer support team is always ready to assist you with any inquiries or concerns. Experience top-notch service and quick solution to any issues that may arise."
   },
   {
     icon: IconLeaf,
-    title: "Sustainable Sourcing",
+    title: "Product Range",
     description:
-      "We are committed to sustainability and ethical sourcing practices. Our sugar and sunflower oil are sourced responsibly, ensuring minimal impact on the environment and supporting local communities."
+      "We provide wide range of products with frequency converters, static converters, inverters, motors, generators, batteries of many global manufacturers."
   },
   {
     icon: IconMessage2,
-    title: "Industry Expertise",
+    title: "Custom Packaging",
     description:
-      "Benefit from our extensive industry knowledge and expertise. We provide valuable insights and guidance to help you make informed decisions that drive your business forward."
+      "Benefit from our extensive industry knowledge and expertise, we provide valuable insights and guidance to help you make proper decisions for your business."
   }
 ]
 

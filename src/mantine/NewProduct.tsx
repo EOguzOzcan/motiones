@@ -1,43 +1,64 @@
 import React from "react"
-import { Container, SimpleGrid, Title, Image, Text, List } from "@mantine/core"
+import { Container, SimpleGrid, Title, Image, Text, createStyles, rem } from "@mantine/core"
 import { aboutContent } from "@/utils/aboutContent"
 import { useMediaQuery } from "@mantine/hooks"
 
 const imageContent = (
   <Image
-    mx='auto'
     height={350}
-    className='object-cover w-96 md:w-[900px] mt-0 md:mt-8 '
+    className='mx-4 mt-0 md:mt-8 '
+    style={{ width: "auto" }}
     radius='lg'
     src='/container2.jpg'
     alt='Random image'
   />
 )
 
-const mockdata = () => {
-  return (
-    <div className='text-gray-600' id='about'>
-      <Title className='m-3 text-black font-bold' order={1}>
-        {aboutContent.title}
-      </Title>
-      <List className='text-gray-600' size={"xl"} spacing='xl'>
-        {aboutContent.paragraphs.map((paragraph, index) => (
-          <List.Item key={index} className='m-3'>
-            <Text>{paragraph}</Text>
-          </List.Item>
-        ))}
-      </List>
-    </div>
-  )
-}
+const useStyles = createStyles((theme) => ({
+  wrapper: {
+    padding: `calc(${theme.spacing.xl} * 2)`
+  },
+
+  title: {
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontSize: rem(36),
+    fontWeight: 900,
+    lineHeight: 1.1,
+    marginBottom: theme.spacing.md,
+    color: theme.colorScheme === "dark" ? theme.white : theme.black
+  },
+  featureTitle: {
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`
+  }
+}))
 
 const NewProduct = () => {
   const matches = useMediaQuery("(max-width: 1200px)")
+  const { classes } = useStyles()
+
+  const mockdata = () => {
+    return (
+      <div className='text-gray-600' id='about'>
+        <Title className={`${classes.title} text-2xl md:text-4xl`} order={2}>
+          {aboutContent.title}
+        </Title>
+        <Text className={`${classes.featureTitle} mt-3 text-xl`}>
+          {aboutContent.paragraphs.map((paragraph, index) => (
+            <div key={index} className='mr-5 mb-7'>
+              <Text c='dimmed' className={`${classes.featureTitle}`}>
+                {paragraph}
+              </Text>
+            </div>
+          ))}
+        </Text>
+      </div>
+    )
+  }
 
   return (
-    <Container className={`my-4 mt-16 mx-0 md:mx-12`} fluid={true}>
+    <Container className={`${classes.wrapper} mt-16 `} fluid={true}>
       <SimpleGrid spacing={0} cols={matches ? 1 : 2}>
-        <div className='p-5'>{mockdata()}</div>
+        <div>{mockdata()}</div>
         <div>{imageContent}</div>
       </SimpleGrid>
     </Container>

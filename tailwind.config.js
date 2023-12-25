@@ -1,5 +1,3 @@
-
-
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}", "./pages/**/*.html"],
   theme: {
@@ -9,10 +7,10 @@ module.exports = {
       base: "1rem",
       lg: "1.125rem",
       xl: "1.2rem",
-			"1.5xl": "1.4rem",
+      "1.5xl": "1.4rem",
       "2xl": "1.6rem",
       "3xl": "1.7rem",
-			"3.5xl": "2rem",
+      "3.5xl": "2rem",
       "4xl": "2.5rem",
       "5xl": "3rem",
       "6xl": "4rem"
@@ -46,9 +44,19 @@ module.exports = {
         hero: "4.5rem"
       }
     },
-		fontFamily: {
-			fontHind: ['Hind', 'sans-serif'],
-		}
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      white: "#ffffff",
+      cadetblue: "#C5EBDF",
+      anthracite: "#393D47"
+    },
+    fontFamily: {
+      fontHind: ["Hind", "sans-serif"]
+    }
+  },
+  corePlugins: {
+    preflight: false
   },
   plugins: []
 }

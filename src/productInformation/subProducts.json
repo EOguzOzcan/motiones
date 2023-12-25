@@ -1,0 +1,218 @@
+[
+  {
+    "id": "1",
+    "mainProductId": "1",
+    "mainProductName": "Marine & Port Applications",
+    "title": "Retrofit of Legacy Propulsion Frequency Converters and Automation Integration",
+    "description": "<p>Replacing or upgrading the legacy propulsion system frequency converter can lead to improved fuel efficiency, reduced emissions, and enhanced overall performance.</p> <p>Integration of automation technology in vessel operations can lead to increased safety, reduced crew workload, improved efficiency, and better environmental sustainability. It is a vital aspect of modernizing and optimizing maritime transportation.</p> <ul> <li>Replacement of legacy drive adapting with existing transformer & motor</li> <li>Configurable footprint and easy adaptation</li> <li>Integration of existing automation system</li> <li>Service support through experienced specialists</li></ul>",
+    "image": "https://maisergroup.com/wp-content/uploads/2023/01/retrofit-legacy-768x768.jpg"
+  },
+  {
+    "id": "2",
+    "mainProductId": "1",
+    "mainProductName": "Marine & Port Applications",
+    "title": "On-shore Power Supply, Cold Ironing",
+    "description": "<p>Onshore power supply, often referred to as “shore power,” is a system that provides electrical power to ships while they are docked at a port. This system allows ships to turn off their onboard generators, reducing air pollution and noise in the vicinity of the port. It typically involves connecting the ship to the local electrical grid or a dedicated power source on the shore using special connectors and cables. This way, the ship can operate its onboard systems and services, such as lighting, refrigeration, and HVAC, without relying on its internal generators.</p> <p>Shore power is an environmentally friendly solution that helps reduce emissions and improve air quality in port areas.</p> <p>Maiser Group allows you to design a system with the best economical way through MV and LV converter options.</p>",
+    "image": "https://maisergroup.com/wp-content/uploads/2023/02/on-shore-768x768.jpg"
+  },
+  {
+    "id": "3",
+    "mainProductId": "1",
+    "mainProductName": "Marine & Port Applications",
+    "title": "Integrated Alarm and Control Systems",
+    "description": "<p><span>Vessel Integrated Automation System (IAS):</span> and Alarm Monitoring System (AMS): play a vital role in modern ships, offering advanced control, monitoring, and safety functions.</p> <p><u>Vessel Integrated Automation System (IAS): </u>integrates and automates various shipboard systems, including propulsion, power generation, navigation, and more. It allows for centralized control and optimization of these systems.</p> <p><u>Alarm Monitoring System (AMS):</u> continuously monitors a wide range of ship systems and sensors, including engines, navigation, fuel levels, and environmental conditions. It triggers alarms when predefined thresholds are exceeded or when faults are detected. These alarms can be visual, audible, or sent as notifications to crew members or remote monitoring stations.</p> <p>Together, IAS and AMS are critical components of modern vessels, contributing to safety, efficiency, and overall operational excellence. They ensure that ships can navigate challenging conditions while minimizing risks and environmental impact.</p>",
+    "image": "https://maisergroup.com/wp-content/uploads/2023/03/integrated-auto-768x768.jpg"
+  },
+  {
+    "id": "4",
+    "mainProductId": "1",
+    "mainProductName": "Marine & Port Applications",
+    "title": "Shaft Generator and Modernization",
+    "description": "<p>A shaft generator is typically used in maritime applications to generate electrical power on ships. It is connected to the ship’s main propulsion shaft and uses the rotation of the shaft to generate electricity. This electrical power can be used to supply the ship’s onboard systems, including lighting, navigation equipment, and other electrical devices, reducing the need for separate generators or engines to produce electricity.</p> <p>Shaft generators are efficient and environmentally friendly because they can utilize the kinetic energy of the ship’s propulsion system to generate power, reducing the consumption of fuel and emissions. They are especially common on larger vessels like container ships and cruise liners where there is a significant need for electrical power. A shaft generator’s application is to generate electricity for onboard use on ships by harnessing the rotational energy of the ship’s main propulsion shaft.</p> <ul> <li>Inline and parallel shaft generator applications</li> <li>PTO (Power Take Out) mode for electrifying Ship’s consumers and upgrading existing vessels</li> <li>PTH (Power Take Home) for in-use as an electrical motor of the shaft generator and supplying the propeller when disconnected from the main engine</li> <li>Boost Mode (Power Take In) for in-use as an electrical motor of the shaft generator and boosting the main engine</li></ul>",
+    "image": "https://maisergroup.com/wp-content/uploads/2023/04/shaft-gen-768x768.jpg"
+  },
+  {
+    "id": "5",
+    "mainProductId": "1",
+    "mainProductName": "Marine & Port Applications",
+    "title": "Marine Equipment, Water and Wastewater Treatment",
+    "description": "<p>Tank level gauging systems on vessels are sophisticated and integrated sets of equipment, sensors, and software designed to accurately and continuously measure, monitor, and manage the levels of liquids or gases within various types of onboard tanks. These systems are essential components of modern marine vessels.</p> <p>Tank level gauging systems are characterized by their high precision, reliability, and versatility, making them indispensable tools for ship operators to ensure the safe, efficient, and environmentally responsible operation of vessels carrying various types of fluids and gases in their tanks.</p>",
+    "image": "https://maisergroup.com/wp-content/uploads/2023/05/tank-level-768x768.jpg"
+  },
+  {
+    "id": "6",
+    "mainProductId": "1",
+    "mainProductName": "Marine & Port Applications",
+    "title": "Measurement and Control",
+    "description": "<p>A ballast water system on vessels is a critical component used to manage a ship’s stability and balance while at sea. Ballast water is water taken on board a vessel, often from the surrounding body of water, to control its draft, stability, and trim. The primary purpose of a ballast water system is to ensure that a ship maintains proper stability, maneuverability, and safe operating conditions during various phases of a voyage, such as loading, unloading cargo, or encountering rough seas.</p> <p>The ballast water system on vessels offers several advantages that are crucial for their safe and efficient operation. Here are some key benefits:</p><p> <u>Stability and Safety:</u> The primary purpose of the ballast water system is to maintain the ship’s stability and balance, ensuring it remains upright and seaworthy. This is essential for the safety of the vessel and its crew, especially during rough seas, loading, and unloading operations.</p><p><u>Optimized Draft and Trim:</u> Ballast water allows for the adjustment of a ship’s draft (the depth in the water) and trim (longitudinal balance). Proper adjustments enhance the vessel’s maneuverability and fuel efficiency, ensuring it operates at its best performance.</p><p><u>Fuel Efficiency:</u> Properly managed ballast can optimize a ship’s hydrodynamic performance, reducing fuel consumption and greenhouse gas emissions. This is particularly important as the shipping industry seeks to improve its environmental footprint.</p><p><u>Environmental Compliance:</u> Ballast water treatment systems (BWTS) within the ballast water system help vessels comply with environmental regulations. These systems treat ballast water to remove or neutralize harmful organisms and pathogens, reducing the risk of invasive species transfer between ecosystems.</p><p>While the ballast water system offers significant advantages, it’s essential to address potential environmental concerns related to the discharge of ballast water, which can transport invasive species. This has led to the development and implementation of ballast water treatment technologies to minimize ecological risks.</p>",
+    "image": "https://maisergroup.com/wp-content/uploads/2023/06/ballast-768x768.jpg"
+  },
+  {
+    "id": "7",
+    "mainProductId": "1",
+    "mainProductName": "Marine & Port Applications",
+    "title": "Carbon Capture and Storage Systems",
+    "description": "<p>Capture and storage systems on vessels, often referred to as Carbon Capture and Storage (CCS) systems, are specialized technologies designed to capture and contain carbon dioxide (CO2) emissions generated by various onboard processes, especially those related to combustion, such as engine operation. These systems are used to mitigate the environmental impact of vessel emissions and reduce the contribution of shipping to climate change.</p> <p><u>Capture:</u> The capture component of these systems involves the extraction and separation of CO2 from the exhaust gases produced by the vessel’s engines and other emission sources. This is typically done using various capture technologies, such as absorption, adsorption, or membrane separation, which selectively capture CO2 while allowing other gases to pass through.</p> <p><u>Storage:</u> After CO2 is captured, it needs to be safely stored to prevent its release into the atmosphere. On vessels, this often involves storing the captured CO2 in dedicated onboard storage tanks or containers, which are designed to withstand the high-pressure conditions typically associated with CO2 storage.</p> <p>The primary goal of capture and storage systems on vessels is to reduce greenhouse gas emissions, specifically CO2 emissions, from maritime activities. These systems play a crucial role in the maritime industry’s efforts to meet environmental regulations, reduce its carbon footprint, and contribute to global efforts to combat climate change.</p>",
+    "image": "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": "8",
+    "mainProductId": "1",
+    "mainProductName": "Marine & Port Applications",
+    "title": "Waste Heat Recovery and Heat Pumps",
+    "description": "Product 1 description",
+    "image": "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": "9",
+    "mainProductId": "1",
+    "mainProductName": "Marine & Port Applications",
+    "title": "Scrubbers",
+    "description": "Product 1 description",
+    "image": "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": "10",
+    "mainProductId": "1",
+    "mainProductName": "Marine & Port Applications",
+    "title": "Winches and Cranes",
+    "description": "Product 1 description",
+    "image": "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": "11",
+    "mainProductId": "2",
+    "mainProductName": "E-Mobility",
+    "title": "Drivetrain Power for Marine Vehicles",
+    "description": "Product 1 description",
+    "image": "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": "12",
+    "mainProductId": "2",
+    "mainProductName": "E-Mobility",
+    "title": "Drivetrain Power for Shore Vehicles",
+    "description": "Product 1 description",
+    "image": "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": "13",
+    "mainProductId": "3",
+    "mainProductName": "Industry",
+    "title": "Mine Hoist and Industrial Crane Applications",
+    "description": "Product 1 description",
+    "image": "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": "14",
+    "mainProductId": "3",
+    "mainProductName": "Industry",
+    "title": "Mill Applications",
+    "description": "Product 1 description",
+    "image": "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": "15",
+    "mainProductId": "3",
+    "mainProductName": "Industry",
+    "title": "Pump, Fan and Compressor Applications",
+    "description": "Product 1 description",
+    "image": "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": "16",
+    "mainProductId": "3",
+    "mainProductName": "Industry",
+    "title": "Power Generation Applications",
+    "description": "Product 1 description",
+    "image": "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": "17",
+    "mainProductId": "3",
+    "mainProductName": "Industry",
+    "title": "Test Bench Applications",
+    "description": "Product 1 description",
+    "image": "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": "18",
+    "mainProductId": "3",
+    "mainProductName": "Industry",
+    "title": "Statcom & Synchronous Condenser",
+    "description": "Product 1 description",
+    "image": "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": "19",
+    "mainProductId": "4",
+    "mainProductName": "Services",
+    "title": "Predictive and Preventive Maintenance",
+    "description": "Product 1 description",
+    "image": "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": "20",
+    "mainProductId": "4",
+    "mainProductName": "Services",
+    "title": "Service Agreements",
+    "description": "Product 1 description",
+    "image": "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": "21",
+    "mainProductId": "4",
+    "mainProductName": "Services",
+    "title": "Modernization Services",
+    "description": "Product 1 description",
+    "image": "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": "22",
+    "mainProductId": "4",
+    "mainProductName": "Services",
+    "title": "Installation and Commissioning",
+    "description": "Product 1 description",
+    "image": "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": "23",
+    "mainProductId": "4",
+    "mainProductName": "Services",
+    "title": "Repair Services",
+    "description": "Product 1 description",
+    "image": "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": "24",
+    "mainProductId": "4",
+    "mainProductName": "Services",
+    "title": "Digital Services",
+    "description": "Product 1 description",
+    "image": "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": "25",
+    "mainProductId": "4",
+    "mainProductName": "Services",
+    "title": "Power Quality Inspections and Solutions",
+    "description": "Product 1 description",
+    "image": "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": "26",
+    "mainProductId": "4",
+    "mainProductName": "Services",
+    "title": "Trainings",
+    "description": "Product 1 description",
+    "image": "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": "27",
+    "mainProductId": "4",
+    "mainProductName": "Services",
+    "title": "Spare Parts",
+    "description": "Product 1 description",
+    "image": "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+  }
+]

@@ -114,7 +114,7 @@ export function ContactMantine() {
   }
 
   return (
-    <div className={`${classes.wrapper} mx-12 my-6 bg-gradient-to-r from-orange-400 to-orange-500`} id='contact'>
+    <div className={`${classes.wrapper} mx-6 my-6 bg-gradient-to-r from-orange-400 to-orange-500`} id='contact'>
       <SimpleGrid cols={2} spacing={50} breakpoints={[{ maxWidth: "sm", cols: 1 }]}>
         <div>
           <Title className={`${classes.title} text-3xl`}>Let Us Know How We Can Help Your Business Succeed</Title>
@@ -151,7 +151,7 @@ export function ContactMantine() {
               classNames={{ input: classes.input, label: classes.inputLabel }}
             />
             <Group position='right' mt='md'>
-              <Button type='submit' className={classes.control} variant='light' color='orange'>
+              <Button type='submit' variant='subtle' color='orange'>
                 Send message
               </Button>
             </Group>

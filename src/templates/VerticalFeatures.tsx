@@ -1,6 +1,6 @@
 import React from "react"
 
-import { createStyles, Title, SimpleGrid, Text, Button, ThemeIcon, Grid, Col, rem } from "@mantine/core"
+import { createStyles, Title, SimpleGrid, Text, ThemeIcon, Grid, Col, rem } from "@mantine/core"
 import { IconTruck, IconCertificate, IconDiscountCheck, Icon24Hours } from "@tabler/icons-react"
 
 const useStyles = createStyles((theme) => ({
@@ -13,35 +13,37 @@ const useStyles = createStyles((theme) => ({
     fontSize: rem(36),
     fontWeight: 900,
     lineHeight: 1.1,
-    marginBottom: theme.spacing.md,
     color: theme.colorScheme === "dark" ? theme.white : theme.black
+  },
+  featureTitle: {
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`
   }
 }))
 
 const features = [
   {
     icon: IconCertificate,
-    title: "Uncompromising Quality",
+    title: "Specialized solutions",
     description:
-      "We believe in offering products that meet the highest quality standards. Our sugar and sunflower oil products undergo rigorous testing and inspection to ensure they exceed your expectations."
+      "We believe in offering products and solutions that meet the highest expectations. Our solutions can be customized for your applications and needs."
   },
   {
     icon: IconDiscountCheck,
-    title: "Competitive Pricing",
+    title: "Quick technical support and flexibility",
     description:
-      "We understand the value of affordability in a competitive market. Our prices are designed to give your business the edge it needs without compromising on quality."
+      "We understand how your system is important in case you have downtime due to electrical converters. Our dedicated support team find quickest and best way to handle for existing problems in your system."
   },
   {
     icon: IconTruck,
-    title: "Reliable Supply",
+    title: "Engineering and engineering support",
     description:
-      "With ARC Global Chain, you can count on a steady and dependable supply. Say goodbye to stock shortages and focus on growing your business with confidence."
+      "With Motion-ES, you can have highly qualified engineering solutions with professionals who have years of experience."
   },
   {
     icon: Icon24Hours,
-    title: "Exceptional Customer Service",
+    title: "Realibility and customer-oriented support/solutions",
     description:
-      "Your satisfaction is our priority. Our dedicated support team is always ready to assist you with any queries or concerns, providing a seamless experience every step of the way."
+      "Your satisfaction is our priority. Our sales and technical team are always ready to assist you with any queries or concerns, providing a seamless experience in every step of the way."
   }
 ]
 
@@ -50,43 +52,47 @@ const VerticalFeatures = () => {
 
   const items = features.map((feature) => (
     <div key={feature.title}>
-      <ThemeIcon size={44} radius='md' variant='gradient' gradient={{ deg: 133, from: "orange", to: "orange" }}>
-        <feature.icon size={rem(26)} stroke={1.5} />
+      <ThemeIcon size={44} radius='md' variant='gradient' className={"bg-cadetblue bg-none"}>
+        <feature.icon className='bg-none text-anthracite' size={rem(26)} stroke={1.5} />
       </ThemeIcon>
-      <Text fz='lg' mt='sm' fw={900} className='text-black'>
+      <Text fz='lg' mt='sm' fw={700} className={`${classes.featureTitle} text-xl text-anthracite mb-3`}>
         {feature.title}
       </Text>
-      <Text c='dimmed' fz='sm' className='text-base'>
+      <Text c='dimmed' fz='sm' className={`${classes.featureTitle} text-base`}>
         {feature.description}
       </Text>
     </div>
   ))
 
   return (
-    <div className={`${classes.wrapper} my-4 mt-16 mx-0 md:mx-12`}>
+    <div className={`${classes.wrapper} mt-16 `}>
       <Grid gutter={80}>
         <Col span={12} md={5}>
           <Title className={`${classes.title} text-2xl md:text-4xl`} order={2}>
-            ARC Global Chain
+            Motion-ES
           </Title>
-          <br />
-          <Title className={`${classes.title} text-2xl md:text-3.5xl mt-2`} order={2}>
+          <Text fw={700} mt='sm' className={`${classes.featureTitle} text-xl text-anthracite mb-3`}>
             Your Trusted Partner for Quality, Price, Supply, and Service
-          </Title>
+          </Text>
+
+          <Text c='dimmed' className={`${classes.featureTitle} text-xl`}>
+            Motion-ES is an integration and multiservice company that can support for your electrical converters,
+            electrical motors/generators and batteries of many global manufacturers.
+          </Text>
           <br />
 
-          <Text c='dimmed' className='text-xl'>
-            ARC Global Chain is established by ATG & Ruha Yağ Rafineri A.Ş.to provide the finest quality sugar and
-            sunflower oil commodity products.
+          <Text c='dimmed' className={`${classes.featureTitle} text-xl`}>
+            Quick response, flexibility and customer-oriented solutions are our essential principles.
           </Text>
           <br />
-          <Text c='dimmed' className='text-xl'>
-            We pride ourselves in manufacturing and delivering the highest quality commodities. We also make sure all
-            our products undergo accredited independent quality assurance inspection testing.
+          <Text c='dimmed' className={`${classes.featureTitle} text-xl`}>
+            Motion-ES supplies products for various markets along with technical support including engineering,
+            automation, system integration, commissioning and after sales services. We mainly adapt our portfolio to the
+            customer’s needs.
           </Text>
-          <Button variant='gradient' gradient={{ deg: 133, from: "blue", to: "cyan" }} size='lg' radius='md' mt='xl'>
+          {/* <Button variant='gradient' gradient={{ deg: 133, from: "blue", to: "cyan" }} size='lg' radius='md' mt='xl'>
             Get started
-          </Button>
+          </Button> */}
         </Col>
         <Col span={12} md={7}>
           <SimpleGrid cols={2} spacing={30} breakpoints={[{ maxWidth: "md", cols: 1 }]}>

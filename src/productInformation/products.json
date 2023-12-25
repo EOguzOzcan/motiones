@@ -1,0 +1,26 @@
+[
+  {
+    "image": "/marineport.jpg",
+    "title": "Marine & Port",
+    "category": "Innovative ways to improve Energy Efficiency",
+    "id": "1"
+  },
+  {
+    "image": "/emobility.jpg",
+    "title": "E-Mobility",
+    "category": "Innovative ways to improve Energy Efficiency",
+    "id": "2"
+  },
+  {
+    "image": "/industry.jpg",
+    "title": "Industry",
+    "category": "Innovative ways to improve Energy Efficiency",
+    "id": "3"
+  },
+  {
+    "image": "/services.jpg",
+    "title": "Services",
+    "category": "Innovative ways to improve Energy Efficiency",
+    "id": "4"
+  }
+]

@@ -82,7 +82,6 @@ const useStyles = createStyles((theme) => ({
     paddingBottom: `calc(${theme.spacing.xl} * 4)`,
     maxWidth: "80vw"
   },
-
   title: {
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     fontSize: rem(36),
@@ -97,10 +96,9 @@ const useStyles = createStyles((theme) => ({
       textAlign: "center"
     }
   },
-
   description: {
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     textAlign: "center",
-
     [theme.fn.smallerThan("sm")]: {
       textAlign: "left"
     }
@@ -122,7 +120,7 @@ export function WhyChoose({ title, description }: FeaturesGridProps) {
         {title}
       </Title>
       <Container size={800} p={0}>
-        <Text size='sm' className={`${classes.description} text-lg `}>
+        <Text size='sm' className={`${classes.description} text-xl `}>
           {description}
         </Text>
       </Container>
