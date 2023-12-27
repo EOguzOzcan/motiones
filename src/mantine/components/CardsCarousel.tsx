@@ -5,6 +5,8 @@ import classes from "../css/CardsCarousel.module.css"
 import { Dispatch, SetStateAction } from "react"
 import products from "../../productInformation/products.json"
 import type { SelectedProductType } from "../Products"
+import { IconArrowDown } from "@tabler/icons-react"
+
 interface CardProps {
   image: string
   title: string
@@ -21,8 +23,14 @@ interface CardsCarouselProps {
 
 function Card({ image, title, category, id, setSelectedProduct, scrollIntoView }: CardProps) {
   return (
-    <Paper shadow='md' p='xl' radius='md' style={{ backgroundImage: `url(${image})` }} className={classes.card}>
-      <div>
+    <Paper
+      shadow='md'
+      p='xl'
+      radius='md'
+      style={{ backgroundImage: `url(${image})` }}
+      className={`${classes.card} product-background`}
+    >
+      <div className='z-10'>
         <Text className={classes.category} size='xs'>
           {category}
         </Text>
@@ -37,8 +45,9 @@ function Card({ image, title, category, id, setSelectedProduct, scrollIntoView }
             alignment: "center"
           })
         }}
+        className='bg-anthracite hover:bg-gray-700 transition-all pr-1'
       >
-        Read article
+        Read More <IconArrowDown className='ml-2' />
       </Button>
     </Paper>
   )

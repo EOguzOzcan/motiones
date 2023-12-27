@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-import { createStyles, Text, rem, Title, Container } from "@mantine/core"
+import { createStyles, rem, Title } from "@mantine/core"
 import { useScrollIntoView } from "@mantine/hooks"
 
 import { CardsCarousel } from "./components/CardsCarousel"
@@ -61,7 +61,6 @@ export function Products() {
   const { scrollIntoView, targetRef } = useScrollIntoView<HTMLDivElement>({
     offset: 90
   })
-  console.log(randomNumber)
 
   useEffect(() => {
     // Filter the subProducts.json file to find the product that matches the ProductId
@@ -121,12 +120,13 @@ export function Products() {
       <Title className={`${classes.title} text-2xl md:text-4xl mt-2 mb-6 text-center`} order={2}>
         Products
       </Title>
-      <Container size={800} p={0}>
+      {/* <Container size={800} p={0}>
         <Text size='sm' className={`${classes.description} text-xl  text-center mb-12`}>
           At ARC Global Chain, we take pride in offering a diverse range of premium sugar and top-notch sunflower oil
           products
         </Text>
-      </Container>
+      </Container> */}
+      {/* <hr /> */}
       {/* <SimpleGrid cols={0} spacing='xl' mt={50} breakpoints={[{ maxWidth: "md", cols: 1 }]}> */}
       {/* {features} */}
       <CardsCarousel setSelectedProduct={setSelectedProduct} scrollIntoView={scrollIntoView} />

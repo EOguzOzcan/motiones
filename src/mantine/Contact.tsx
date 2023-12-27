@@ -18,7 +18,6 @@ const useStyles = createStyles((theme) => ({
   wrapper: {
     minHeight: 400,
     boxSizing: "border-box",
-
     padding: `calc(${theme.spacing.xl} * 2.5)`,
     borderRadius: theme.radius.md,
     [theme.fn.smallerThan("sm")]: {
@@ -101,8 +100,6 @@ export function ContactMantine() {
   })
 
   const handleSendEmail = async (data: ContactData) => {
-    console.log(data)
-
     const response = await fetch("/api/send", {
       method: "POST", // Specify the HTTP method used by your API route
       body: JSON.stringify({ data })
@@ -114,7 +111,7 @@ export function ContactMantine() {
   }
 
   return (
-    <div className={`${classes.wrapper} mx-6 my-6 bg-gradient-to-r from-orange-400 to-orange-500`} id='contact'>
+    <div className={`${classes.wrapper} mx-6 my-6 bg-anthracite`} id='contact'>
       <SimpleGrid cols={2} spacing={50} breakpoints={[{ maxWidth: "sm", cols: 1 }]}>
         <div>
           <Title className={`${classes.title} text-3xl`}>Let Us Know How We Can Help Your Business Succeed</Title>
@@ -151,7 +148,7 @@ export function ContactMantine() {
               classNames={{ input: classes.input, label: classes.inputLabel }}
             />
             <Group position='right' mt='md'>
-              <Button type='submit' variant='subtle' color='orange'>
+              <Button type='submit' className='bg-anthracite hover:bg-gray-700 transition-all'>
                 Send message
               </Button>
             </Group>

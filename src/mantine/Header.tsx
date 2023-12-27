@@ -77,7 +77,7 @@ export function HeaderAction() {
     >
       <Container className={classes.inner} fluid>
         <Group className='flex justify-center items-center cursor-pointer mt-2'>
-          <Burger opened={opened} onClick={toggle} className={`${classes.burger}`} color={"white"} size='md' />
+          <Burger opened={opened} onClick={toggle} className={`${classes.burger} text-anthracite`} size='md' />
           <Logo />
         </Group>
         <Group spacing={24} className={`${classes.links} mt-1`}>

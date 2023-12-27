@@ -33,7 +33,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   icon: {
-    color: theme.fn.variant({ variant: "light", color: "orange" }).color
+    color: "#92ebcf"
   },
 
   title: {

@@ -49,7 +49,8 @@ module.exports = {
       current: "currentColor",
       white: "#ffffff",
       cadetblue: "#C5EBDF",
-      anthracite: "#393D47"
+      anthracite: "#393D47",
+      opacityAnthracite: "rgba(57, 61, 71, 0.5)"
     },
     fontFamily: {
       fontHind: ["Hind", "sans-serif"]

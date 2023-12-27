@@ -31,9 +31,9 @@ function Card({ image, title, description }: CardProps) {
       p='xl'
       radius='md'
       style={{ backgroundImage: `url(${image})` }}
-      className={classes.card}
+      className={`${classes.card} product-background`}
     >
-      <div>
+      <div className='z-10'>
         <Text className={classes.category} size='xs'></Text>
         <Title order={3} className={classes.title}>
           {title}
@@ -46,11 +46,13 @@ function Card({ image, title, description }: CardProps) {
             p='md'
             style={{
               ...styles,
-              overflow: "auto"
+              overflow: "auto",
+              width: "100%"
             }}
+            className='bg-opacityAnthracite'
           >
             <TypographyStylesProvider>
-              <div dangerouslySetInnerHTML={{ __html: description }} />
+              <div dangerouslySetInnerHTML={{ __html: description }} className='text-gray-200	' />
             </TypographyStylesProvider>
           </Paper>
         )}
@@ -68,16 +70,17 @@ export function SubProductCarousel({ subProducts }: SubProductProps) {
       <Card {...item} />
     </Carousel.Slide>
   ))
-
+  const slideCount = slides.length
   return (
     <Carousel
+      containScroll='trimSnaps'
       withIndicators
       height={750}
-      slideSize={mobile ? "100%" : "33%"}
+      slideSize={mobile ? "100%" : slideCount > 2 ? "33%" : "50%"}
       slideGap='md'
       align='start'
       // align='start'
-      slidesToScroll={mobile ? 1 : 3}
+      slidesToScroll={mobile ? 1 : slideCount > 2 ? 3 : 2}
     >
       {slides}
     </Carousel>

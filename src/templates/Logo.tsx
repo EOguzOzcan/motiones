@@ -33,15 +33,9 @@ const Logo = (props: ILogoProps) => {
         to='home'
         smooth={true}
         duration={1000}
-        className={`flex justify-center items-center ml-4 md:ml-0 text-white ${fontStyle}`}
+        className={`flex justify-center items-center md:ml-0 text-white ${fontStyle}`}
       >
-        <Image
-          src='/motioneslogo.png'
-          alt='logo'
-          width={250}
-          height={40}
-          style={{ display: "flex", marginRight: "12px" }}
-        />
+        <Image src='/motioneslogo.png' alt='logo' width={225} height={40} style={{ display: "flex" }} />
 
         {/* <h1 className='text-3xl md:text-3.5xl text-white font-bold font-fontHind'>{AppConfig.site_name}</h1> */}
       </ScrollLink>

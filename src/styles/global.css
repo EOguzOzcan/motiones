@@ -42,7 +42,7 @@ iframe {
 .section {
 		position: relative;
 		width: 100%;
-		height: 600px;
+		height: 700px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -89,4 +89,31 @@ iframe {
 	
 u {
   color: green;
+}
+
+.product-background {
+  position: relative;
+  height: 100vh; /* Set the height as needed */
+  overflow: hidden;
+}
+
+.product-background:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 17%; /* Adjust this value to control the coverage from top to middle */
+  background: linear-gradient(rgba(57, 61, 71, 0.45), rgba(57, 61, 71, 0.2));
+  z-index: 1; /* Adjust the z-index as needed */
+}
+
+@media (max-width: 1024px) {
+  .product-background {
+    height: 150vh; /* Adjust the height for mobile screens */
+  }
+
+  .product-background:before {
+    height: 22%; /* Adjust the coverage for mobile screens */
+  }
 }
