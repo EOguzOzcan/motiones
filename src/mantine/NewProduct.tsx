@@ -38,16 +38,14 @@ const NewProduct = () => {
 
   const mockdata = () => {
     return (
-      <div className='text-gray-600' id='about'>
+      <div id='about'>
         <Title className={`${classes.title} text-2xl md:text-4xl`} order={2}>
           {aboutContent.title}
         </Title>
         <Text className={`${classes.featureTitle} mt-3 text-xl`}>
           {aboutContent.paragraphs.map((paragraph, index) => (
             <div key={index} className='mr-5 mb-7'>
-              <Text c='dimmed' className={`${classes.featureTitle}`}>
-                {paragraph}
-              </Text>
+              <Text className={`${classes.featureTitle}`}>{paragraph}</Text>
             </div>
           ))}
         </Text>

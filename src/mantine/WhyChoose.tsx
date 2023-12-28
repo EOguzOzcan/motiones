@@ -69,7 +69,7 @@ export function Feature({ icon: Icon, title, description }: FeatureProps) {
         {title}
       </Text>
 
-      <Text size='sm' color='dimmed' className='text-base' sx={{ lineHeight: 1.6 }}>
+      <Text size='sm' className='text-base' sx={{ lineHeight: 1.6 }}>
         {description}
       </Text>
     </div>

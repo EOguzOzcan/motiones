@@ -24,7 +24,7 @@ function MantineTabs({ data, index }: Props) {
         </Tabs.List>
         {data.map((item, index) => (
           <Tabs.Panel key={index} value={item.id} pt='xs' className=''>
-            <Text fz='sm' c='dimmed' mt='sm' className='text-base'>
+            <Text fz='sm' mt='sm' className='text-base'>
               {item.description}
             </Text>
           </Tabs.Panel>

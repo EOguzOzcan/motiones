@@ -44,7 +44,10 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: theme.white,
     padding: theme.spacing.xl,
     borderRadius: theme.radius.md,
-    boxShadow: theme.shadows.lg
+    boxShadow: theme.shadows.lg,
+    display: "flex",
+    flexWrap: "nowrap",
+    flexDirection: "column"
   },
 
   social: {
@@ -74,7 +77,11 @@ const useStyles = createStyles((theme) => ({
   }
 }))
 
-const social = [IconBrandTwitter, IconBrandYoutube, IconBrandInstagram]
+const social = [
+  { Icon: IconBrandTwitter, link: "/" },
+  { Icon: IconBrandYoutube, link: "/" },
+  { Icon: IconBrandInstagram, link: "/" }
+]
 type ContactData = {
   to: string
   name: string
@@ -83,8 +90,14 @@ type ContactData = {
 export function ContactMantine() {
   const { classes } = useStyles()
   const icons = social.map((Icon, index) => (
-    <ActionIcon key={index} size={28} className={classes.social} variant='transparent'>
-      <Icon size='1.4rem' stroke={1.5} />
+    <ActionIcon
+      key={index}
+      size={28}
+      className={classes.social}
+      variant='transparent'
+      onClick={() => (window.location.href = Icon.link)}
+    >
+      <Icon.Icon size='1.4rem' stroke={1.5} />
     </ActionIcon>
   ))
   const form = useForm({
@@ -112,7 +125,7 @@ export function ContactMantine() {
 
   return (
     <div className={`${classes.wrapper} mx-6 my-6 bg-anthracite`} id='contact'>
-      <SimpleGrid cols={2} spacing={50} breakpoints={[{ maxWidth: "sm", cols: 1 }]}>
+      <SimpleGrid cols={2} breakpoints={[{ maxWidth: "md", cols: 1 }]}>
         <div>
           <Title className={`${classes.title} text-3xl`}>Let Us Know How We Can Help Your Business Succeed</Title>
           <Text className={`${classes.description} text-lg`} mt='lg' mb={30}>
@@ -147,7 +160,7 @@ export function ContactMantine() {
               {...form.getInputProps("message")}
               classNames={{ input: classes.input, label: classes.inputLabel }}
             />
-            <Group position='right' mt='md'>
+            <Group position='right' className={`mt-5`}>
               <Button type='submit' className='bg-anthracite hover:bg-gray-700 transition-all'>
                 Send message
               </Button>

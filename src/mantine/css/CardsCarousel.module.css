@@ -27,3 +27,39 @@
   font-weight: 700;
   text-transform: uppercase;
 }
+
+.control {
+  outline: 1px solid #ffffff;
+  outline-offset: -1px;
+  background-color: #393D47;
+  padding: 8px;
+  color: #fff;
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+  
+}
+
+.control[data-inactive="true"] {
+    opacity: 0;
+    cursor: default;
+}
+
+.indicator {
+  outline: 2px solid #ffffff;
+  outline-offset: -3px;
+  background-color: #393D47;
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 14px; /* Adjust the font size */
+  transition: background-color 0.3s ease;
+}
+.indicator :focus {
+  outline: 2px solid #ffffff;
+  outline-offset: -3px;
+  background-color: #393D47;
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 14px; /* Adjust the font size */
+  transition: background-color 0.3s ease;
+}

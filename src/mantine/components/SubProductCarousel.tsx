@@ -1,9 +1,11 @@
 import { Carousel } from "@mantine/carousel"
 import { useMediaQuery } from "@mantine/hooks"
-import { Paper, Text, Title, useMantineTheme, TypographyStylesProvider } from "@mantine/core"
+import { Paper, Title, useMantineTheme, TypographyStylesProvider } from "@mantine/core"
 import classes from "../css/CardsCarousel.module.css"
 import { Transition } from "@mantine/core"
 import { useHover } from "@mantine/hooks"
+import { IconArrowRight, IconArrowLeft } from "@tabler/icons-react"
+import { useEffect, useState } from "react"
 
 interface CardProps {
   image: string
@@ -34,7 +36,6 @@ function Card({ image, title, description }: CardProps) {
       className={`${classes.card} product-background`}
     >
       <div className='z-10'>
-        <Text className={classes.category} size='xs'></Text>
         <Title order={3} className={classes.title}>
           {title}
         </Title>
@@ -64,6 +65,7 @@ function Card({ image, title, description }: CardProps) {
 export function SubProductCarousel({ subProducts }: SubProductProps) {
   const theme = useMantineTheme()
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`)
+  const [key, setKey] = useState(0)
 
   const slides = subProducts.map((item) => (
     <Carousel.Slide key={item.title}>
@@ -71,15 +73,22 @@ export function SubProductCarousel({ subProducts }: SubProductProps) {
     </Carousel.Slide>
   ))
   const slideCount = slides.length
+  useEffect(() => {
+    // Update the key whenever subProducts change
+    setKey((prevKey) => prevKey + 1)
+  }, [subProducts])
   return (
     <Carousel
+      key={key}
+      classNames={classes}
       containScroll='trimSnaps'
       withIndicators
       height={750}
       slideSize={mobile ? "100%" : slideCount > 2 ? "33%" : "50%"}
-      slideGap='md'
+      slideGap='xs'
       align='start'
-      // align='start'
+      nextControlIcon={<IconArrowRight />}
+      previousControlIcon={<IconArrowLeft />}
       slidesToScroll={mobile ? 1 : slideCount > 2 ? 3 : 2}
     >
       {slides}

@@ -117,23 +117,14 @@ export function Products() {
 
   return (
     <div className='px-6 py-6'>
-      <Title className={`${classes.title} text-2xl md:text-4xl mt-2 mb-6 text-center`} order={2}>
+      <Title className={`${classes.title} text-2xl md:text-4xl mt-2 mb-6 text-center`} order={2} id='products'>
         Products
       </Title>
-      {/* <Container size={800} p={0}>
-        <Text size='sm' className={`${classes.description} text-xl  text-center mb-12`}>
-          At ARC Global Chain, we take pride in offering a diverse range of premium sugar and top-notch sunflower oil
-          products
-        </Text>
-      </Container> */}
-      {/* <hr /> */}
-      {/* <SimpleGrid cols={0} spacing='xl' mt={50} breakpoints={[{ maxWidth: "md", cols: 1 }]}> */}
-      {/* {features} */}
       <CardsCarousel setSelectedProduct={setSelectedProduct} scrollIntoView={scrollIntoView} />
       <div className='mt-12' ref={targetRef}>
         {filteredSubProducts.length > 0 && (
           <>
-            <Title order={3} size='h1' className='text-center mb-6'>
+            <Title className={`${classes.title} text-2xl md:text-4xl mt-2 mb-6 text-center`} order={2}>
               {filteredSubProducts[0].mainProductName}
             </Title>
             <SubProductCarousel subProducts={filteredSubProducts} />

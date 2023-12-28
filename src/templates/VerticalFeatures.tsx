@@ -1,8 +1,9 @@
 import React from "react"
 
 import { createStyles, Title, SimpleGrid, Text, ThemeIcon, Grid, Col, rem } from "@mantine/core"
-import { IconTruck, IconCertificate, IconDiscountCheck, Icon24Hours } from "@tabler/icons-react"
-
+import { IconTruck } from "@tabler/icons-react"
+import { GiShakingHands, GiAutoRepair } from "react-icons/gi"
+import { MdEngineering } from "react-icons/md"
 const useStyles = createStyles((theme) => ({
   wrapper: {
     padding: `calc(${theme.spacing.xl} * 2)`
@@ -22,25 +23,25 @@ const useStyles = createStyles((theme) => ({
 
 const features = [
   {
-    icon: IconCertificate,
-    title: "Specialized solutions",
+    icon: GiShakingHands,
+    title: "Customized solutions",
     description:
       "We believe in offering products and solutions that meet the highest expectations. Our solutions can be customized for your applications and needs."
   },
   {
-    icon: IconDiscountCheck,
+    icon: IconTruck,
     title: "Quick technical support and flexibility",
     description:
       "We understand how your system is important in case you have downtime due to electrical converters. Our dedicated support team find quickest and best way to handle for existing problems in your system."
   },
   {
-    icon: IconTruck,
+    icon: MdEngineering,
     title: "Engineering and engineering support",
     description:
       "With Motion-ES, you can have highly qualified engineering solutions with professionals who have years of experience."
   },
   {
-    icon: Icon24Hours,
+    icon: GiAutoRepair,
     title: "Realibility and customer-oriented support/solutions",
     description:
       "Your satisfaction is our priority. Our sales and technical team are always ready to assist you with any queries or concerns, providing a seamless experience in every step of the way."
@@ -53,12 +54,12 @@ const VerticalFeatures = () => {
   const items = features.map((feature) => (
     <div key={feature.title}>
       <ThemeIcon size={44} radius='md' variant='gradient' className={"bg-cadetblue bg-none"}>
-        <feature.icon className='bg-none text-anthracite' size={rem(26)} stroke={1.5} />
+        <feature.icon className='bg-none text-anthracite' size={rem(26)} stroke={"1.5"} />
       </ThemeIcon>
       <Text fz='lg' mt='sm' fw={700} className={`${classes.featureTitle} text-xl text-anthracite mb-3`}>
         {feature.title}
       </Text>
-      <Text c='dimmed' fz='sm' className={`${classes.featureTitle} text-base`}>
+      <Text fz='sm' className={`${classes.featureTitle} text-base`}>
         {feature.description}
       </Text>
     </div>
@@ -75,17 +76,17 @@ const VerticalFeatures = () => {
             Your Trusted Partner for Quality, Price, Supply, and Service
           </Text>
 
-          <Text c='dimmed' className={`${classes.featureTitle} text-xl`}>
+          <Text className={`${classes.featureTitle} text-xl`}>
             Motion-ES is an integration and multiservice company that can support for your electrical converters,
             electrical motors/generators and batteries of many global manufacturers.
           </Text>
           <br />
 
-          <Text c='dimmed' className={`${classes.featureTitle} text-xl`}>
+          <Text className={`${classes.featureTitle} text-xl`}>
             Quick response, flexibility and customer-oriented solutions are our essential principles.
           </Text>
           <br />
-          <Text c='dimmed' className={`${classes.featureTitle} text-xl`}>
+          <Text className={`${classes.featureTitle} text-xl`}>
             Motion-ES supplies products for various markets along with technical support including engineering,
             automation, system integration, commissioning and after sales services. We mainly adapt our portfolio to the
             customer’s needs.

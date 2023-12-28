@@ -25,7 +25,8 @@ const useStyles = createStyles((theme) => ({
   },
 
   image: {
-    maxWidth: "100%"
+    maxWidth: "100%",
+    marginTop: "70px"
   },
 
   content: {
@@ -107,8 +108,10 @@ const Hero = () => {
           {/* <source src='/testt.jpg' type='video/mp4' /> */}
           {/* </video> */}
           <div className={`${classes.content} content flex flex-col items-center justify-center lg:ml-32`}>
-            <Title className={`${classes.title} text-lg md:text-4xl mt-6 `}>Engineering and technical solutions</Title>
-            <Text className={`${classes.description} md:text-2xl`} mt={30}>
+            <Title className={`${classes.title} text-base mt-20 md:text-4xl md:mt-6 `}>
+              Engineering and technical solutions
+            </Title>
+            <Text className={`${classes.description} mt-5 md:text-2xl md:mt-6`}>
               Marine and Port & Industry & E-Mobility & Service
             </Text>
           </div>

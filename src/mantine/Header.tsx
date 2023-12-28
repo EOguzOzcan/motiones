@@ -1,6 +1,6 @@
 import { Logo } from "@/templates/Logo"
-import { createStyles, Header, Container, Group, Burger, rem } from "@mantine/core"
-import { useDisclosure } from "@mantine/hooks"
+import { createStyles, Header, Container, Group, rem, Text, Image } from "@mantine/core"
+// import { useDisclosure } from "@mantine/hooks"
 import { Link as ScrollLink } from "react-scroll"
 
 const HEADER_HEIGHT = rem(70)
@@ -11,7 +11,7 @@ const useStyles = createStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    "@media (max-width: 800px)": {
+    "@media (max-width: 1020px)": {
       justifyContent: "center"
     }
   },
@@ -20,7 +20,7 @@ const useStyles = createStyles((theme) => ({
     "@media (max-width: 850px)": {
       display: "contents"
     },
-    "@media (max-width: 800px)": {
+    "@media (max-width: 1020px)": {
       display: "none"
     }
   },
@@ -49,7 +49,7 @@ const useStyles = createStyles((theme) => ({
 
 export function HeaderAction() {
   const { classes } = useStyles()
-  const [opened, { toggle }] = useDisclosure(false)
+  // const [opened, { toggle }] = useDisclosure(false)
   // const [windowScreen, setWindowScreen] = useState(false)
 
   // useEffect(() => {
@@ -77,14 +77,14 @@ export function HeaderAction() {
     >
       <Container className={classes.inner} fluid>
         <Group className='flex justify-center items-center cursor-pointer mt-2'>
-          <Burger opened={opened} onClick={toggle} className={`${classes.burger} text-anthracite`} size='md' />
+          {/* <Burger opened={opened} onClick={toggle} className={`${classes.burger} text-anthracite`} size='md' /> */}
           <Logo />
         </Group>
-        <Group spacing={24} className={`${classes.links} mt-1`}>
-          {/* <a
-						href="#about" // Replace "#" with the URL or path to the About section
-						className={`${classes.link} text-white text-2xl`}
-					> */}
+        <Group spacing={24} className={`${classes.links} mt-1 items-baseline`}>
+          <Text className='flex items-center	'>
+            Exclusive Partner of&nbsp;&nbsp;
+            <Image width={90} src='/Ingeteam.png' />
+          </Text>
           <li className={`${classes.link} text-anthracite text-1.5xl cursor-pointer`}>
             <ScrollLink offset={-150} to='about' smooth={true} duration={1000}>
               About
@@ -103,33 +103,34 @@ export function HeaderAction() {
             </ScrollLink>
           </li>
         </Group>
-        {opened && (
-          <div className='absolute top-[70px] bg-gray-200 w-[370px] rounded-md'>
+        {/* {opened && (
+          <div className='absolute top-[70px] bg-cadetblue w-[370px] rounded-md'>
             <Group spacing={5} className={`${classes.links} flex justify-center items-center`}>
-              <li
-                className={`${classes.link} text-black  text-xl text-center cursor-pointer bg-gray-100 w-[360px] m-1 mt-2 rounded-md`}
-              >
-                <ScrollLink offset={-150} to='about' smooth={true} duration={1000}>
+              <ScrollLink offset={-150} to='about' smooth={true} duration={1000} onClick={toggle}>
+                <li
+                  className={`${classes.link} text-anthracite text-xl text-center cursor-pointer bg-gray-100 w-[360px] m-1 mt-2 rounded-md`}
+                >
                   About
-                </ScrollLink>
-              </li>
-              <li
-                className={`${classes.link} text-black  text-xl text-center cursor-pointer bg-gray-100 w-[360px] m-1 rounded-md`}
-              >
-                <ScrollLink offset={-150} to='products' smooth={true} duration={1000}>
+                </li>
+              </ScrollLink>
+
+              <ScrollLink offset={-150} to='products' smooth={true} duration={1000} onClick={toggle}>
+                <li
+                  className={`${classes.link} text-anthracite text-xl text-center cursor-pointer bg-gray-100 w-[360px] m-1 rounded-md`}
+                >
                   Products
-                </ScrollLink>
-              </li>
-              <li
-                className={`${classes.link} text-black  text-xl text-center cursor-pointer bg-gray-100 w-[360px] m-1 rounded-md mb-2`}
-              >
-                <ScrollLink offset={-150} to='contact' smooth={true} duration={1000}>
+                </li>
+              </ScrollLink>
+              <ScrollLink offset={-150} to='contact' smooth={true} duration={1000} onClick={toggle}>
+                <li
+                  className={`${classes.link} text-anthracite text-xl text-center cursor-pointer bg-gray-100 w-[360px] m-1 rounded-md mb-2`}
+                >
                   Contact Us
-                </ScrollLink>
-              </li>
+                </li>
+              </ScrollLink>
             </Group>
           </div>
-        )}
+        )} */}
       </Container>
     </Header>
   )

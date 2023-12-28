@@ -1,11 +1,11 @@
+import { Dispatch, SetStateAction } from "react"
 import { Carousel } from "@mantine/carousel"
 import { useMediaQuery } from "@mantine/hooks"
 import { Paper, Text, Title, Button, useMantineTheme } from "@mantine/core"
+import { IconArrowDown, IconArrowRight, IconArrowLeft } from "@tabler/icons-react"
 import classes from "../css/CardsCarousel.module.css"
-import { Dispatch, SetStateAction } from "react"
 import products from "../../productInformation/products.json"
 import type { SelectedProductType } from "../Products"
-import { IconArrowDown } from "@tabler/icons-react"
 
 interface CardProps {
   image: string
@@ -45,7 +45,7 @@ function Card({ image, title, category, id, setSelectedProduct, scrollIntoView }
             alignment: "center"
           })
         }}
-        className='bg-anthracite hover:bg-gray-700 transition-all pr-1'
+        className='bg-anthracite hover:bg-gray-700 transition-all pr-1 ml-2 mb-1'
       >
         Read More <IconArrowDown className='ml-2' />
       </Button>
@@ -64,11 +64,13 @@ export function CardsCarousel({ setSelectedProduct, scrollIntoView }: CardsCarou
 
   return (
     <Carousel
-      withIndicators
+      classNames={classes}
       height={750}
       slideSize={mobile ? "100%" : "50%"}
-      slideGap='md'
+      slideGap='xs'
       align='start'
+      nextControlIcon={<IconArrowRight />}
+      previousControlIcon={<IconArrowLeft />}
       slidesToScroll={mobile ? 1 : 2}
     >
       {slides}
