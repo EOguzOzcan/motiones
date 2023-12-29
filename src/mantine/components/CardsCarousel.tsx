@@ -68,13 +68,14 @@ export function CardsCarousel({ setSelectedProduct, scrollIntoView }: CardsCarou
     <>
       <Carousel
         classNames={classes}
+        loop
+        containScroll={"trimSnaps"}
         height={750}
         slideSize={mobile ? "100%" : "50%"}
         slideGap='xs'
         align='start'
         nextControlIcon={<IconArrowRight />}
         previousControlIcon={<IconArrowLeft />}
-        slidesToScroll={1}
       >
         {products.map((item) => (
           <Carousel.Slide key={item.id}>

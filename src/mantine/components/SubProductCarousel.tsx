@@ -89,6 +89,7 @@ export function SubProductCarousel({ subProducts }: SubProductProps) {
       containScroll='trimSnaps'
       height={750}
       withIndicators
+      loop
       slideSize={mobile ? "100%" : slideCount > 2 ? "33%" : "50%"}
       slideGap='xs'
       align='start'

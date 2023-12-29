@@ -61,7 +61,6 @@ export function Products() {
   const { scrollIntoView, targetRef } = useScrollIntoView<HTMLDivElement>({
     offset: 90
   })
-  console.log(SelectedProduct)
 
   useEffect(() => {
     // Filter the subProducts.json file to find the product that matches the ProductId
@@ -73,48 +72,6 @@ export function Products() {
       setFilteredSubProducts(product)
     }
   }, [SelectedProduct])
-
-  // const downloadFile = () => {
-  //   // Replace 'path/to/your/file.pdf' with the actual path or URL of your file
-  //   const fileUrl = "/RUHA-CATALOG-2023.pdf"
-  //   const link = document.createElement("a")
-  //   link.href = fileUrl
-  //   link.download = "RUHA-CATALOG-2023.pdf" // Specify the desired filename for the download
-  //   link.click()
-  // }
-
-  // const features = mockdata.map((feature, index) => (
-  //   <Card
-  //     key={feature.title}
-  //     shadow='md'
-  //     radius='md'
-  //     className={`${classes.card} relative flex flex-col`}
-  //     padding='xl'
-  //     id='products'
-  //   >
-  //     <Card.Section>
-  //       <Image src={feature.image} alt='test' height={375} className='object-cover' />
-  //     </Card.Section>
-  //     <Text
-  //       fz='lg'
-  //       fw={500}
-  //       className={`${classes.cardTitle} text-center flex justify-center items-center flex-col text-2xl mt-8`}
-  //       mt='md'
-  //     >
-  //       {feature.title}
-  //     </Text>
-  //     <Text fz='sm' c='dimmed' mt='sm' className='text-base'>
-  //       {feature.description}
-  //     </Text>
-  //     <MantineTabs data={feature.data} index={index} />
-
-  //     <div className='absolute bottom-0 right-0 mr-8 '>
-  //       <Button fullWidth className='bg-gray-500 mb-4 w-32 hover:bg-orange-500 transition-all'>
-  //         Specs
-  //       </Button>
-  //     </div>
-  //   </Card>
-  // ))
 
   return (
     <div className='px-6 py-6'>
