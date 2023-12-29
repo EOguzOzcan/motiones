@@ -64,7 +64,6 @@ export function CardsCarousel({ setSelectedProduct, scrollIntoView }: CardsCarou
 
   return (
     <Carousel
-      dragFree
       classNames={classes}
       containScroll='trimSnaps'
       height={750}
