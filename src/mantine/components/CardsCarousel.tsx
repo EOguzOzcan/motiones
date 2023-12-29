@@ -56,6 +56,9 @@ function Card({ image, title, category, id, setSelectedProduct, scrollIntoView }
 export function CardsCarousel({ setSelectedProduct, scrollIntoView }: CardsCarouselProps) {
   const theme = useMantineTheme()
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`)
+
+  if (mobile === undefined) return null
+
   const slides = products.map((item) => (
     <Carousel.Slide key={item.title}>
       <Card {...item} setSelectedProduct={setSelectedProduct} scrollIntoView={scrollIntoView} />
