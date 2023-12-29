@@ -105,6 +105,10 @@ u {
   z-index: 1; /* Adjust the z-index as needed */
 }
 
+.swiper {
+  height: 550px;
+}
+
 @media (max-width: 1024px) {
   .product-background {
     height: 150vh; /* Adjust the height for mobile screens */

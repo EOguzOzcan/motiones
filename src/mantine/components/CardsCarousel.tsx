@@ -1,11 +1,18 @@
 import { Dispatch, SetStateAction } from "react"
-import { Carousel } from "@mantine/carousel"
 import { useMediaQuery } from "@mantine/hooks"
 import { Paper, Text, Title, Button, useMantineTheme } from "@mantine/core"
-import { IconArrowDown, IconArrowRight, IconArrowLeft } from "@tabler/icons-react"
+import { IconArrowDown } from "@tabler/icons-react"
 import classes from "../css/CardsCarousel.module.css"
 import products from "../../productInformation/products.json"
 import type { SelectedProductType } from "../Products"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules"
+
+import "swiper/css"
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import "swiper/css/scrollbar"
 
 interface CardProps {
   image: string
@@ -60,25 +67,22 @@ export function CardsCarousel({ setSelectedProduct, scrollIntoView }: CardsCarou
   if (mobile === undefined || products === undefined) return null
 
   return (
-    <>
-      <Carousel
-        classNames={classes}
-        loop
-        dragFree
-        containScroll={"trimSnaps"}
-        height={750}
-        slideSize={mobile ? "100%" : "50%"}
-        slideGap='xs'
-        align='start'
-        nextControlIcon={<IconArrowRight />}
-        previousControlIcon={<IconArrowLeft />}
-      >
-        {products.map((item) => (
-          <Carousel.Slide key={item.id}>
-            <Card {...item} setSelectedProduct={setSelectedProduct} scrollIntoView={scrollIntoView} />
-          </Carousel.Slide>
-        ))}
-      </Carousel>
-    </>
+    <Swiper
+      // install Swiper modules
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      spaceBetween={25}
+      slidesPerView={mobile ? 1 : 2}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log("swiper", swiper)}
+      onSlideChange={() => console.log("slide change")}
+    >
+      {products.map((item) => (
+        <SwiperSlide key={item.id}>
+          <Card {...item} setSelectedProduct={setSelectedProduct} scrollIntoView={scrollIntoView} />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   )
 }

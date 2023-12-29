@@ -1,11 +1,12 @@
-import { Carousel } from "@mantine/carousel"
 import { useMediaQuery } from "@mantine/hooks"
 import { Paper, Title, useMantineTheme, TypographyStylesProvider } from "@mantine/core"
 import classes from "../css/CardsCarousel.module.css"
 import { Transition } from "@mantine/core"
 import { useHover } from "@mantine/hooks"
-import { IconArrowRight, IconArrowLeft } from "@tabler/icons-react"
+// import { IconArrowRight, IconArrowLeft } from "@tabler/icons-react"
 import { useEffect, useState } from "react"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules"
 
 interface CardProps {
   image: string
@@ -68,9 +69,9 @@ export function SubProductCarousel({ subProducts }: SubProductProps) {
   const [key, setKey] = useState(0)
 
   const slides = subProducts.map((item) => (
-    <Carousel.Slide key={item.title}>
+    <SwiperSlide key={item.title}>
       <Card {...item} />
-    </Carousel.Slide>
+    </SwiperSlide>
   ))
 
   const slideCount = slides.length
@@ -83,22 +84,19 @@ export function SubProductCarousel({ subProducts }: SubProductProps) {
   if (mobile === undefined) return null
 
   return (
-    <Carousel
+    <Swiper
+      // install Swiper modules
       key={key}
-      classNames={classes}
-      containScroll='trimSnaps'
-      height={750}
-      withIndicators
-      loop
-      dragFree
-      slideSize={mobile ? "100%" : slideCount > 2 ? "33%" : "50%"}
-      slideGap='xs'
-      align='start'
-      nextControlIcon={<IconArrowRight />}
-      previousControlIcon={<IconArrowLeft />}
-      slidesToScroll={1}
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      spaceBetween={25}
+      slidesPerView={mobile ? 1 : slideCount > 2 ? 3 : 2}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log("swiper", swiper)}
+      onSlideChange={() => console.log("slide change")}
     >
       {slides}
-    </Carousel>
+    </Swiper>
   )
 }
