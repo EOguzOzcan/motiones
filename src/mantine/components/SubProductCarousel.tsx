@@ -72,11 +72,15 @@ export function SubProductCarousel({ subProducts }: SubProductProps) {
       <Card {...item} />
     </Carousel.Slide>
   ))
+
   const slideCount = slides.length
+
   useEffect(() => {
     // Update the key whenever subProducts change
     setKey((prevKey) => prevKey + 1)
   }, [subProducts])
+
+  if (mobile === undefined) return null
 
   return (
     <Carousel

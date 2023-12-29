@@ -38,10 +38,10 @@
   
 }
 
-.control[data-inactive="true"] {
+/* .control[data-inactive="true"] {
     opacity: 0;
     cursor: default;
-}
+} */
 
 .indicator {
   outline: 2px solid #ffffff;
