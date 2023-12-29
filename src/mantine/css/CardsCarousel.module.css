@@ -28,15 +28,14 @@
   text-transform: uppercase;
 }
 
-.control {
-  outline: 1px solid #ffffff;
+/* .control { */
+  /* outline: 1px solid #ffffff;
   outline-offset: -1px;
   background-color: #393D47;
   padding: 8px;
   color: #fff;
-  transition: background-color 0.3s ease; /* Smooth transition effect */
-  
-}
+  transition: background-color 0.3s ease; Smooth transition effect */
+  /* } */
 
 /* .control[data-inactive="true"] {
     opacity: 0;
