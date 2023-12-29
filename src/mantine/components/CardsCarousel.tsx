@@ -22,6 +22,8 @@ interface CardsCarouselProps {
 }
 
 function Card({ image, title, category, id, setSelectedProduct, scrollIntoView }: CardProps) {
+  console.log("BİŞEYLER OLDU")
+
   return (
     <Paper
       shadow='md'
@@ -57,13 +59,14 @@ export function CardsCarousel({ setSelectedProduct, scrollIntoView }: CardsCarou
   const theme = useMantineTheme()
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`)
 
-  if (mobile === undefined) return null
+  if (mobile === undefined || products === undefined) return null
 
   const slides = products.map((item) => (
-    <Carousel.Slide key={item.title}>
+    <Carousel.Slide key={item.id}>
       <Card {...item} setSelectedProduct={setSelectedProduct} scrollIntoView={scrollIntoView} />
     </Carousel.Slide>
   ))
+  console.log("BİŞEYLER OLDU2")
 
   return (
     <Carousel
