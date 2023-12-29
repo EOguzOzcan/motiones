@@ -131,7 +131,6 @@ export function Products() {
           </>
         )}
       </div>
-      {/* </SimpleGrid> */}
     </div>
   )
 }

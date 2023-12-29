@@ -6,7 +6,7 @@
   align-items: flex-start;
   background-size: cover;
   background-position: center;
-  
+
 }
 
 .title {
@@ -37,10 +37,10 @@
   transition: background-color 0.3s ease; /* Smooth transition effect */
   }
 
-/* .control[data-inactive="true"] {
+.control[data-inactive="true"] {
     opacity: 0;
     cursor: default;
-} */
+}
 
 .indicator {
   outline: 2px solid #ffffff;
