@@ -59,16 +59,12 @@ export function CardsCarousel({ setSelectedProduct, scrollIntoView }: CardsCarou
 
   if (mobile === undefined || products === undefined) return null
 
-  // const slides = products.map((item) => (
-  //   <Carousel.Slide key={item.id}>
-  //     <Card {...item} setSelectedProduct={setSelectedProduct} scrollIntoView={scrollIntoView} />
-  //   </Carousel.Slide>
-  // ))
   return (
     <>
       <Carousel
         classNames={classes}
         loop
+        dragFree
         containScroll={"trimSnaps"}
         height={750}
         slideSize={mobile ? "100%" : "50%"}

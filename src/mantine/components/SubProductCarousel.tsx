@@ -90,6 +90,7 @@ export function SubProductCarousel({ subProducts }: SubProductProps) {
       height={750}
       withIndicators
       loop
+      dragFree
       slideSize={mobile ? "100%" : slideCount > 2 ? "33%" : "50%"}
       slideGap='xs'
       align='start'
