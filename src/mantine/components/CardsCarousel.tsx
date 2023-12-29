@@ -72,7 +72,7 @@ export function CardsCarousel({ setSelectedProduct, scrollIntoView }: CardsCarou
       align='start'
       nextControlIcon={<IconArrowRight />}
       previousControlIcon={<IconArrowLeft />}
-      slidesToScroll={mobile ? 1 : 1}
+      slidesToScroll={1}
     >
       {slides}
     </Carousel>

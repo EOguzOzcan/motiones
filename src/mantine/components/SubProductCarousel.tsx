@@ -77,19 +77,20 @@ export function SubProductCarousel({ subProducts }: SubProductProps) {
     // Update the key whenever subProducts change
     setKey((prevKey) => prevKey + 1)
   }, [subProducts])
+
   return (
     <Carousel
       key={key}
       classNames={classes}
       containScroll='trimSnaps'
-      withIndicators
       height={750}
+      withIndicators
       slideSize={mobile ? "100%" : slideCount > 2 ? "33%" : "50%"}
       slideGap='xs'
       align='start'
       nextControlIcon={<IconArrowRight />}
       previousControlIcon={<IconArrowLeft />}
-      slidesToScroll={mobile ? 1 : slideCount > 2 ? 1 : 1}
+      slidesToScroll={1}
     >
       {slides}
     </Carousel>
