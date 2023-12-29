@@ -109,7 +109,7 @@ const Hero = () => {
           {/* </video> */}
           <div className={`${classes.content} content flex flex-col items-center justify-center lg:ml-32`}>
             <Title className={`${classes.title} text-base mt-20 md:text-4xl md:mt-6 `}>
-              Engineering and technical solutions
+              Engineering and Technical Solutions
             </Title>
             <Text className={`${classes.description} mt-5 md:text-2xl md:mt-6`}>
               Marine and Port & Industry & E-Mobility & Service
