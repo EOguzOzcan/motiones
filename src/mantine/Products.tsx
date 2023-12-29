@@ -61,6 +61,7 @@ export function Products() {
   const { scrollIntoView, targetRef } = useScrollIntoView<HTMLDivElement>({
     offset: 90
   })
+  console.log(SelectedProduct)
 
   useEffect(() => {
     // Filter the subProducts.json file to find the product that matches the ProductId
