@@ -5,7 +5,7 @@ import classes from "../css/CardsCarousel.module.css"
 import { Transition } from "@mantine/core"
 import { useHover } from "@mantine/hooks"
 import { IconArrowRight, IconArrowLeft } from "@tabler/icons-react"
-import { useEffect, useState } from "react"
+// import { useEffect, useState } from "react"
 
 interface CardProps {
   image: string
@@ -65,7 +65,7 @@ function Card({ image, title, description }: CardProps) {
 export function SubProductCarousel({ subProducts }: SubProductProps) {
   const theme = useMantineTheme()
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`)
-  const [key, setKey] = useState(0)
+  // const [key, setKey] = useState(0)
 
   const slides = subProducts.map((item) => (
     <Carousel.Slide key={item.title}>
@@ -75,16 +75,16 @@ export function SubProductCarousel({ subProducts }: SubProductProps) {
 
   const slideCount = slides.length
 
-  useEffect(() => {
-    // Update the key whenever subProducts change
-    setKey((prevKey) => prevKey + 1)
-  }, [subProducts])
+  // useEffect(() => {
+  //   // Update the key whenever subProducts change
+  //   setKey((prevKey) => prevKey + 1)
+  // }, [subProducts])
 
   if (mobile === undefined) return null
 
   return (
     <Carousel
-      key={key}
+      // key={key}
       classNames={classes}
       containScroll='trimSnaps'
       height={750}
