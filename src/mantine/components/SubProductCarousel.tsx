@@ -89,7 +89,7 @@ export function SubProductCarousel({ subProducts }: SubProductProps) {
       align='start'
       nextControlIcon={<IconArrowRight />}
       previousControlIcon={<IconArrowLeft />}
-      slidesToScroll={mobile ? 1 : slideCount > 2 ? 3 : 2}
+      slidesToScroll={mobile ? 1 : slideCount > 2 ? 1 : 1}
     >
       {slides}
     </Carousel>

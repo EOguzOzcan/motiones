@@ -48,7 +48,7 @@ module.exports = {
       transparent: "transparent",
       current: "currentColor",
       white: "#ffffff",
-      cadetblue: "#C5EBDF",
+      cadetblue: "#d4ede5",
       anthracite: "#393D47",
       opacityAnthracite: "rgba(57, 61, 71, 0.5)"
     },

@@ -10,7 +10,7 @@ import {
   ActionIcon,
   rem
 } from "@mantine/core"
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from "@tabler/icons-react"
+import { IconBrandTwitter, IconBrandYoutube, IconBrandLinkedin } from "@tabler/icons-react"
 import { ContactIconsList } from "./icons/ContactIcons"
 import { useForm } from "@mantine/form"
 
@@ -78,9 +78,9 @@ const useStyles = createStyles((theme) => ({
 }))
 
 const social = [
-  { Icon: IconBrandTwitter, link: "/" },
-  { Icon: IconBrandYoutube, link: "/" },
-  { Icon: IconBrandInstagram, link: "/" }
+  { Icon: IconBrandLinkedin, link: "https://www.linkedin.com/company/motion-es/about/" },
+  { Icon: IconBrandTwitter, link: "" },
+  { Icon: IconBrandYoutube, link: "" }
 ]
 type ContactData = {
   to: string
@@ -146,7 +146,6 @@ export function ContactMantine() {
             />
             <TextInput
               label='Name'
-              placeholder='John Doe'
               mt='md'
               {...form.getInputProps("name")}
               classNames={{ input: classes.input, label: classes.inputLabel }}
@@ -154,7 +153,6 @@ export function ContactMantine() {
             <Textarea
               required
               label='Your message'
-              placeholder='I want to order your goods'
               minRows={4}
               mt='md'
               {...form.getInputProps("message")}

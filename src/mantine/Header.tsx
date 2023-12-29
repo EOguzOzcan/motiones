@@ -81,7 +81,7 @@ export function HeaderAction() {
           <Logo />
         </Group>
         <Group spacing={24} className={`${classes.links} mt-1 items-baseline`}>
-          <Text className='flex items-center	'>
+          <Text className='flex items-center mr-3	'>
             Exclusive Partner of&nbsp;&nbsp;
             <Image width={90} src='/Ingeteam.png' />
           </Text>

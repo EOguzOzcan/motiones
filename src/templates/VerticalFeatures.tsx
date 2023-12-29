@@ -87,13 +87,10 @@ const VerticalFeatures = () => {
           </Text>
           <br />
           <Text className={`${classes.featureTitle} text-xl`}>
-            Motion-ES supplies products for various markets along with technical support including engineering,
-            automation, system integration, commissioning and after sales services. We mainly adapt our portfolio to the
-            customer’s needs.
+            We supply products for various markets along with technical support including engineering, automation,
+            system integration, commissioning and after sales services. We mainly adapt our portfolio to the customer’s
+            needs.
           </Text>
-          {/* <Button variant='gradient' gradient={{ deg: 133, from: "blue", to: "cyan" }} size='lg' radius='md' mt='xl'>
-            Get started
-          </Button> */}
         </Col>
         <Col span={12} md={7}>
           <SimpleGrid cols={2} spacing={30} breakpoints={[{ maxWidth: "md", cols: 1 }]}>

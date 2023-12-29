@@ -37,7 +37,7 @@
     "mainProductName": "Marine & Port",
     "title": "Marine Equipment, Water and Wastewater Treatment",
     "description": "<ul><li>Ballast Water Treatment System</li><li>Sewage Treatment System</li><li>Impressed Current Cathodic Protection System</li><li>Marine Growth Preventing System</li><li>Oil Water Separator</li><li>Shaft Grounding Device</li></ul>",
-    "image": "/maiserSubProducts/tank-level-768x768.jpg"
+    "image": "/maiserSubProducts/ballast-768x768.jpg"
   },
   {
     "id": "6",
@@ -45,7 +45,7 @@
     "mainProductName": "Marine & Port",
     "title": "Carbon Capture and Storage Systems",
     "description": "<ul><li>Compact size of tower and Configurations</li><li>High Purity of Products CO2</li><li>Low Energy Consumption</li><li>Simple and Reliable Operation</li><li>Full Automation</li></ul>",
-    "image": "/maiserSubProducts/ballast-768x768.jpg"
+    "image": "/maiserSubProducts/carbon-768x768.jpg"
   },
   {
     "id": "7",

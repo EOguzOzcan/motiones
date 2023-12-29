@@ -64,14 +64,16 @@ export function CardsCarousel({ setSelectedProduct, scrollIntoView }: CardsCarou
 
   return (
     <Carousel
+      dragFree
       classNames={classes}
+      containScroll='trimSnaps'
       height={750}
       slideSize={mobile ? "100%" : "50%"}
       slideGap='xs'
       align='start'
       nextControlIcon={<IconArrowRight />}
       previousControlIcon={<IconArrowLeft />}
-      slidesToScroll={mobile ? 1 : 2}
+      slidesToScroll={mobile ? 1 : 1}
     >
       {slides}
     </Carousel>
