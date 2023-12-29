@@ -6,7 +6,7 @@ import { useMediaQuery } from "@mantine/hooks"
 const imageContent = (
   <Image
     height={350}
-    fit='fill'
+    fit='cover'
     className='mx-0 mt-0 md:mt-8 '
     style={{ width: "auto" }}
     radius='lg'
