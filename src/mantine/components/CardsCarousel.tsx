@@ -69,18 +69,26 @@ export function CardsCarousel({ setSelectedProduct, scrollIntoView }: CardsCarou
   console.log("BİŞEYLER OLDU2")
 
   return (
-    <Carousel
-      classNames={classes}
-      containScroll='trimSnaps'
-      height={750}
-      slideSize={mobile ? "100%" : "50%"}
-      slideGap='xs'
-      align='start'
-      nextControlIcon={<IconArrowRight />}
-      previousControlIcon={<IconArrowLeft />}
-      slidesToScroll={1}
-    >
-      {slides}
-    </Carousel>
+    <>
+      <Carousel
+        classNames={classes}
+        containScroll='trimSnaps'
+        height={750}
+        slideSize={mobile ? "100%" : "50%"}
+        slideGap='xs'
+        align='start'
+        nextControlIcon={<IconArrowRight />}
+        previousControlIcon={<IconArrowLeft />}
+        slidesToScroll={1}
+      >
+        {slides}
+      </Carousel>
+      <Carousel withIndicators height={200}>
+        <Carousel.Slide>111123112323</Carousel.Slide>
+        <Carousel.Slide>1123112311231123</Carousel.Slide>
+        <Carousel.Slide>1123112311231123</Carousel.Slide>
+        {/* ...other slides */}
+      </Carousel>
+    </>
   )
 }
