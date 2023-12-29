@@ -24,25 +24,25 @@ const useStyles = createStyles((theme) => ({
 const features = [
   {
     icon: GiShakingHands,
-    title: "Customized solutions",
+    title: "Customized Solutions",
     description:
       "We believe in offering products and solutions that meet the highest expectations. Our solutions can be customized for your applications and needs."
   },
   {
     icon: IconTruck,
-    title: "Quick technical support and flexibility",
+    title: "Quick Technical Support and Flexibility",
     description:
       "We understand how your system is important in case you have downtime due to electrical converters. Our dedicated support team find quickest and best way to handle for existing problems in your system."
   },
   {
     icon: MdEngineering,
-    title: "Engineering and engineering support",
+    title: "Engineering and Engineering Support",
     description:
       "With Motion-ES, you can have highly qualified engineering solutions with professionals who have years of experience."
   },
   {
     icon: GiAutoRepair,
-    title: "Realibility and customer-oriented support/solutions",
+    title: "Realibility and Customer-oriented Support/Solutions",
     description:
       "Your satisfaction is our priority. Our sales and technical team are always ready to assist you with any queries or concerns, providing a seamless experience in every step of the way."
   }
