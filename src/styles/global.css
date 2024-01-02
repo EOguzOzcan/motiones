@@ -105,9 +105,9 @@ u {
   z-index: 1; /* Adjust the z-index as needed */
 }
 
-.swiper {
+/* .swiper {
   height: 750px;
-}
+} */
 
 .swiper-button-next:after , .swiper-button-prev:after {
   color: #d4ede5;
