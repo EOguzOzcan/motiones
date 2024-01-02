@@ -11,6 +11,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules"
 interface CardProps {
   image: string
   title: string
+  isMobile: boolean
   description: string
 }
 
@@ -24,7 +25,7 @@ interface SubProductProps {
   }[]
 }
 
-function Card({ image, title, description }: CardProps) {
+function Card({ image, title, description, isMobile }: CardProps) {
   const { hovered, ref } = useHover()
 
   return (
@@ -40,24 +41,45 @@ function Card({ image, title, description }: CardProps) {
           {title}
         </Title>
       </div>
-      <Transition mounted={hovered} transition='slide-up' duration={400} timingFunction='ease'>
-        {(styles) => (
-          <Paper
-            shadow='lg' // You can adjust the shadow to make it different
-            p='md'
-            style={{
-              ...styles,
-              overflow: "auto",
-              width: "100%"
-            }}
-            className='bg-opacityAnthracite'
-          >
-            <TypographyStylesProvider>
-              <div dangerouslySetInnerHTML={{ __html: description }} className='text-gray-200	' />
-            </TypographyStylesProvider>
-          </Paper>
-        )}
-      </Transition>
+      {isMobile ? (
+        <Transition mounted={isMobile} transition='slide-up' duration={400} timingFunction='ease'>
+          {(styles) => (
+            <Paper
+              shadow='lg' // You can adjust the shadow to make it different
+              p='md'
+              style={{
+                ...styles,
+                overflow: "auto",
+                width: "100%"
+              }}
+              className='bg-opacityAnthracite'
+            >
+              <TypographyStylesProvider>
+                <div dangerouslySetInnerHTML={{ __html: description }} className='text-gray-200	' />
+              </TypographyStylesProvider>
+            </Paper>
+          )}
+        </Transition>
+      ) : (
+        <Transition mounted={hovered} transition='slide-up' duration={400} timingFunction='ease'>
+          {(styles) => (
+            <Paper
+              shadow='lg' // You can adjust the shadow to make it different
+              p='md'
+              style={{
+                ...styles,
+                overflow: "auto",
+                width: "100%"
+              }}
+              className='bg-opacityAnthracite'
+            >
+              <TypographyStylesProvider>
+                <div dangerouslySetInnerHTML={{ __html: description }} className='text-gray-200	' />
+              </TypographyStylesProvider>
+            </Paper>
+          )}
+        </Transition>
+      )}
     </Paper>
   )
 }
@@ -69,7 +91,7 @@ export function SubProductCarousel({ subProducts }: SubProductProps) {
 
   const slides = subProducts.map((item) => (
     <SwiperSlide key={item.title}>
-      <Card {...item} />
+      <Card {...item} isMobile={mobile} />
     </SwiperSlide>
   ))
 
