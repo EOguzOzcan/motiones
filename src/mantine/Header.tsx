@@ -11,7 +11,7 @@ const useStyles = createStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    "@media (max-width: 1020px)": {
+    "@media (max-width: 1050px)": {
       justifyContent: "center"
     }
   },
@@ -20,7 +20,7 @@ const useStyles = createStyles((theme) => ({
     "@media (max-width: 850px)": {
       display: "contents"
     },
-    "@media (max-width: 1020px)": {
+    "@media (max-width: 1050px)": {
       display: "none"
     }
   },
@@ -86,19 +86,19 @@ export function HeaderAction() {
             <Image width={90} src='/Ingeteam.png' />
           </Text>
           <li className={`${classes.link} text-anthracite text-1.5xl cursor-pointer`}>
-            <ScrollLink offset={-150} to='about' smooth={true} duration={1000}>
+            <ScrollLink offset={-175} to='about' smooth={true} duration={1000}>
               About
             </ScrollLink>
           </li>
 
           <li className={`${classes.link} text-anthracite text-1.5xl cursor-pointer `}>
-            <ScrollLink offset={-150} to='products' smooth={true} duration={1000}>
+            <ScrollLink offset={-175} to='products' smooth={true} duration={1000}>
               Products
             </ScrollLink>
           </li>
 
           <li className={`${classes.link} text-anthracite text-1.5xl cursor-pointer`}>
-            <ScrollLink offset={-150} to='contact' smooth={true} duration={1000}>
+            <ScrollLink offset={-175} to='contact' smooth={true} duration={1000}>
               Contact Us
             </ScrollLink>
           </li>
@@ -106,7 +106,7 @@ export function HeaderAction() {
         {/* {opened && (
           <div className='absolute top-[70px] bg-cadetblue w-[370px] rounded-md'>
             <Group spacing={5} className={`${classes.links} flex justify-center items-center`}>
-              <ScrollLink offset={-150} to='about' smooth={true} duration={1000} onClick={toggle}>
+              <ScrollLink offset={-175} to='about' smooth={true} duration={1000} onClick={toggle}>
                 <li
                   className={`${classes.link} text-anthracite text-xl text-center cursor-pointer bg-gray-100 w-[360px] m-1 mt-2 rounded-md`}
                 >
@@ -114,14 +114,14 @@ export function HeaderAction() {
                 </li>
               </ScrollLink>
 
-              <ScrollLink offset={-150} to='products' smooth={true} duration={1000} onClick={toggle}>
+              <ScrollLink offset={-175} to='products' smooth={true} duration={1000} onClick={toggle}>
                 <li
                   className={`${classes.link} text-anthracite text-xl text-center cursor-pointer bg-gray-100 w-[360px] m-1 rounded-md`}
                 >
                   Products
                 </li>
               </ScrollLink>
-              <ScrollLink offset={-150} to='contact' smooth={true} duration={1000} onClick={toggle}>
+              <ScrollLink offset={-175} to='contact' smooth={true} duration={1000} onClick={toggle}>
                 <li
                   className={`${classes.link} text-anthracite text-xl text-center cursor-pointer bg-gray-100 w-[360px] m-1 rounded-md mb-2`}
                 >
