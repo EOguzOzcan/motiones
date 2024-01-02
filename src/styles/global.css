@@ -104,10 +104,6 @@ u {
   z-index: 1; /* Adjust the z-index as needed */
 }
 
-/* .swiper {
-  height: 750px;
-} */
-
 .swiper-button-next:after , .swiper-button-prev:after {
   color: #d4ede5;
 }
@@ -117,12 +113,3 @@ u {
   opacity: 1;
 }
 
-@media (max-width: 1024px) {
-  .product-background {
-    height: 150vh; /* Adjust the height for mobile screens */
-  }
-
-  .product-background:before {
-    height: 22%; /* Adjust the coverage for mobile screens */
-  }
-}
