@@ -106,7 +106,16 @@ u {
 }
 
 .swiper {
-  height: 550px;
+  height: 750px;
+}
+
+.swiper-button-next:after , .swiper-button-prev:after {
+  color: #d4ede5;
+}
+
+.swiper-pagination-bullet, .swiper-pagination-bullet-active {
+  background: #d4ede5 !important;
+  opacity: 1;
 }
 
 @media (max-width: 1024px) {
