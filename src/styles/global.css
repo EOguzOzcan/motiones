@@ -90,7 +90,6 @@ u {
 
 .product-background {
   position: relative;
-  height: 100vh; /* Set the height as needed */
   overflow: hidden;
 }
 
