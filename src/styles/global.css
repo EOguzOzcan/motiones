@@ -99,7 +99,7 @@ u {
   top: 0;
   left: 0;
   width: 100%;
-  height: 17%; /* Adjust this value to control the coverage from top to middle */
+  height: 23%; /* Adjust this value to control the coverage from top to middle */
   background: linear-gradient(rgba(57, 61, 71, 0.45), rgba(57, 61, 71, 0.2));
   z-index: 1; /* Adjust the z-index as needed */
 }
