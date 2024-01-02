@@ -107,8 +107,8 @@ const Hero = () => {
 
           {/* <source src='/testt.jpg' type='video/mp4' /> */}
           {/* </video> */}
-          <div className={`${classes.content} content flex flex-col items-center justify-center lg:ml-32`}>
-            <Title className={`${classes.title} text-base mt-20 md:text-4xl md:mt-6 `}>
+          <div className={`${classes.content} content flex flex-col items-center justify-center xs:ml-20  lg:ml-32`}>
+            <Title className={`${classes.title} text-base mt-32 md:text-4xl md:mt-32 lg:mt-32 `}>
               Engineering and Technical Solutions
             </Title>
             <Text className={`${classes.description} mt-5 md:text-2xl md:mt-6`}>

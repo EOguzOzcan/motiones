@@ -70,7 +70,7 @@ export function HeaderAction() {
 
   return (
     <Header
-      className={`fixed z-[200] px-0 md:px-12 bg-cadetblue opacity-90`}
+      className={`fixed z-[200] px-0 md:px-12 bg-cadetblue `}
       height={HEADER_HEIGHT}
       sx={{ borderBottom: 0 }}
       mb={120}
