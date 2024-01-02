@@ -46,7 +46,6 @@ function Card({ image, title, description, isMobile }: CardProps) {
           {(styles) => (
             <Paper
               shadow='lg' // You can adjust the shadow to make it different
-              p='md'
               style={{
                 ...styles,
                 overflow: "auto",
@@ -65,7 +64,6 @@ function Card({ image, title, description, isMobile }: CardProps) {
           {(styles) => (
             <Paper
               shadow='lg' // You can adjust the shadow to make it different
-              p='md'
               style={{
                 ...styles,
                 overflow: "auto",
