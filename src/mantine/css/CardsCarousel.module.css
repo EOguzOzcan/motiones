@@ -5,7 +5,7 @@
   align-items: flex-start;
   background-size: cover;
   background-position: center;
-
+  z-index: 99;
 }
 
 .title {
