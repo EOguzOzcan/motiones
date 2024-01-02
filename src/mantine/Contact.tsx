@@ -95,7 +95,8 @@ export function ContactMantine() {
       size={28}
       className={classes.social}
       variant='transparent'
-      onClick={() => (window.location.href = Icon.link)}
+      onClick={() => window.open(Icon.link, "_blank")}
+      disabled={!Icon.link}
     >
       <Icon.Icon size='1.4rem' stroke={1.5} />
     </ActionIcon>
