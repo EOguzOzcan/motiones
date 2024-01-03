@@ -13,6 +13,7 @@ import {
 import { IconBrandTwitter, IconBrandYoutube, IconBrandLinkedin } from "@tabler/icons-react"
 import { ContactIconsList } from "./icons/ContactIcons"
 import { useForm } from "@mantine/form"
+import emailjs from "@emailjs/browser"
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -83,12 +84,14 @@ const social = [
   { Icon: IconBrandYoutube, link: "" }
 ]
 type ContactData = {
-  to: string
+  from: string
   name: string
   message: string
+  [key: string]: string // Index signature to indicate that all keys are strings
 }
 export function ContactMantine() {
   const { classes } = useStyles()
+
   const icons = social.map((Icon, index) => (
     <ActionIcon
       key={index}
@@ -103,25 +106,40 @@ export function ContactMantine() {
   ))
   const form = useForm({
     initialValues: {
-      to: "",
+      from: "",
       name: "",
       message: ""
     },
-
     validate: {
-      to: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email")
+      from: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email")
     }
   })
 
   const handleSendEmail = async (data: ContactData) => {
-    const response = await fetch("/api/nodemailler", {
-      method: "POST", // Specify the HTTP method used by your API route
-      body: JSON.stringify({ data })
-    })
-    if (response.ok) {
-      const data = await response.json()
-      console.log(data)
+    const form = document.createElement("form")
+    form.style.display = "none"
+
+    // Append each field to the form
+    for (const key in data) {
+      if (data.hasOwnProperty(key)) {
+        const input = document.createElement("input")
+        input.type = "hidden"
+        input.name = key
+        input.value = data[key]
+        form.appendChild(input)
+      }
     }
+
+    document.body.appendChild(form)
+    debugger
+    emailjs.sendForm("service_58ouo3b", "template_r27zrgw", form, "QrPuAhJdd2d4wc7T5").then(
+      (result) => {
+        console.log(result.text)
+      },
+      (error) => {
+        console.log(error.text)
+      }
+    )
   }
 
   return (
@@ -142,7 +160,7 @@ export function ContactMantine() {
               label='Email'
               placeholder='your@email.com'
               required
-              {...form.getInputProps("to")}
+              {...form.getInputProps("from")}
               classNames={{ input: classes.input, label: classes.inputLabel }}
             />
             <TextInput
