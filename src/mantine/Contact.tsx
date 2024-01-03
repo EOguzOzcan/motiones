@@ -114,7 +114,7 @@ export function ContactMantine() {
   })
 
   const handleSendEmail = async (data: ContactData) => {
-    const response = await fetch("/api/send", {
+    const response = await fetch("/api/nodemailler", {
       method: "POST", // Specify the HTTP method used by your API route
       body: JSON.stringify({ data })
     })
