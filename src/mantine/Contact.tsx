@@ -131,7 +131,6 @@ export function ContactMantine() {
     }
 
     document.body.appendChild(form)
-    debugger
     emailjs.sendForm("service_58ouo3b", "template_r27zrgw", form, "QrPuAhJdd2d4wc7T5").then(
       (result) => {
         console.log(result.text)
