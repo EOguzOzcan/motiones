@@ -2,7 +2,7 @@ import nodemailer from "nodemailer"
 import { NextApiRequest, NextApiResponse } from "next"
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  const companyEmail = "testbordro@outlook.com" // Change this to your company's email address
+  const companyEmail = "" // Change this to your company's email address
 
   // Get the raw string from the request body
   const { data: body } = JSON.parse(req.body)
@@ -19,7 +19,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     requireTLS: true, // Force TLS
     auth: {
       user: companyEmail, // Your Outlook email address
-      pass: "Meyhane8112" // Your Outlook password
+      pass: "" // Your Outlook password
     }
   })
 
