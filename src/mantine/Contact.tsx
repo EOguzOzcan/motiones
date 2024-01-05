@@ -8,12 +8,14 @@ import {
   Button,
   Group,
   ActionIcon,
-  rem
+  rem,
+  Badge
 } from "@mantine/core"
 import { IconBrandTwitter, IconBrandYoutube, IconBrandLinkedin } from "@tabler/icons-react"
 import { ContactIconsList } from "./icons/ContactIcons"
 import { useForm } from "@mantine/form"
 import emailjs from "@emailjs/browser"
+import { useState } from "react"
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -91,6 +93,8 @@ type ContactData = {
 }
 export function ContactMantine() {
   const { classes } = useStyles()
+  const [isSend, setIsSend] = useState(false)
+  const [mailErrorMess, setMailErrorMess] = useState({ message: "", color: "" })
 
   const icons = social.map((Icon, index) => (
     <ActionIcon
@@ -116,6 +120,7 @@ export function ContactMantine() {
   })
 
   const handleSendEmail = async (data: ContactData) => {
+    setIsSend(true)
     const form = document.createElement("form")
     form.style.display = "none"
 
@@ -131,11 +136,15 @@ export function ContactMantine() {
     }
 
     document.body.appendChild(form)
-    emailjs.sendForm("service_58ouo3b", "template_r27zrgw", form, "QrPuAhJdd2d4wc7T5").then(
+    emailjs.sendForm("service_py5pwr6", "template_r27zrgw", form, "ha0u9H5uUXg3jJ7EU").then(
       (result) => {
+        setMailErrorMess({ message: "Message sent successfully!", color: "green" })
+        setIsSend(false)
         console.log(result.text)
       },
       (error) => {
+        setMailErrorMess({ message: "Message sent failed!", color: "red" })
+        setIsSend(false)
         console.log(error.text)
       }
     )
@@ -177,10 +186,17 @@ export function ContactMantine() {
               classNames={{ input: classes.input, label: classes.inputLabel }}
             />
             <Group position='right' className={`mt-5`}>
-              <Button type='submit' className='bg-anthracite hover:bg-gray-700 transition-all'>
+              <Button type='submit' className='bg-anthracite hover:bg-gray-700 transition-all' disabled={isSend}>
                 Send message
               </Button>
             </Group>
+            {mailErrorMess.message && (
+              <Group position='right' className={`mt-5`}>
+                <Badge variant='outline' color={mailErrorMess.color}>
+                  {mailErrorMess.message}
+                </Badge>
+              </Group>
+            )}
           </form>
         </div>
       </SimpleGrid>
